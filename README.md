@@ -74,4 +74,10 @@ It consists of a recreation of Twitter, to put into practice knowledge of both F
 [![LinkedIn](https://custom-icon-badges.herokuapp.com/badge/-LinkedIn%20Mario%20Quirós%20Luna-%230A66C2?style=flat&logo=LinkedIn&logoColor=white&labelColor=111)](https://www.linkedin.com/in/mario-quir%C3%B3s-luna-dev-b99050206/)
 [![Twitter URL](https://img.shields.io/twitter/url?label=Twitter%20%40MarioQuirosL&style=social&url=https%3A%2F%2Ftwitter.com%2FMarioQuirosL)](https://twitter.com/MarioQuirosL)
 
+* Isabel Portuguez Calderón
+
+[![LinkedIn](https://custom-icon-badges.herokuapp.com/badge/-LinkedIn%20Isabel%20Portuguez%20Calderón-%230A66C2?style=flat&logo=LinkedIn&logoColor=white&labelColor=111)](https://www.linkedin.com/in/isabel-portuguez-calderón-142b4b229)
+[![Twitter URL](https://img.shields.io/twitter/url?label=Twitter%20%40IsaPortuguezC&style=social&url=https%3A%2F%2Ftwitter.com%2FIsaPortuguezC)](https://twitter.com/IsaPortuguezC)
+
+
 ## 💜 Acknowledgments.
