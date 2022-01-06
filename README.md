@@ -57,8 +57,8 @@ It consists of a recreation of Twitter, to put into practice knowledge of both F
    ### ⚡ Executing.
 
 ## ☕ Collaborators.
-  - ![Mario Quiros Luna](https://github.com/MarioQuirosLuna)
-  - ![Isabel Portuguez Calderón](https://github.com/IsaPortuguez)
+  * ![Mario Quiros Luna](https://github.com/MarioQuirosLuna)
+  * ![Isabel Portuguez Calderón](https://github.com/IsaPortuguez)
 
 ## 📝 License.
 
