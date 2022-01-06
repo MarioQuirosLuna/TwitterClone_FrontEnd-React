@@ -33,14 +33,10 @@ It consists of a recreation of Twitter, to put into practice knowledge of both F
    ### 🎨 Frameworks.
    
   ![React](https://custom-icon-badges.herokuapp.com/badge/-React-%2361DAFB?style=flat&logo=react&logoColor=white&labelColor=111)
-  ![Express](https://custom-icon-badges.herokuapp.com/badge/-Express-%23000000?style=flat&logo=express&logoColor=white&labelColor=111)
-  ![Node](https://custom-icon-badges.herokuapp.com/badge/-Node-%23339933?style=flat&logo=nodedotjs&logoColor=white&labelColor=111)
   
   ![Sass](https://custom-icon-badges.herokuapp.com/badge/-Sass-%23CC6699?style=flat&logo=sass&logoColor=white&labelColor=111)
    
    ### 💾 Databases and cloud hosting.
-   
-  ![Mongo](https://custom-icon-badges.herokuapp.com/badge/-Mongo-%2347A248?style=flat&logo=mongodb&logoColor=white&labelColor=111)
   
    ### 🛠️ Software and Tools.
    
