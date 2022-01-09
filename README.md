@@ -78,10 +78,23 @@
 ## 🚀 Getting Started.
 
    ### 📌 Prerequisites and dependencies.
+   
+   * ![React](https://img.shields.io/badge/react-v.17.0.2-111)
+   * ![React-Dom](https://img.shields.io/badge/react_dom-v.17.0.2-111)
+   * ![React-Scripts](https://img.shields.io/badge/react_scripts-v.5.0.0-111)
 
    ### 👉 Installation.
+   
+   In your local repository
+   ```
+   npm install
+   ```
 
    ### ⚡ Executing.
+   
+   ```
+   npm start
+   ```
 
 ## ☕ Collaborators.
   * [![Mario Quiros Luna](https://custom-icon-badges.herokuapp.com/badge/-Mario%20Quirós%20Luna-%23181717?style=flat&logo=github&logoColor=white&labelColor=111)](https://github.com/MarioQuirosLuna)
