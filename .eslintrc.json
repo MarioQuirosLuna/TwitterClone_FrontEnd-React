@@ -1,0 +1,20 @@
+{
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ],
+    "rules": {
+        "indent": [
+			"error",
+			"tab"
+		],
+		"quotes": [
+			"error",
+			"single"
+		],
+		"semi": [
+			"error",
+			"never"
+		]
+    }
+}
