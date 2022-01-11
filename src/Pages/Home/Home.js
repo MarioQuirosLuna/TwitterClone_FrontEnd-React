@@ -1,10 +1,13 @@
+import Happening from '../../Components/Happening/Happening'
+
 import './Home.scss'
 
 const Home = () => {
 	return (
-		<section className="home__container">
+		<div className="home__container">
+			<Happening />
             Home
-		</section>
+		</div>
 	)
 }
 
