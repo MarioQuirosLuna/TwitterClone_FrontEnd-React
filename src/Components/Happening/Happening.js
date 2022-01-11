@@ -10,7 +10,7 @@ const Happening = () => {
 					<h2>Home</h2>
 				</div>
 				<div>
-						Icon
+					Icon
 				</div>             
 			</section>
 			<section className="main">
