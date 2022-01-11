@@ -1,0 +1,69 @@
+@import '../../shared/Styles/colors.scss';
+
+.tweet__container{
+    width: 100%;
+
+    display: flex;
+    border: 1px solid $border_color_light;
+    padding: 10px 0;
+    cursor: pointer;
+
+    .tweet__container-photo{
+        width: 48px;
+        margin: 0 12px 0 12px;
+    }
+
+    .tweet__container-content{
+        width: 100%;
+        padding: 0 12px 0 10px;
+
+        .content__nav{
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            flex-direction: row;
+
+            .content__nav-data{
+                width: 100%;
+                height: 22px;
+
+                span{
+                    height: auto;
+                    width: auto;
+                    display: inline;
+                    line-height: 20px;
+                    padding: 0 5px 0 0;
+                }
+
+                .nav__data-name{
+                    font-weight: 700;
+                }
+
+                .nav__data-username, .nav__data-time{
+                    color: $color_text_gray;
+                }
+            }
+            .content__nav-settings{
+                display: flex;
+                align-items: stretch;
+                margin: 0 20px 0 20px;
+            }
+        }
+
+        .content__text{
+            width: 100%;
+            min-height: auto;
+        }
+        .content__media{
+            width: 100%;
+            min-height: auto;
+            padding: 12px 0 0 0;
+        }
+        .content__options{
+            width: 90%;
+            display: flex;
+            padding: 10px 0 0 0;
+            justify-content: space-between;
+        }
+    }
+}
