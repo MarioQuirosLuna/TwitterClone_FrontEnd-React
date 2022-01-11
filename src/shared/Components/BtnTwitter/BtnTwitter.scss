@@ -1,0 +1,29 @@
+@import '../../Styles/colors.scss';
+
+.container__btnTwitter{
+    background-color: $blue_Twitter;
+    min-width: 36px;
+    min-height: 36px;
+    height: 36px;
+    outline: none;
+    padding: 0 16px 0 16px;
+    border: 1px solid rgba(0, 0, 0,0);
+    border-radius: 9999px;
+    cursor: pointer;
+
+    div{  
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        span{
+            max-width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            font-weight: 700;
+            line-height: 20px;
+        }
+    }
+}
