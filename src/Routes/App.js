@@ -5,13 +5,20 @@ import {
 	Routes
 } from 'react-router-dom'
 
+import PageWrapper from '../Pages/Wrapper/PageWrapper'
+import Home from '../Pages/Home/Home'
+
+import './App.scss'
+
 function App() {
 	return (
-		<div className="App">
+		<div className="app">
 			<BrowserRouter>
 				<Routes>
 					<Route path="/" element={
-						<div>Home</div>
+						<PageWrapper component={
+							<Home />
+						}/>
 					}/>
 					<Route path="*" element={
 						<Navigate to="/"/>

@@ -1,0 +1,31 @@
+.Layout{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 15px 0 0;
+
+    .Container{
+        background: #999;
+        display: flex;
+        min-height: 100vh;
+
+        .container__menu{
+            width: 275px;
+            background: #777;
+        }
+    
+        .Content{
+            display: flex;
+            width: 990px;
+        
+            .Content__page{
+                width: 598px;
+            }
+        }
+
+        .container__trends{
+            width: 392px;
+            background: #555;
+        }
+    }
+}
