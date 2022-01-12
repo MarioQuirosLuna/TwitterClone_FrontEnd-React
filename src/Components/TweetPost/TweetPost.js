@@ -20,7 +20,6 @@ const TweetPost = ({
 		media_posted
 	} 
 }) => {
-	console.log(name)
 	return (
 		<div className="tweet__container">
 			<div className="tweet__container-photo">
