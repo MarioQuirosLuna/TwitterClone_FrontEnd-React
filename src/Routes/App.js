@@ -7,6 +7,7 @@ import {
 
 import PageWrapper from '../Pages/Wrapper/PageWrapper'
 import Home from '../Pages/Home/Home'
+import Notifications from '../Pages/Notifications/Notifications'
 
 import './App.scss'
 
@@ -18,6 +19,11 @@ function App() {
 					<Route path="/" element={
 						<PageWrapper component={
 							<Home />
+						}/>
+					}/>
+					<Route path="/notifications" element={
+						<PageWrapper component={
+							<Notifications/>
 						}/>
 					}/>
 					<Route path="*" element={
