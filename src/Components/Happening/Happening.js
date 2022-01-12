@@ -1,6 +1,17 @@
 import BtnTwitter from '../../shared/Components/BtnTwitter/BtnTwitter'
+import PhotoUser from '../../shared/Components/PhotoUser/PhotoUser'
 
 import './Happening.scss'
+
+import StarRateOutlinedIcon from '@mui/icons-material/StarRateOutlined'
+import ImageOutlinedIcon from '@mui/icons-material/ImageOutlined'
+import GifBoxOutlinedIcon from '@mui/icons-material/GifBoxOutlined'
+import PollOutlinedIcon from '@mui/icons-material/PollOutlined'
+import SentimentSatisfiedAltOutlinedIcon from '@mui/icons-material/SentimentSatisfiedAltOutlined'
+import DateRangeOutlinedIcon from '@mui/icons-material/DateRangeOutlined'
+import AddLocationAltOutlinedIcon from '@mui/icons-material/AddLocationAltOutlined'
+
+
 
 const Happening = () => {
 	return (
@@ -10,13 +21,13 @@ const Happening = () => {
 					<h2>Home</h2>
 				</div>
 				<div>
-					Icon
+					<StarRateOutlinedIcon />
 				</div>             
 			</section>
 			<section className="main">
 				<div className="main__content">
 					<div className="main__content-photo">
-                        Photo
+						<PhotoUser url={undefined}/>
 					</div>
 					<div className="main__content-form">
 						<div className="form__input">
@@ -27,7 +38,24 @@ const Happening = () => {
 						</div>
 						<div className="form__options">
 							<div className="form__options-icons">
-                                icons
+								<div>
+									<ImageOutlinedIcon />
+								</div>
+								<div>
+									<GifBoxOutlinedIcon />
+								</div>
+								<div>
+									<PollOutlinedIcon />
+								</div>
+								<div>
+									<SentimentSatisfiedAltOutlinedIcon />
+								</div>
+								<div>
+									<DateRangeOutlinedIcon />
+								</div>
+								<div>
+									<AddLocationAltOutlinedIcon />
+								</div>
 							</div>
 							<div className="form__options-btn">
 								<BtnTwitter label="Tweet"/>

@@ -4,7 +4,9 @@
     width: 100%;
 
     display: flex;
-    border: 1px solid $border_color_light;
+    border-left: 1px solid $border_color_light;
+    border-right: 1px solid $border_color_light;
+    border-bottom: 1px solid $border_color_light;
     padding: 10px 0;
     cursor: pointer;
 
@@ -46,7 +48,7 @@
             .content__nav-settings{
                 display: flex;
                 align-items: stretch;
-                margin: 0 20px 0 20px;
+                margin: 0 10px 0 10px;
             }
         }
 
@@ -64,6 +66,16 @@
             display: flex;
             padding: 10px 0 0 0;
             justify-content: space-between;
+            color: $color_text_gray;
+
+            div{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                span{
+                    margin: 0 0 0 10px;
+                }
+            }
         }
     }
 }

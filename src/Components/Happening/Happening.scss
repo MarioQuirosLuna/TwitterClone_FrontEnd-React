@@ -61,7 +61,16 @@
                     justify-content: space-between;
                     align-items: center;
 
-                    .form__options-icons{}
+                    .form__options-icons{
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        width: 50%;
+
+                        div{
+                            color: $blue_Twitter;
+                        }
+                    }
                     .form__options-btn{}
                 }
             }

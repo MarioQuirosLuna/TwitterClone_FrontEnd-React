@@ -1,7 +1,13 @@
 import ImagePosted from '../../shared/Components/ImagePosted/ImagePosted'
 import PhotoUser from '../../shared/Components/PhotoUser/PhotoUser'
+import SettingsMenu from '../../shared/Components/SettingsMenu/SettingsMenu'
 
 import './TweetPost.scss'
+
+import ChatBubbleOutlineOutlinedIcon from '@mui/icons-material/ChatBubbleOutlineOutlined'
+import AutorenewOutlinedIcon from '@mui/icons-material/AutorenewOutlined'
+import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined'
+import IosShareOutlinedIcon from '@mui/icons-material/IosShareOutlined'
 
 const TweetPost = ({ 
 	post: {
@@ -28,7 +34,7 @@ const TweetPost = ({
 						<span className="nav__data-time">· {time}</span>
 					</div>
 					<div className="content__nav-settings">
-                        ···
+						<SettingsMenu />
 					</div>
 				</div>
 				<div className="content__text">
@@ -39,16 +45,19 @@ const TweetPost = ({
 				</div>
 				<div className="content__options">
 					<div>
-                        comment
+						<ChatBubbleOutlineOutlinedIcon />
+						<span>1</span>
 					</div>
 					<div>
-                        retweet
+						<AutorenewOutlinedIcon />
+						<span>2</span>
 					</div>
 					<div>
-                        like
+						<FavoriteBorderOutlinedIcon />
+						<span>3</span>
 					</div>
 					<div>
-                        shared
+						<IosShareOutlinedIcon />
 					</div>
 				</div>
 			</div>
