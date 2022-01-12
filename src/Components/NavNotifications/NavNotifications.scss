@@ -1,8 +1,10 @@
 @import '../../shared/Styles/colors.scss';
 
 .container{
+    height: 106px;
     width: 100%;
     border: 1px solid $border_color_light;
+    align-items: center;
 
     .header{
         height: 53px;
@@ -12,16 +14,16 @@
         margin: 0 15px;
     }
 
-    .nav
-
     .main{
-        width: 100%;
-        height: 160px;
+        width: 95%;
+        height: 53px;
         margin: 0 15px;
 
         .main__content{
             display: flex;
-            height: 145px;
+            height: 53px;
+            justify-content: space-around;
+            align-items: center;
         }
     }
 }

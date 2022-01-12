@@ -15,12 +15,8 @@ const NavNotifications = () => {
 			</section>
 			<section className="main">
 				<div className="main__content">
-					<div className="form__options-btn">
-						<NavNotificationsItem label="All"/>
-					</div>
-					<div className="form__options-btn">
-						<NavNotificationsItem label="Mentions"/>
-					</div>
+					<NavNotificationsItem label="All"/>
+					<NavNotificationsItem label="Mentions"/>
 				</div>
 			</section>
 		</div>
