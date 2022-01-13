@@ -6,7 +6,6 @@
     align-items: center;
 
     .Container{
-        background: rgb(0, 0, 0);
         display: flex;
         justify-content: center;
         min-height: 100vh;
@@ -37,6 +36,15 @@
             @media(max-width: $TabletS){
                 width: 100%;
             }
+
+            .Content__page{
+                width: 600px;
+                
+                @media(max-width: $TabletS){
+                    width: 100%;
+                }
+            }
+
             .container__trends{
                 width: 380px;
                 border: 1px solid #0f0;
