@@ -1,36 +1,73 @@
-@import '../../shared/Styles/colors.scss';
+@import '../../shared/Styles/colors';
+@import '../../shared/Styles/breakpoints';
 
-.container{
+.container__happening{
     width: 100%;
     border: 1px solid $border_color_light;
 
-    .header{
+    .header__happening{
         height: 53px;
+        width: 598px;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin: 0 15px;
+        padding: 0 15px;
+        top: 0;
+        background-color: $bg_Twitter_transparent;
+        position: fixed;
+
+        @media(min-width: $LaptopS) and (max-width: $LaptopM) {
+            width: 579px;
+        }
+        @media(max-width: $TabletS){
+            width: 100%;
+        }
+
+        .headerHappening__Photo{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+
+            .headerHappening__Photo-user{
+                @media(min-width: ($MobileXL + 1)){
+                    display: none;
+                }
+            }
+            div{
+                h2{
+                    @media(max-width: $MobileXL){
+                        padding: 0 0 0 25px;
+                    }
+                                     
+                }
+            }
+        }
     }
 
-    .main{
+    .main__happening{
         width: 100%;
         height: 160px;
-        margin: 0 15px;
+        margin: 53px 0 0 0;
+        padding: 0 15px 0 15px;
 
-        .main__content{
+        @media(max-width: $MobileXL){
+            display: none;
+        }
+
+        .mainHappening__Content{
             display: flex;
             height: 145px;
 
-            .main__content-photo{
+            .mainHappening__Content-photo{
                 width: 48px;
                 height: 100%;
             }
-            .main__content-form{
-                width: 506px;
+            .mainHappening__Content-form{
+                width: 100%;
                 height: 100%;
                 display: grid;
 
-                .form__input{
+                .formHappening__input{
                     border-bottom: 1px solid $border_color_light;
 
                     input[type="text"]{
@@ -39,8 +76,9 @@
                         padding: 10px 2px 10px 2px;
                         background-color: transparent;
                         border: transparent;
+                        color: inherit;
                     }
-                    .form__input-span{
+                    .formHappening__input-span{
                         height: 37px;
                         span{
                             width: 170px;
@@ -56,13 +94,21 @@
                     }
                 }
 
-                .form__options{
+                .formHappening__options{
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
 
-                    .form__options-icons{}
-                    .form__options-btn{}
+                    .formHappening__options-icons{
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        width: 50%;
+
+                        div{
+                            color: $blue_Twitter;
+                        }
+                    }
                 }
             }
         }

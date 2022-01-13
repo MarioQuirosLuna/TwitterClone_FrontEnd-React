@@ -1,0 +1,41 @@
+@import '../../shared/Styles/colors.scss';
+@import '../../shared/Styles/font.scss';
+
+.container{
+    width: 100%;
+    height: 121px;
+    border: 1px solid $border_color_light;
+
+    .header{
+        height: 53px;
+        color: $color_font_light;
+        display: flex;
+        font-family: $Twitter_Font;
+        font-size: 14px;
+        justify-content: space-between;
+        line-height: 24px;
+        align-items: center;
+        margin: 0 15px;
+    }
+    .search{
+        color: $color_text_gray;
+        margin-top: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+        height: 43px;
+        background-color: $background_Twitter;
+        align-items: center;
+        padding: 3px 10px;
+        border: 1px solid $border_color_light;
+        border-radius: 40px;
+        input[type="text"]{
+            height: 35px;
+            width:100%;
+            border: transparent;
+            background-color: transparent;
+            text-decoration: none solid $color_text_gray;
+            color: $color_font_light;
+            text-align: center;
+        }
+    }
+}
