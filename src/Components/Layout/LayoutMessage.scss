@@ -1,0 +1,43 @@
+@import '../../shared/Styles/breakpoints';
+
+.LayoutMessage__container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .containerMessage__content{
+        background: rgb(0, 0, 0);
+        display: flex;
+        justify-content: center;
+        min-height: 100vh;
+        max-width: 100vw;
+
+        .container__menu{
+            width: 250px;
+            border: 1px solid #0f0;
+
+            @media(max-width: $LaptopL){
+                width: 80px;
+            }
+            @media(max-width: $TabletS){
+                display: none;
+            }
+        }
+    
+        .content__main{
+            display: flex;
+            width: 990px;
+
+            @media(max-width: $LaptopM){
+                width: 920px;
+            }
+            @media(max-width: $LaptopS){
+                width: 600px;
+            }
+            @media(max-width: $TabletS){
+                width: 100%;
+            }
+        }
+
+    }
+}
