@@ -46,9 +46,11 @@ const Home = () => {
 	return (
 		<div className="home__container">
 			<Happening />
-			{posts?.map((post, id) => {
-				return <TweetPost key={id} post={post}/>
-			})}
+			<div className="home__tweetsList">
+				{posts?.map((post, id) => {
+					return <TweetPost key={id} post={post}/>
+				})}
+			</div>
 		</div>
 	)
 }

@@ -1,4 +1,5 @@
 @import '../shared/Styles/colors.scss';
+@import '../shared/Styles/breakpoints';
 
 *{
     margin: 0;
@@ -12,6 +13,10 @@
 
 h2{
     font-size: 20px;
+
+    @media(max-width: $MobileXL){
+        font-size: 17px;
+    }
 }
 
 .app{

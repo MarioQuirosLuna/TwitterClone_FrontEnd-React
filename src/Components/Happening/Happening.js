@@ -17,8 +17,13 @@ const Happening = () => {
 	return (
 		<div className="container">
 			<section className="header">
-				<div>
-					<h2>Home</h2>
+				<div className="header__photo">
+					<div className="header__photo-user">
+						<PhotoUser url={undefined} size='32'/>
+					</div>
+					<div>
+						<h2>Home</h2>
+					</div>
 				</div>
 				<div>
 					<StarRateOutlinedIcon />
