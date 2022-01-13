@@ -1,11 +1,27 @@
+@import '../shared/Styles/colors.scss';
+@import '../shared/Styles/breakpoints';
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    text-decoration: none solid rgb(0, 0, 0);
+    list-style: none;
+}
+
+h2{
+    font-size: 20px;
+
+    @media(max-width: $MobileXL){
+        font-size: 17px;
+    }
 }
 
 .app{
-    background: #000;
     width: 100%;
     min-height: 100vh;
+    background: $background_Twitter;
+    color: $color_font_light;
 }

@@ -18,6 +18,13 @@ function App() {
 				<Routes>
 					<Route path="/" element={
 						<PageWrapper component={
+							<div>
+								default page
+							</div>
+						}/>
+					}/>
+					<Route path="/home" element={
+						<PageWrapper component={
 							<Home />
 						}/>
 					}/>
