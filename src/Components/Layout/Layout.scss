@@ -1,31 +1,61 @@
+@import '../../shared/Styles/breakpoints';
+
 .Layout{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 15px 0 0;
 
     .Container{
-        background: #999;
         display: flex;
+        justify-content: center;
         min-height: 100vh;
+        max-width: 100vw;
 
         .container__menu{
-            width: 275px;
-            background: #777;
+            width: 250px;
+            border: 1px solid #0f0;
+
+            @media(max-width: $LaptopL){
+                width: 80px;
+            }
+            @media(max-width: $TabletS){
+                display: none;
+            }
         }
     
         .Content{
             display: flex;
             width: 990px;
+
+            @media(max-width: $LaptopM){
+                width: 920px;
+            }
+            @media(max-width: $LaptopS){
+                width: 600px;
+            }
+            @media(max-width: $TabletS){
+                width: 100%;
+            }
         
             .Content__page{
-                width: 598px;
+                width: 600px;
+                
+                @media(max-width: $TabletS){
+                    width: 100%;
+                }
+            }
+            .container__trends{
+                width: 380px;
+                border: 1px solid #0f0;
+
+                @media(max-width: $LaptopM){
+                    width: 350px;
+                }
+                @media(max-width: $LaptopS){
+                    display: none;
+                }
             }
         }
 
-        .container__trends{
-            width: 392px;
-            background: #555;
-        }
     }
 }

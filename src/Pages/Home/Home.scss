@@ -1,0 +1,9 @@
+@import '../../shared/Styles/breakpoints';
+
+.home__container{
+    .home__tweetsList{
+        @media(max-width: $MobileXL){
+            padding: 53px 0 0 0;
+        }
+    }
+}
