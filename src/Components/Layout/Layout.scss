@@ -5,7 +5,9 @@
     justify-content: center;
     align-items: center;
 
+
     .container__content{
+
         display: flex;
         justify-content: center;
         min-height: 100vh;
@@ -35,14 +37,6 @@
             }
             @media(max-width: $TabletS){
                 width: 100%;
-            }
-        
-            .Content__page{
-                width: 600px;
-                
-                @media(max-width: $TabletS){
-                    width: 100%;
-                }
             }
             .container__trends{
                 width: 380px;
