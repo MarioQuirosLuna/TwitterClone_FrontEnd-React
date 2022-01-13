@@ -1,11 +1,12 @@
 @import '../../shared/Styles/breakpoints';
 
-.Layout{
+.Layout__container{
     display: flex;
     justify-content: center;
     align-items: center;
 
-    .Container{
+    .container__content{
+
         display: flex;
         justify-content: center;
         min-height: 100vh;
@@ -23,7 +24,7 @@
             }
         }
     
-        .Content{
+        .content__main{
             display: flex;
             width: 990px;
 

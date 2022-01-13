@@ -15,10 +15,10 @@ import AddLocationAltOutlinedIcon from '@mui/icons-material/AddLocationAltOutlin
 
 const Happening = () => {
 	return (
-		<div className="container">
-			<section className="header">
-				<div className="header__photo">
-					<div className="header__photo-user">
+		<div className="container__happening">
+			<section className="header__happening">
+				<div className="headerHappening__Photo">
+					<div className="headerHappening__Photo-user">
 						<PhotoUser url={undefined} size='32'/>
 					</div>
 					<div>
@@ -29,20 +29,20 @@ const Happening = () => {
 					<StarRateOutlinedIcon />
 				</div>             
 			</section>
-			<section className="main">
-				<div className="main__content">
-					<div className="main__content-photo">
+			<section className="main__happening">
+				<div className="mainHappening__Content">
+					<div className="mainHappening__Content-photo">
 						<PhotoUser url={undefined}/>
 					</div>
-					<div className="main__content-form">
-						<div className="form__input">
+					<div className="mainHappening__Content-form">
+						<div className="formHappening__input">
 							<input type="text" placeholder="What's happening?"/>
-							<div className="form__input-span">
+							<div className="formHappening__input-span">
 								<span>Everyone can reply</span>
 							</div>
 						</div>
-						<div className="form__options">
-							<div className="form__options-icons">
+						<div className="formHappening__options">
+							<div className="formHappening__options-icons">
 								<div>
 									<ImageOutlinedIcon />
 								</div>
@@ -62,7 +62,7 @@ const Happening = () => {
 									<AddLocationAltOutlinedIcon />
 								</div>
 							</div>
-							<div className="form__options-btn">
+							<div>
 								<BtnTwitter label="Tweet"/>
 							</div>
 						</div>
