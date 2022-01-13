@@ -5,12 +5,12 @@ import './Layout.scss'
 
 const Layout = ({ children }) => {
 	return (
-		<div className="Layout">
-			<div className="Container">
+		<div className="Layout__container">
+			<div className="container__content">
 				<div className="container__menu">
 					<Menu />
 				</div>
-				<div className="Content">
+				<div className="content__main">
 					<section className="Content__page">
 						{children}
 					</section>
