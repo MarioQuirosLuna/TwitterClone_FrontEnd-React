@@ -4,8 +4,8 @@ import './NavNotifications.scss'
 
 const NavNotifications = () => {
 	return (
-		<div className="container">
-			<section className="header">
+		<div className="container__NavNotification">
+			<section className="header__NavNotification">
 				<div>
 					<h2>Notifications</h2>
 				</div>
@@ -13,8 +13,8 @@ const NavNotifications = () => {
 					Icon
 				</div>             
 			</section>
-			<section className="main">
-				<div className="main__content">
+			<section className="main__NavNotification">
+				<div className="mainContent__NavNotification">
 					<NavNotificationsItem label="All"/>
 					<NavNotificationsItem label="Mentions"/>
 				</div>
