@@ -31,7 +31,7 @@ function App() {
 					<Route path="/Message" element={
 						<PageWrapper component={
 							<Message />
-						}/>
+						} isMessagePage/>
 					}/>
 					<Route path="*" element={
 						<Navigate to="/"/>

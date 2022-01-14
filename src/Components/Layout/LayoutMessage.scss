@@ -1,12 +1,12 @@
 @import '../../shared/Styles/breakpoints';
 
-.Layout__container{
+.LayoutMessage__container{
     display: flex;
     justify-content: center;
     align-items: center;
 
-    .container__content{
-
+    .containerMessage__content{
+        background: rgb(0, 0, 0);
         display: flex;
         justify-content: center;
         min-height: 100vh;
@@ -36,26 +36,6 @@
             }
             @media(max-width: $TabletS){
                 width: 100%;
-            }
-
-            .Content__page{
-                width: 600px;
-                
-                @media(max-width: $TabletS){
-                    width: 100%;
-                }
-            }
-
-            .container__trends{
-                width: 380px;
-                border: 1px solid #0f0;
-
-                @media(max-width: $LaptopM){
-                    width: 350px;
-                }
-                @media(max-width: $LaptopS){
-                    display: none;
-                }
             }
         }
 
