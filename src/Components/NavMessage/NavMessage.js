@@ -1,20 +1,29 @@
 import './NavMessage.scss'
 
+import SettingsIcon from '@mui/icons-material/Settings'
+import MailOutlineIcon from '@mui/icons-material/MailOutline'
+import SearchIcon from '@mui/icons-material/Search'
+
 const NavMessage=()=>{
 	return(
-		<div className="container">
-			<section className="header">
+		<div className="containerMessage">
+			<section className="containerMessage_header">
 				<div>
 					<h2>Messages</h2>
 				</div>
-				<div>
-					<label>icon</label>
-					<label> icon</label>
+				<div className="containerMessage_icons">
+					<div>
+						<SettingsIcon/>
+					</div>
+					<div>
+						<MailOutlineIcon/>
+					</div>
 				</div>
 			</section>
-			<section className="search">
+			<section className="containerMessage_search">
 				<div>
 					<input type="text" Placeholder="Search for people and groups"></input>
+					<label><SearchIcon/></label>
 				</div>
 			</section>
 		</div>
