@@ -1,10 +1,10 @@
+@import '../../shared/Styles/breakpoints';
 @import '../../shared/Styles/colors.scss';
 
 .Message__container{
-    width: 390px;
+    width: 100%;
     display: flex;
     border-top: 1px solid $border_color_light;
-    border-right: 1px solid $border_color_light;
     cursor: pointer;
 
     .Message__container-photo{
@@ -40,6 +40,9 @@
                 padding-left: 50px;
                 align-items: right;
                 color: $color_text_gray;
+                @media(max-width: $LaptopS){
+                    padding-left: 270px;
+                }
             }
         }
         .content__text{

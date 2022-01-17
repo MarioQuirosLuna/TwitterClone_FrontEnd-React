@@ -1,0 +1,15 @@
+@import '../../shared/Styles/breakpoints';
+@import '../../shared/Styles/colors.scss';
+
+.insideMessage__container{
+    width: 600px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    border-right: 1px solid $border_color_light;
+    border-left: 1px solid $border_color_light;
+    div{
+        width: 90%;
+        max-width: 350px;
+    }
+}

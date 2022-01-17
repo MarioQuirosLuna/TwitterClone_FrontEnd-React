@@ -1,9 +1,12 @@
+@import '../../shared/Styles/breakpoints';
 @import '../../shared/Styles/colors.scss';
 
 .containerMessage{
     width: 390px;
     height: 121px;
-    border: 1px solid $border_color_light;
+    @media(max-width: $LaptopS){
+        width: 600px;
+    }
 
     .containerMessage_header{
         height: 53px;

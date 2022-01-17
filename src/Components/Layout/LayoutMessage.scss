@@ -37,9 +37,16 @@
                 width: 600px;
             }
             @media(max-width: $TabletS){
-                width: 100%;
+                width: 680px;
+            }
+
+            .content__insideMessage{
+                width: 600px;
+    
+                @media(max-width: $LaptopS){
+                    display: none;
+                }
             }
         }
-
     }
 }
