@@ -1,5 +1,6 @@
 import BtnTwitter from '../../shared/Components/BtnTwitter/BtnTwitter'
 import PhotoUser from '../../shared/Components/PhotoUser/PhotoUser'
+import TextBlue from '../../shared/Components/TextBlue/TextBlue'
 
 import './NavHome.scss'
 
@@ -10,8 +11,6 @@ import PollOutlinedIcon from '@mui/icons-material/PollOutlined'
 import SentimentSatisfiedAltOutlinedIcon from '@mui/icons-material/SentimentSatisfiedAltOutlined'
 import DateRangeOutlinedIcon from '@mui/icons-material/DateRangeOutlined'
 import AddLocationAltOutlinedIcon from '@mui/icons-material/AddLocationAltOutlined'
-
-
 
 const Happening = () => {
 	return (
@@ -38,7 +37,7 @@ const Happening = () => {
 						<div className="formNavHome__input">
 							<input type="text" placeholder="What's happening?" />
 							<div className="formNavHome__input-span">
-								<span>Everyone can reply</span>
+								<TextBlue label="Everyone can reply"/>
 							</div>
 						</div>
 						<div className="formNavHome__options">
