@@ -1,4 +1,5 @@
 @import '../../shared/Styles/colors';
+@import '../../shared/Styles/breakpoints';
 
 .container__navProfile{
     border-right: 1px solid $border_color_light;
@@ -24,6 +25,12 @@
                 object-position: center;
                 cursor: pointer;
             }
+            @media(max-width: $MobileXL){
+                height: 150px;
+            }
+            @media(max-width: $MobileL){
+                height: 100px;
+            }
         }
         .main__navProfile-imgUser{
             height: 0px;
@@ -36,6 +43,23 @@
                 border-radius: 50%;
                 border: 5px solid $background_Twitter;
                 background-color: $background_Twitter;
+
+                img{
+                    @media(max-width: $MobileXL){
+                        width: 100px;
+                    }
+                    @media(max-width: $MobileL){
+                        width: 68px;
+                    }
+                }
+                @media(max-width: $MobileXL){
+                    width: 110px;
+                    top: -50px;
+                }
+                @media(max-width: $MobileL){
+                    width: 78px;
+                    top: -30px;
+                }
             }
         }
         .btn__editProfile-container{
