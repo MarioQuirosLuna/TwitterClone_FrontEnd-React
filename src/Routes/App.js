@@ -8,6 +8,7 @@ import {
 import PageWrapper from '../Pages/Wrapper/PageWrapper'
 import Home from '../Pages/Home/Home'
 import Message from '../Pages/Message/Message'
+import Profile from '../Pages/Profile/Profile'
 
 import './App.scss'
 
@@ -32,6 +33,11 @@ function App() {
 						<PageWrapper component={
 							<Message />
 						} isMessagePage/>
+					}/>
+					<Route path="/profile" element={
+						<PageWrapper component={
+							<Profile />
+						}/>
 					}/>
 					<Route path="*" element={
 						<Navigate to="/"/>
