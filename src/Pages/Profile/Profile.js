@@ -1,4 +1,5 @@
 import NavProfile from '../../Components/NavProfile/NavProfile'
+import MenuTweetsProfile from '../../Components/MenuTweetsProfile/MenuTweetsProfile'
 import TweetPost from '../../Components/TweetPost/TweetPost'
 
 const user = {
@@ -36,11 +37,12 @@ const user = {
 const Profile = () => {
 	return (
 		<div className="profile__container">
-			<NavProfile user={user}/>
+			<NavProfile user={user} />
+			<MenuTweetsProfile />
 			<div className="home__tweetsList">
 				{user?.posts?.map((post, id) => {
 					//TODO: change post user profile
-					return <TweetPost key={id} post={post}/>
+					return <TweetPost key={id} post={post} />
 				})}
 			</div>
 		</div>

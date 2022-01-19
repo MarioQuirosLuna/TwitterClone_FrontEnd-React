@@ -3,6 +3,8 @@
 
 .container__navProfile{
     border-right: 1px solid $border_color_light;
+    border-left: 1px solid $border_color_light;
+    
     .header__navProfile{
         display: flex;
         align-items: center;
