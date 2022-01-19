@@ -26,7 +26,7 @@ const user = {
 			'id': '2',
 			'user_photo': undefined,
 			'name': 'name user',
-			'username': '@username',
+			'username': '@username2',
 			'time': '10m',
 			'text_posted': 'Hello React',
 			'media_posted': undefined
@@ -41,8 +41,7 @@ const Profile = () => {
 			<MenuTweetsProfile />
 			<div className="home__tweetsList">
 				{user?.posts?.map((post, id) => {
-					//TODO: change post user profile
-					return <TweetPost key={id} post={post} />
+					return <TweetPost key={id} post={post} owner={user.username === post.username} />
 				})}
 			</div>
 		</div>
