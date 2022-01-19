@@ -4,6 +4,7 @@ import ArrowBackOutlinedIcon from '@mui/icons-material/ArrowBackOutlined'
 import EventNoteOutlinedIcon from '@mui/icons-material/EventNoteOutlined'
 
 import './NavProfile.scss'
+import TextBlue from '../../shared/Components/TextBlue/TextBlue'
 
 const NavProfile = ({
 	user: {
@@ -38,28 +39,36 @@ const NavProfile = ({
 						<PhotoUser url={undefined} size='133' />
 					</div>
 				</div>
-				<div className='btn_editProfile'>
-					Edit Profile
+				<div className='btn__editProfile-container'>
+					<div className='btn_editProfile-content'>
+						<span>Edit Profile</span>
+					</div>
 				</div>
 				<div className="main__dataProfile">
 					<div className='main__dataProfile-User'>
 						<h2>{name}</h2>
 						<span>{username}</span>
 					</div>
-					<div>
-						{description}
+					<div className='main__dataProfile-description'>
+						<div>
+							{description}
+						</div>
+						<div className='translate_bioProfile'>
+							<TextBlue label="Translate bio" />
+						</div>
 					</div>
-					<span>Translate bio</span>
-					<div>
+					<div className='main__joinedDate'>
 						<EventNoteOutlinedIcon />
 						<span>Joined {joined_date}</span>
 					</div>
-					<div>
+					<div className='main__followBtns'>
 						<div>
-							<span>{following}</span><span>Following</span>
+							<span className='followBtn__number'>{following}</span>
+							<span className='followBtn__text'>Following</span>
 						</div>
 						<div>
-							<span>{followers}</span><span>Followers</span>
+							<span className='followBtn__number'>{followers}</span>
+							<span className='followBtn__text'>Followers</span>
 						</div>
 					</div>
 				</div>

@@ -1,0 +1,97 @@
+@import '../../shared/Styles/colors';
+
+.container__navProfile{
+    border-right: 1px solid $border_color_light;
+    .header__navProfile{
+        display: flex;
+        align-items: center;
+        div{
+            padding: 8px 16px;
+            span{
+                color: $color_text_gray;
+                font-size: 13px;
+            }
+        }
+    }
+    .main__navProfile{
+        .main__navProfile-bgImage{
+            width: 100%;
+            height: 200px;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+                cursor: pointer;
+            }
+        }
+        .main__navProfile-imgUser{
+            height: 0px;
+            
+            .photo__profile{
+                position: relative;
+                top: -60px;
+                left: 20px;
+                width: 143px;
+                border-radius: 50%;
+                border: 5px solid $background_Twitter;
+                background-color: $background_Twitter;
+            }
+        }
+        .btn__editProfile-container{
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            margin: 15px;
+            .btn_editProfile-content{
+                border: 1px solid $border_color_light;
+                padding: 10px 15px;
+                border-radius: 20px;
+                cursor: pointer;
+                span{
+                    font-weight: 700;
+                }
+            }
+        }
+        .main__dataProfile{
+            padding: 15px;
+
+            .main__dataProfile-User{
+                padding: 0 0 10px 0;
+                span{
+                    color: $color_text_gray;
+                }
+            }
+            .main__dataProfile-description{
+                padding: 0 0 15px 0;
+                line-height: 23px;  
+                .translate_bioProfile{
+                    font-weight: 400;
+                }
+            }
+            .main__joinedDate{
+                display: flex;
+                align-items: center;
+                padding: 0 0 15px 0;
+                color: $color_text_gray;
+                span{
+                    padding: 0 0 0 5px;
+                }
+            }
+            .main__followBtns{
+                display: flex;
+                div{
+                    padding: 0 15px 0 0;
+                    .followBtn__number{
+                        padding: 0 5px 0 0;
+                        font-weight: 700;
+                        font-size: 16px;
+                    }
+                    .followBtn__text{
+                        color: $color_text_gray;
+                    }
+                }
+            }
+        }
+    }
+}
