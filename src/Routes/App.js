@@ -1,4 +1,4 @@
-import { 
+import {
 	BrowserRouter,
 	Navigate,
 	Route,
@@ -23,8 +23,8 @@ function App() {
 							<div>
 								default page
 							</div>
-						} isPage/>
-					}/>
+						} isPage />
+					} />
 					<Route path="/home" element={
 						<PageWrapper component={
 							<Home />
@@ -33,21 +33,21 @@ function App() {
 					<Route path="/notifications" element={
 						<PageWrapper component={
 							<Notifications/>
-						}/>
+						} isPage/>
 					}/>
 					<Route path="/Message" element={
 						<PageWrapper component={
 							<Message />
-						} isMessagePage/>
-					}/>
+						} isMessagePage />
+					} />
 					<Route path="/profile" element={
 						<PageWrapper component={
 							<Profile />
-						}/>
-					}/>
+						} isPage />
+					} />
 					<Route path="*" element={
-						<Navigate to="/"/>
-					}/>
+						<Navigate to="/" />
+					} />
 				</Routes>
 			</BrowserRouter>
 		</div>
