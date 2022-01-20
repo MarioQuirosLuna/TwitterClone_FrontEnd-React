@@ -1,6 +1,7 @@
-import NavNotificationsItem from '../../Components/NavNotificationsItem/NavNotificationsItem'
+import NavNotificationsItem from '../NavNotificationsItem/NavNotificationsItem'
 
 import SettingsMenuGear from '../../shared/Components/SettingsMenuGear/SettingsMenuGear'
+import { NavNotificationsMenuListOptions } from './NavNotificationsListOption'
 
 import './NavNotifications.scss'
 
@@ -17,8 +18,11 @@ const NavNotifications = () => {
 			</section>
 			<section className="main__NavNotification">
 				<div className="mainContent__NavNotification">
-					<NavNotificationsItem label="All"/>
-					<NavNotificationsItem label="Mentions"/>
+					{NavNotificationsMenuListOptions?.map((option, index) => {
+						return (
+							<NavNotificationsItem key={index} option={option} />
+						)
+					})}
 				</div>
 			</section>
 		</div>

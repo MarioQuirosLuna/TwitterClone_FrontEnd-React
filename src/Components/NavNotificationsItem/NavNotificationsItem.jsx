@@ -1,6 +1,10 @@
 import './NavNotificationsItem.scss'
 
-const NavNotificationsItem = ({ label='ItemLabel' }) => {
+const NavNotificationsItem = ({
+	option: {
+		label
+	}
+}) => {
 	return (
 		<div className="container__navItem">
 			<div>
