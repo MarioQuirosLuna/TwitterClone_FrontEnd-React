@@ -1,4 +1,4 @@
-import Happening from '../../Components/Happening/Happening'
+import Happening from '../../Components/NavHome/NavHome'
 import TweetPost from '../../Components/TweetPost/TweetPost'
 
 import './Home.scss'
