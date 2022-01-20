@@ -21,12 +21,12 @@ function App() {
 							<div>
 								default page
 							</div>
-						}/>
+						} isPage/>
 					}/>
 					<Route path="/home" element={
 						<PageWrapper component={
 							<Home />
-						}/>
+						} isPage/>
 					}/>
 					<Route path="/Message" element={
 						<PageWrapper component={

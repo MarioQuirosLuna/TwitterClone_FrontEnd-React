@@ -1,17 +1,20 @@
 import Layout from '../../Components/Layout/Layout'
 import LayoutMessage from '../../Components/Layout/LayoutMessage'
 
-const PageWrapper = ({ component: Component, isMessagePage }) => {
+const PageWrapper = ({ component: Component, isPage, isMessagePage, isLoginPage }) => {
 	return (
-		<>{isMessagePage ? 
-			<LayoutMessage>
-				{Component}
-			</LayoutMessage> 
-			:
-			<Layout>
-				{Component}
-			</Layout>
-		}</>
+		<>
+			{isPage && 
+				<Layout>
+					{Component}
+				</Layout>
+			}
+			{isMessagePage &&
+				<LayoutMessage>
+					{Component}
+				</LayoutMessage> 
+			}
+		</>
 	)
 }
 
