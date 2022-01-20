@@ -1,6 +1,6 @@
 import './NavNotificationsItem.scss'
 
-const NavItem = ({ label='ItemLabel' }) => {
+const NavNotificationsItem = ({ label='ItemLabel' }) => {
 	return (
 		<div className="container__navItem">
 			<div>
@@ -10,4 +10,4 @@ const NavItem = ({ label='ItemLabel' }) => {
 	)
 }
 
-export default NavItem
+export default NavNotificationsItem

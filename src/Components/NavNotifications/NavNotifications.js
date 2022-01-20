@@ -1,5 +1,7 @@
 import NavNotificationsItem from '../../Components/NavNotificationsItem/NavNotificationsItem'
 
+import SettingsMenuGear from '../../shared/Components/SettingsMenuGear/SettingsMenuGear'
+
 import './NavNotifications.scss'
 
 const NavNotifications = () => {
@@ -10,7 +12,7 @@ const NavNotifications = () => {
 					<h2>Notifications</h2>
 				</div>
 				<div>
-					Icon
+					<SettingsMenuGear/>
 				</div>             
 			</section>
 			<section className="main__NavNotification">
