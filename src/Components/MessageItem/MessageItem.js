@@ -19,8 +19,10 @@ const Message = ({
 			<div className="Message__container-content">
 				<div className="content__head">
 					<div className="content__head-data">
-						<span className="head__data-name">{name}</span>
-						<span className="head__data-username">{username}</span>
+						<div>
+							<span className="head__data-name">{name}</span>
+							<span className="head__data-username">{username}</span>
+						</div>
 						<span className="head__data-time">{time}</span>
 					</div>
 				</div>

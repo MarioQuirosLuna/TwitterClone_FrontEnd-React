@@ -7,6 +7,9 @@
     @media(max-width: $LaptopS){
         width: 600px;
     }
+    @media(max-width: $TabletS){
+        width: 100vw;
+    }
 
     .containerMessage_header{
         height: 53px;
@@ -37,20 +40,20 @@
         padding: 3px 10px;
         border: 1px solid $border_color_light;
         border-radius: 40px;
-        input[type="text"]{
-            height: 35px;
-            width: 100%;
-            font-size: 0.9em;
-            border: transparent;
-            background-color: transparent;
-            text-decoration: none solid $color_text_gray;
-            color: $color_font_light;
-            text-align: center;
-        }
-        label{
-            position: absolute;
-            left: 480px;
-            top: 75px;
+        div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            input[type="text"]{
+                height: 35px;
+                width: 100%;
+                font-size: 0.9em;
+                border: transparent;
+                background-color: transparent;
+                text-decoration: none solid $color_text_gray;
+                color: $color_font_light;
+                text-align: center;
+            }
         }
     }
 }

@@ -1,6 +1,6 @@
 import './NavMessage.scss'
 
-import SettingsIcon from '@mui/icons-material/Settings'
+import SettingsIcon from '@mui/icons-material/SettingsOutlined'
 import MailOutlineIcon from '@mui/icons-material/MailOutline'
 import SearchIcon from '@mui/icons-material/Search'
 
@@ -22,8 +22,8 @@ const NavMessage=()=>{
 			</section>
 			<section className="containerMessage_search">
 				<div>
-					<input type="text" Placeholder="Search for people and groups"></input>
 					<label><SearchIcon/></label>
+					<input type="text" placeholder="Search for people and groups"></input>
 				</div>
 			</section>
 		</div>

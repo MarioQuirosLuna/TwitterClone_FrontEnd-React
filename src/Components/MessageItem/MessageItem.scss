@@ -6,6 +6,9 @@
     display: flex;
     border-top: 1px solid $border_color_light;
     cursor: pointer;
+    @media(max-width: $TabletS){
+        width: 100vw;
+    }
 
     .Message__container-photo{
         margin-left: 10px;
@@ -25,6 +28,7 @@
         }
         .content__head-data{
             width: 100%;
+            justify-content: space-between;
             height: 22px;
             display: flex;
 
@@ -37,12 +41,7 @@
                 color: $color_text_gray;
             }
             .head__data-time{
-                padding-left: 50px;
-                align-items: right;
                 color: $color_text_gray;
-                @media(max-width: $LaptopS){
-                    padding-left: 270px;
-                }
             }
         }
         .content__text{
