@@ -8,8 +8,9 @@ import ChatBubbleOutlineOutlinedIcon from '@mui/icons-material/ChatBubbleOutline
 import AutorenewOutlinedIcon from '@mui/icons-material/AutorenewOutlined'
 import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined'
 import IosShareOutlinedIcon from '@mui/icons-material/IosShareOutlined'
+import BarChartOutlinedIcon from '@mui/icons-material/BarChartOutlined'
 
-const TweetPost = ({ 
+const TweetPost = ({
 	post: {
 		id,
 		user_photo,
@@ -18,12 +19,13 @@ const TweetPost = ({
 		time,
 		text_posted,
 		media_posted
-	} 
+	},
+	owner
 }) => {
 	return (
 		<div className="tweet__container">
 			<div className="tweet__container-photo">
-				<PhotoUser url={user_photo}/>
+				<PhotoUser url={user_photo} />
 			</div>
 			<div className="tweet__container-content">
 				<div className="content__nav">
@@ -40,7 +42,7 @@ const TweetPost = ({
 					{text_posted}
 				</div>
 				<div className="content__media">
-					{media_posted && <ImagePosted url={media_posted}/>}
+					{media_posted && <ImagePosted url={media_posted} />}
 				</div>
 				<div className="content__options">
 					<div>
@@ -58,6 +60,11 @@ const TweetPost = ({
 					<div>
 						<IosShareOutlinedIcon />
 					</div>
+					{owner &&
+						<div>
+							<BarChartOutlinedIcon />
+						</div>
+					}
 				</div>
 			</div>
 		</div>

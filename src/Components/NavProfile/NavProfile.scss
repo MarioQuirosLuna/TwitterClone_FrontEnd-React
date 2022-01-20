@@ -1,0 +1,135 @@
+@import '../../shared/Styles/colors';
+@import '../../shared/Styles/breakpoints';
+
+.container__navProfile{
+    border-right: 1px solid $border_color_light;
+    border-left: 1px solid $border_color_light;
+    
+    .header__navProfile{
+        width: 598px;
+        display: flex;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        background-color: $bg_Twitter_transparent;
+        div{
+            padding: 8px 16px;
+            span{
+                color: $color_text_gray;
+                font-size: 13px;
+            }
+        }
+        @media(min-width: $LaptopS) and (max-width: $LaptopM) {
+            width: 579px;
+        }
+        @media(max-width: $TabletS){
+            width: 100%;
+        }
+    }
+    .main__navProfile{
+        margin: 57px 0 0 0;
+        
+        .main__navProfile-bgImage{
+            width: 100%;
+            height: 200px;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+                cursor: pointer;
+            }
+            @media(max-width: $MobileXL){
+                height: 150px;
+            }
+            @media(max-width: $MobileL){
+                height: 100px;
+            }
+        }
+        .main__navProfile-imgUser{
+            height: 0px;
+            
+            .photo__profile{
+                position: relative;
+                top: -60px;
+                left: 20px;
+                width: 143px;
+                border-radius: 50%;
+                border: 5px solid $background_Twitter;
+                background-color: $background_Twitter;
+
+                img{
+                    @media(max-width: $MobileXL){
+                        width: 100px;
+                    }
+                    @media(max-width: $MobileL){
+                        width: 68px;
+                    }
+                }
+                @media(max-width: $MobileXL){
+                    width: 110px;
+                    top: -50px;
+                }
+                @media(max-width: $MobileL){
+                    width: 78px;
+                    top: -30px;
+                }
+            }
+        }
+        .btn__editProfile-container{
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            margin: 15px;
+            .btn_editProfile-content{
+                border: 1px solid $border_color_light;
+                padding: 10px 15px;
+                border-radius: 20px;
+                cursor: pointer;
+                span{
+                    font-weight: 700;
+                }
+            }
+        }
+        .main__dataProfile{
+            padding: 15px;
+
+            .main__dataProfile-User{
+                padding: 0 0 10px 0;
+                span{
+                    color: $color_text_gray;
+                }
+            }
+            .main__dataProfile-description{
+                padding: 0 0 15px 0;
+                line-height: 23px;  
+                .translate_bioProfile{
+                    font-weight: 400;
+                }
+            }
+            .main__joinedDate{
+                display: flex;
+                align-items: center;
+                padding: 0 0 15px 0;
+                color: $color_text_gray;
+                span{
+                    padding: 0 0 0 5px;
+                }
+            }
+            .main__followBtns{
+                display: flex;
+                div{
+                    padding: 0 15px 0 0;
+                    .followBtn__number{
+                        padding: 0 5px 0 0;
+                        font-weight: 700;
+                        font-size: 16px;
+                    }
+                    .followBtn__text{
+                        color: $color_text_gray;
+                    }
+                }
+            }
+        }
+    }
+}

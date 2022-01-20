@@ -9,6 +9,7 @@ import PageWrapper from '../Pages/Wrapper/PageWrapper'
 import Home from '../Pages/Home/Home'
 import Notifications from '../Pages/Notifications/Notifications'
 import Message from '../Pages/Message/Message'
+import Profile from '../Pages/Profile/Profile'
 
 import './App.scss'
 
@@ -22,12 +23,12 @@ function App() {
 							<div>
 								default page
 							</div>
-						}/>
+						} isPage/>
 					}/>
 					<Route path="/home" element={
 						<PageWrapper component={
 							<Home />
-						}/>
+						} isPage/>
 					}/>
 					<Route path="/notifications" element={
 						<PageWrapper component={
@@ -38,6 +39,11 @@ function App() {
 						<PageWrapper component={
 							<Message />
 						} isMessagePage/>
+					}/>
+					<Route path="/profile" element={
+						<PageWrapper component={
+							<Profile />
+						}/>
 					}/>
 					<Route path="*" element={
 						<Navigate to="/"/>
