@@ -1,0 +1,29 @@
+@import '../../shared/Styles/colors.scss';
+
+.container__navItem{
+    min-width:56px;
+    min-height:53px;
+    height: 53px;
+    width: 283px;
+    outline: none;
+    border: 1px solid rgba(0, 0, 0,0);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    div{  
+        height: 53%;
+
+        span{
+            font-size: 15px;
+            max-width: 100%;
+            text-overflow: ellipsis;
+            text-decoration: none solid rgb(217,217,217);
+            white-space: pre-wrap;
+            word-spacing: 0%;
+            font-weight: 700;
+            line-height: 20px;
+        }
+    }
+}

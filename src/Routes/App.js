@@ -7,6 +7,7 @@ import {
 
 import PageWrapper from '../Pages/Wrapper/PageWrapper'
 import Home from '../Pages/Home/Home'
+import Notifications from '../Pages/Notifications/Notifications'
 import Message from '../Pages/Message/Message'
 import Profile from '../Pages/Profile/Profile'
 
@@ -27,8 +28,13 @@ function App() {
 					<Route path="/home" element={
 						<PageWrapper component={
 							<Home />
-						} isPage />
-					} />
+						} isPage/>
+					}/>
+					<Route path="/notifications" element={
+						<PageWrapper component={
+							<Notifications/>
+						} isPage/>
+					}/>
 					<Route path="/Message" element={
 						<PageWrapper component={
 							<Message />

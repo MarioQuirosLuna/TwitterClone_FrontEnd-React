@@ -1,0 +1,27 @@
+@import '../../shared/Styles/colors.scss';
+
+.container__NavNotification{
+    height: 106px;
+    width: 100%;
+    border: 1px solid $border_color_light;
+
+    .header__NavNotification{
+        height: 53px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 15px;
+    }
+
+    .main__NavNotification{
+        width: 100%;
+        height: 53px;
+
+        .mainContent__NavNotification{
+            display: flex;
+            height: 53px;
+            justify-content: space-around;
+            align-items: center;
+        }
+    }
+}
