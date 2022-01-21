@@ -13,11 +13,12 @@
     .notification__container-icon{
         width: 32px;
         margin: 0 0px 0 32px;
+        color: $blue_Twitter;
     }
 
     .notification__container-photo{
         width: 32px;
-        margin: 0 12px 0 12px;
+        margin: 0 12px 0 0px;
     }
 
     .notification__container-content{
@@ -66,7 +67,11 @@
         .content__text{
             width: 100%;
             min-height: auto;
-            margin: 0 10px 0 10px;
+            margin: 0 10px 0 0;
+
+            span{
+                font-weight: 700;
+            }
         }
     }
 }
