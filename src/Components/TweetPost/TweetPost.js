@@ -2,6 +2,8 @@ import ImagePosted from '../../shared/Components/ImagePosted/ImagePosted'
 import PhotoUser from '../../shared/Components/PhotoUser/PhotoUser'
 import SettingsMenu from '../../shared/Components/SettingsMenu/SettingsMenu'
 
+import useGetPostTime from '../../Hooks/useGetPostTime'
+
 import './TweetPost.scss'
 
 import ChatBubbleOutlineOutlinedIcon from '@mui/icons-material/ChatBubbleOutlineOutlined'
@@ -14,9 +16,9 @@ const TweetPost = ({
 	post: {
 		id,
 		user_photo,
-		name,
+		nameUser,
 		username,
-		time,
+		postTime,
 		text_posted,
 		media_posted
 	},
@@ -30,9 +32,9 @@ const TweetPost = ({
 			<div className="tweet__container-content">
 				<div className="content__nav">
 					<div className="content__nav-data">
-						<span className="nav__data-name">{name}</span>
+						<span className="nav__data-name">{nameUser}</span>
 						<span className="nav__data-username">{username}</span>
-						<span className="nav__data-time">· {time}</span>
+						<span className="nav__data-time">· {useGetPostTime(postTime)}</span>
 					</div>
 					<div className="content__nav-settings">
 						<SettingsMenu />
