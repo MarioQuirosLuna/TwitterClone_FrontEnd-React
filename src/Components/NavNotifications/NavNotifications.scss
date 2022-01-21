@@ -11,6 +11,25 @@
         justify-content: space-between;
         align-items: center;
         margin: 0 15px;
+
+        .container__NavNotification-title{
+            display: flex;
+            justify-content: space-between;
+            margin: 0 5px;
+
+            .container__NavNotification-photo{
+                display: none;
+                margin: 0 20px 0 0;
+                @media screen and (max-width:500px) {
+                    display: flex;
+                }
+            }
+
+            h2{
+                margin: 5px 0 0 0;
+            }
+
+        }
     }
 
     .main__NavNotification{
