@@ -10,8 +10,9 @@ import Home from '../Pages/Home/Home'
 import Notifications from '../Pages/Notifications/Notifications'
 import Message from '../Pages/Message/Message'
 import Profile from '../Pages/Profile/Profile'
+import PostDetails from '../Pages/PostDetails/PostDetails'
 
-import { PostProvider } from '../Context/postContext'
+import AppProvider from '../Context/AppContext'
 
 import './App.scss'
 
@@ -19,7 +20,7 @@ function App() {
 	return (
 		<div className="app">
 			<BrowserRouter>
-				<PostProvider value={{ allPost: [] }}>
+				<AppProvider>
 					<Routes>
 						<Route path="/" element={
 							<PageWrapper component={
@@ -48,11 +49,16 @@ function App() {
 								<Message />
 							} isMessagePage />
 						} />
+						<Route path="/:user/status/:idPost" element={
+							<PageWrapper component={
+								<PostDetails />
+							} isPage />
+						} />
 						<Route path="*" element={
 							<Navigate to="/" />
 						} />
 					</Routes>
-				</PostProvider>
+				</AppProvider>
 			</BrowserRouter>
 		</div>
 	)
