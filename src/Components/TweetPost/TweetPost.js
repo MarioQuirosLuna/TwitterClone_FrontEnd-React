@@ -11,6 +11,7 @@ import AutorenewOutlinedIcon from '@mui/icons-material/AutorenewOutlined'
 import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined'
 import IosShareOutlinedIcon from '@mui/icons-material/IosShareOutlined'
 import BarChartOutlinedIcon from '@mui/icons-material/BarChartOutlined'
+import { Link } from 'react-router-dom'
 
 const TweetPost = ({
 	post: {
@@ -20,12 +21,15 @@ const TweetPost = ({
 		username,
 		postTime,
 		text_posted,
-		media_posted
+		media_posted,
+		comments,
+		retweets,
+		likes
 	},
 	owner
 }) => {
 	return (
-		<div className="tweet__container">
+		<Link to={`/${username}/status/${id}`} className="tweet__container">
 			<div className="tweet__container-photo">
 				<PhotoUser url={user_photo} />
 			</div>
@@ -47,19 +51,19 @@ const TweetPost = ({
 					{media_posted && <ImagePosted url={media_posted} />}
 				</div>
 				<div className="content__options">
-					<div>
+					<div onClick={() => console.log('click comments')} >
 						<ChatBubbleOutlineOutlinedIcon />
-						<span>1</span>
+						<span>{comments.length}</span>
 					</div>
-					<div>
+					<div onClick={() => console.log('click retweets')} >
 						<AutorenewOutlinedIcon />
-						<span>2</span>
+						<span>{retweets.length}</span>
 					</div>
-					<div>
+					<div onClick={() => console.log('click like')} >
 						<FavoriteBorderOutlinedIcon />
-						<span>3</span>
+						<span>{likes.length}</span>
 					</div>
-					<div>
+					<div onClick={() => console.log('click shared')} >
 						<IosShareOutlinedIcon />
 					</div>
 					{owner &&
@@ -69,7 +73,7 @@ const TweetPost = ({
 					}
 				</div>
 			</div>
-		</div>
+		</Link>
 	)
 }
 
