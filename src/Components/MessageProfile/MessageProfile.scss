@@ -5,7 +5,9 @@
     width: 92%;
     border-bottom: 1px solid $border_color_light;
     margin: 0 25px 0 25px;
-    
+    @media(max-width: $LaptopM){
+        width: 80%;
+    }
     .MessageProfile__container-firstinfo{
         color: $color_font_light;
         justify-content: space-between;
@@ -14,19 +16,31 @@
         justify-content: space-between;
         flex-direction: row;
         padding: 10px 0 0 0;
+        label{
+            cursor: pointer;
+        }
         .MessageProfile__photo-name{
             color: $color_font_light;
             display: flex;
+            .MessageProfile__photo{
+                margin: 7px 0 0 0;
+                cursor: pointer;
+            }
             .MessageProfile__name{
                 display: inline-block;
                 margin: 0 0 0 10px;
-                .MessageProfile__username{
+                .MessageProfile__data-name{
+                    font-size: 20px;
+                }
+                .MessageProfile__data-username{
+                    font-size: 13px;
                     color: $color_text_gray;
                 }
             }
         }
     }
     .MessageProfile__content{
+        cursor: pointer;
         margin: 8px 0 0 0;
         align-items: center;
         justify-content: center;

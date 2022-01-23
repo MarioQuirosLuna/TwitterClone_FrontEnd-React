@@ -1,5 +1,6 @@
 import PhotoUser from '../../shared/Components/PhotoUser/PhotoUser'
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined'
+import DateRangeOutlinedIcon from '@mui/icons-material/DateRangeOutlined'
 import './MessageProfile.scss'
 
 const MessageProfile = ({ 
@@ -20,7 +21,7 @@ const MessageProfile = ({
 			<div className="MessageProfile__container-firstinfo">
 				<div className="MessageProfile__photo-name">
 					<div className="MessageProfile__photo">
-						<PhotoUser url={user_photo}/>
+						<PhotoUser url={user_photo} size="20"/>
 					</div>
 					<div className="MessageProfile__name">
 						<span className="MessageProfile__data-name">{name}</span>
@@ -48,6 +49,7 @@ const MessageProfile = ({
 					<label className="followers__label">Followers</label>
 				</div>
 				<div className="content__joined">
+					<DateRangeOutlinedIcon/>
 				    <span className="joined__data-joined">{joined}</span>
 				</div>
 			</div>
