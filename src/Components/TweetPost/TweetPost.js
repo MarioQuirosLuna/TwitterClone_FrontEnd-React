@@ -16,6 +16,7 @@ import { Link } from 'react-router-dom'
 const TweetPost = ({
 	post: {
 		id,
+		_id,
 		user_photo,
 		nameUser,
 		username,
@@ -29,7 +30,7 @@ const TweetPost = ({
 	owner
 }) => {
 	return (
-		<Link to={`/${username}/status/${id}`} className="tweet__container">
+		<Link to={`/${username}/status/${id ? id : _id}`} className="tweet__container">
 			<div className="tweet__container-photo">
 				<PhotoUser url={user_photo} />
 			</div>

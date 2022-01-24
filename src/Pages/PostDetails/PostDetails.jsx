@@ -26,7 +26,6 @@ const PostDetails = () => {
 	useEffect(() => {
 		setPost(appContext?.posts?.find((post) => post.id === idPost))
 	}, [appContext?.posts, idPost])
-	console.log(post)
 	return (
 		<div>
 			<div>
