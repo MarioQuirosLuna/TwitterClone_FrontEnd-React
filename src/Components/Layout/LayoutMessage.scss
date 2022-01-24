@@ -1,4 +1,5 @@
 @import '../../shared/Styles/breakpoints';
+@import '../../shared/Styles/colors.scss';
 
 .LayoutMessage__container{
     display: flex;
@@ -27,6 +28,7 @@
         .content__main{
             display: flex;
             width: 990px;
+            border: 1px solid $border_color_light;
 
             @media(max-width: $LaptopM){
                 width: 920px;
@@ -35,9 +37,16 @@
                 width: 600px;
             }
             @media(max-width: $TabletS){
-                width: 100%;
+                width: 100vw;
+            }
+
+            .content__insideMessage{
+                width: 600px;
+    
+                @media(max-width: $LaptopS){
+                    display: none;
+                }
             }
         }
-
     }
 }

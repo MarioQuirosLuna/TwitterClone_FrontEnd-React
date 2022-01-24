@@ -50,10 +50,10 @@
                 width: 380px;
                 border: 1px solid #0f0;
 
-                @media(max-width: $LaptopM){
-                    width: 350px;
+                @media(max-width: $LaptopL){
+                    width: 80px;
                 }
-                @media(max-width: $LaptopS){
+                @media(max-width: $TabletS){
                     display: none;
                 }
             }
