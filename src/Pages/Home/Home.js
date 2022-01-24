@@ -1,5 +1,5 @@
 import { useContext } from 'react'
-import Happening from '../../Components/NavHome/NavHome'
+import NavHome from '../../Components/NavHome/NavHome'
 import TweetPost from '../../Components/TweetPost/TweetPost'
 
 import { AppContext } from '../../Context/AppContext'
@@ -13,7 +13,7 @@ const Home = () => {
 
 	return (
 		<div className="home__container">
-			<Happening />
+			<NavHome />
 			<div className="home__tweetsList">
 				{posts?.map((post, id) => {
 					return <TweetPost key={id} post={post} />

@@ -12,7 +12,7 @@ import SentimentSatisfiedAltOutlinedIcon from '@mui/icons-material/SentimentSati
 import DateRangeOutlinedIcon from '@mui/icons-material/DateRangeOutlined'
 import AddLocationAltOutlinedIcon from '@mui/icons-material/AddLocationAltOutlined'
 
-const Happening = () => {
+const NavHome = () => {
 	return (
 		<div className="container__navHome">
 			<section className="header__navHome">
@@ -72,4 +72,4 @@ const Happening = () => {
 	)
 }
 
-export default Happening
+export default NavHome
