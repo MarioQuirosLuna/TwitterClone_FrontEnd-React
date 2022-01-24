@@ -8,6 +8,7 @@ import PhotoUser from '../../shared/Components/PhotoUser/PhotoUser'
 import SettingsMenu from '../../shared/Components/SettingsMenu/SettingsMenu'
 import TextBlue from '../../shared/Components/TextBlue/TextBlue'
 
+import ArrowBackOutlinedIcon from '@mui/icons-material/ArrowBackOutlined'
 import ChatBubbleOutlineOutlinedIcon from '@mui/icons-material/ChatBubbleOutlineOutlined'
 import AutorenewOutlinedIcon from '@mui/icons-material/AutorenewOutlined'
 import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined'
@@ -27,56 +28,68 @@ const PostDetails = () => {
 		setPost(appContext?.posts?.find((post) => post.id === idPost))
 	}, [appContext?.posts, idPost])
 	return (
-		<div>
-			<div>
+		<div className="container__tweetDetails">
+			<section className="header__navTweet">
 				<div>
+					<ArrowBackOutlinedIcon />
+				</div>
+				<div>
+					<h2>Tweet</h2>
+				</div>
+			</section>
+			<section className="main__tweetDetails">
+				<div className="tweetDetails__user">
 					<PhotoUser url={post?.user_photo} />
-					<div>
-						<div>
-							<span>{post?.nameUser}</span>
-							<span>{post?.username}</span>
+					<div className="tweetDetails__data">
+						<div className="tweetDetails__data-name">
+							<div>
+								<span>{post?.nameUser}</span>
+							</div>
+							<div className="username">
+								<span>{post?.username}</span>
+							</div>
 						</div>
-						<div>
+						<div className="tweetDetails__data-settings">
 							<SettingsMenu />
 						</div>
 					</div>
 				</div>
-				<div>
-					<div>
+				<div className="tweetDetails__content">
+					<div className="tweetDetails__content-textPosted">
 						{post?.text_posted}
 					</div>
 					<div>
 						{post?.media_posted && <ImagePosted url={post?.media_posted} />}
 					</div>
-					<div>
+					<div className="tweetDetails__content-translate">
 						<TextBlue label="Translate Tweet" />
 					</div>
-					<div>
+					<div className="tweetDetails__content-timePosted">
 						<span>{useGetPostTime(post?.postTime, true)}</span>
 					</div>
 				</div>
-				<div>
+				<div className="tweetDetails__tweets">
 					<div>
-						<span>{post?.retweets?.length} Retweets</span>
+						{post?.retweets?.length} <span>Retweets</span>
 					</div>
 					<div>
-						<span>{post?.likes?.length} Likes</span>
+						{post?.likes?.length} <span>Likes</span>
 					</div>
 				</div>
-				<div>
+				<div className="tweetDetails__icons">
 					<ChatBubbleOutlineOutlinedIcon />
 					<AutorenewOutlinedIcon />
 					<FavoriteBorderOutlinedIcon />
 					<IosShareOutlinedIcon />
 				</div>
-				<div>
+				<div className="tweetDetails__newComment">
 					<PhotoUser />
-					<input type="text" />
+					<input type="text" placeholder="Tweet your reply" />
 					<div>
 						<BtnTwitter label="Reply" />
 					</div>
 				</div>
-			</div>
+			</section>
 			<div>
 				{post?.comments?.map((post, id) => {
 					return <TweetPost key={id} post={post} />
