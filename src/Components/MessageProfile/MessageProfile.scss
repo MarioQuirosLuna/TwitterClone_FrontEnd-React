@@ -1,0 +1,91 @@
+@import '../../shared/Styles/breakpoints';
+@import '../../shared/Styles/colors.scss';
+
+.MessageProfile__container{
+    width: 92%;
+    border-bottom: 1px solid $border_color_light;
+    margin: 0 25px 0 25px;
+    @media(max-width: $LaptopM){
+        width: 80%;
+    }
+    .MessageProfile__container-firstinfo{
+        color: $color_font_light;
+        justify-content: space-between;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-direction: row;
+        padding: 10px 0 0 0;
+        label{
+            cursor: pointer;
+        }
+        .MessageProfile__photo-name{
+            color: $color_font_light;
+            display: flex;
+            .MessageProfile__photo{
+                margin: 7px 0 0 0;
+                cursor: pointer;
+            }
+            .MessageProfile__name{
+                display: inline-block;
+                margin: 0 0 0 10px;
+                .MessageProfile__data-name{
+                    font-size: 20px;
+                }
+                .MessageProfile__data-username{
+                    font-size: 13px;
+                    color: $color_text_gray;
+                }
+            }
+        }
+    }
+    .MessageProfile__content{
+        cursor: pointer;
+        margin: 8px 0 0 0;
+        align-items: center;
+        justify-content: center;
+        .content__name-username{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .name-username__data{
+                .name-username__data-username{
+                    padding: 0 0 0 5px;
+                    color: $color_text_gray
+                }
+            }
+        }
+        .content__bio{
+            margin: 4px 0 0 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .content__following-followers{
+            margin: 4px 0 0 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .following-followers__data-following{
+                padding: 0 4px 0 0;
+            }
+            .following__label{
+                padding: 0 15px 0 0;
+                color: $color_text_gray
+            }
+            .following-followers__data-followers{
+                padding: 0 4px 0 0;
+            }
+            .followers__label{
+                color: $color_text_gray
+            }
+        }
+        .content__joined{
+            margin: 4px 0 25px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: $color_text_gray
+        }
+    }
+}
