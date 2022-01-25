@@ -1,4 +1,6 @@
-@import '../../shared/Styles/breakpoints';
+@use '../../shared/Styles/breakpoints' as *;
+
+@import '../../shared/Styles/colors';
 
 .Layout__container{
     display: flex;
@@ -40,6 +42,7 @@
 
             .Content__page{
                 width: 600px;
+                border: 1px solid $border_color_light;
                 
                 @media(max-width: $TabletS){
                     width: 100vw;
