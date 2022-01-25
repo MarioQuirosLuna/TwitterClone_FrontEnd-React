@@ -1,0 +1,22 @@
+@use 'colors' as *;
+@use 'breakpoints' as *;
+
+@mixin navBarFixed{
+    height: 53px;
+    width: 598px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+    top: 0;
+    background-color: $bg_Twitter_transparent;
+    background-color: #fff;
+    position: fixed;
+
+    @media(min-width: $LaptopS) and (max-width: $LaptopM) {
+        width: 579px;
+    }
+    @media(max-width: $TabletS){
+        width: 100%;
+    }
+}

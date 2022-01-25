@@ -1,0 +1,12 @@
+@use '../../shared/Styles/navBarFixed' as *;
+
+.header__navTweet{
+    @include navBarFixed;
+    justify-content: flex-start;
+
+    div{
+        h2{
+            padding: 0 0 0 25px;
+        }
+    }
+}

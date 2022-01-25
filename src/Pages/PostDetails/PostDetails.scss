@@ -4,24 +4,6 @@
 .container__tweetDetails{
     width: 100%;
 
-    .header__navTweet{
-        height: 53px;
-        width: 598px;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        padding: 0 15px;
-        top: 0;
-        background-color: $bg_Twitter_transparent;
-        position: fixed;
-
-        div{
-            h2{
-                padding: 0 0 0 25px;
-            }
-        }
-    }
-
     .main__tweetDetails{
         width: 100%;
         margin: 53px 0 0 0;
