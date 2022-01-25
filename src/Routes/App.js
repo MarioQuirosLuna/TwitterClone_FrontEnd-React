@@ -9,6 +9,7 @@ import PageWrapper from '../Pages/Wrapper/PageWrapper'
 import Home from '../Pages/Home/Home'
 import Notifications from '../Pages/Notifications/Notifications'
 import Message from '../Pages/Message/Message'
+import List from '../Pages/List/List'
 import Profile from '../Pages/Profile/Profile'
 
 import './App.scss'
@@ -39,6 +40,11 @@ function App() {
 						<PageWrapper component={
 							<Message />
 						} isMessagePage />
+					} />
+					<Route path="/List" element={
+						<PageWrapper component={
+							<List />
+						} isPage />
 					} />
 					<Route path="/profile" element={
 						<PageWrapper component={
