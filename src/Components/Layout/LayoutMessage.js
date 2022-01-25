@@ -12,12 +12,12 @@ const messages = [
 		'username': '@test_subject01',
 		'time': '10m',
 		'text': 'Hello World',
-		'chat':{
+		'chat': {
 			'bio': 'Hello Twitter',
 			'joined': '1 January 2022',
 			'following': 100,
 			'followers': 12,
-			'messages':[
+			'messages': [
 				{
 					'username': '@test_subject01',
 					'text': 'Hello World',
@@ -33,12 +33,12 @@ const messages = [
 		'username': '@test_subject02',
 		'time': '11m',
 		'text': 'Hello World',
-		'chat':{
+		'chat': {
 			'bio': 'Hello Twitter',
 			'joined': '1 January 2022',
 			'following': 100,
 			'followers': 12,
-			'messages':[
+			'messages': [
 				{
 					'username': '@test_subject02',
 					'text': 'Hello World',
@@ -57,7 +57,7 @@ const LayoutMessage = ({ children }) => {
 					<Menu />
 				</div>
 				<div className="content__main">
-					<MessageProvider value={{userMessage:messages}}>
+					<MessageProvider value={{ userMessage: messages }}>
 						<section className="Content__page">
 							{children}
 						</section>
