@@ -42,7 +42,8 @@
 
             .Content__page{
                 width: 600px;
-                border: 1px solid $border_color_light;
+                border-left: 1px solid $border_color_light;
+                border-right: 1px solid $border_color_light;
                 
                 @media(max-width: $TabletS){
                     width: 100vw;
@@ -53,10 +54,10 @@
                 width: 380px;
                 border: 1px solid #0f0;
 
-                @media(max-width: $LaptopL){
-                    width: 80px;
+                @media(max-width: $LaptopM){
+                    width: 300px;
                 }
-                @media(max-width: $TabletS){
+                @media(max-width: $LaptopS){
                     display: none;
                 }
             }

@@ -3,7 +3,7 @@
 
 @mixin navBarFixed{
     height: 53px;
-    width: 598px;
+    width: 597px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -11,10 +11,7 @@
     top: 0;
     background-color: $bg_Twitter_transparent;
     position: fixed;
-
-    @media(min-width: $LaptopS) and (max-width: $LaptopM) {
-        width: 579px;
-    }
+    
     @media(max-width: $TabletS){
         width: 100%;
     }

@@ -7,7 +7,6 @@
     align-items: center;
 
     .containerMessage__content{
-        background: rgb(0, 0, 0);
         display: flex;
         justify-content: center;
         min-height: 100vh;
@@ -28,7 +27,8 @@
         .content__main{
             display: flex;
             width: 990px;
-            border: 1px solid $border_color_light;
+            border-left: 1px solid $border_color_light;
+            border-right: 1px solid $border_color_light;
 
             @media(max-width: $LaptopM){
                 width: 920px;
