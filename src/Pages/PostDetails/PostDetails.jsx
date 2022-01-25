@@ -8,15 +8,16 @@ import PhotoUser from '../../shared/Components/PhotoUser/PhotoUser'
 import SettingsMenu from '../../shared/Components/SettingsMenu/SettingsMenu'
 import TextBlue from '../../shared/Components/TextBlue/TextBlue'
 
-import ArrowBackOutlinedIcon from '@mui/icons-material/ArrowBackOutlined'
+import BtnTwitter from '../../shared/Components/BtnTwitter/BtnTwitter'
+import TweetPost from '../../Components/TweetPost/TweetPost'
+import NavPostDetails from '../../Components/NavPostDetails/NavPostDetails'
+
 import ChatBubbleOutlineOutlinedIcon from '@mui/icons-material/ChatBubbleOutlineOutlined'
 import AutorenewOutlinedIcon from '@mui/icons-material/AutorenewOutlined'
 import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined'
 import IosShareOutlinedIcon from '@mui/icons-material/IosShareOutlined'
 
 import './PostDetails.scss'
-import BtnTwitter from '../../shared/Components/BtnTwitter/BtnTwitter'
-import TweetPost from '../../Components/TweetPost/TweetPost'
 
 const PostDetails = () => {
 
@@ -27,16 +28,17 @@ const PostDetails = () => {
 	useEffect(() => {
 		setPost(appContext?.posts?.find((post) => post.id === idPost))
 	}, [appContext?.posts, idPost])
+
+	useEffect(() => {
+		if (appContext?.history.find((element) => element === idPost))
+			return
+		appContext?.setHistory([...appContext?.history, idPost])
+	// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [idPost])
+	console.log(appContext?.history.length)
 	return (
 		<div className="container__tweetDetails">
-			<section className="header__navTweet">
-				<div>
-					<ArrowBackOutlinedIcon />
-				</div>
-				<div>
-					<h2>Tweet</h2>
-				</div>
-			</section>
+			<NavPostDetails />
 			<section className="main__tweetDetails">
 				<div className="tweetDetails__user">
 					<PhotoUser url={post?.user_photo} />
