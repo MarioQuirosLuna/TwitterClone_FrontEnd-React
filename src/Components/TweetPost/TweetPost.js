@@ -54,15 +54,15 @@ const TweetPost = ({
 				<div className="content__options">
 					<div onClick={() => console.log('click comments')} >
 						<ChatBubbleOutlineOutlinedIcon />
-						<span>{comments.length}</span>
+						<span>{comments?.length}</span>
 					</div>
 					<div onClick={() => console.log('click retweets')} >
 						<AutorenewOutlinedIcon />
-						<span>{retweets.length}</span>
+						<span>{retweets?.length}</span>
 					</div>
 					<div onClick={() => console.log('click like')} >
 						<FavoriteBorderOutlinedIcon />
-						<span>{likes.length}</span>
+						<span>{likes?.length}</span>
 					</div>
 					<div onClick={() => console.log('click shared')} >
 						<IosShareOutlinedIcon />
