@@ -6,8 +6,7 @@ export const AppContext = createContext({})
 
 const AppProvider = ({ children }) => {
 	const [posts, setPosts] = useState(null)
-	const [history, setHistory] = useState([])
-	const initialState = { posts, setPosts, history, setHistory }
+	const initialState = { posts, setPosts }
 
 	const fetching = async () => {
 		setPosts(await getAllPost())

@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 import ArrowBackOutlinedIcon from '@mui/icons-material/ArrowBackOutlined'
 
 import './NavPostDetails.scss'
@@ -5,9 +7,9 @@ import './NavPostDetails.scss'
 const NavPostDetails = () => {
 	return (
 		<section className="header__navTweet">
-			<div>
+			<Link to={'/home'} >
 				<ArrowBackOutlinedIcon />
-			</div>
+			</Link>
 			<div>
 				<h2>Tweet</h2>
 			</div>

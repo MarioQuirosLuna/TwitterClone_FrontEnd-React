@@ -29,13 +29,6 @@ const PostDetails = () => {
 		setPost(appContext?.posts?.find((post) => post.id === idPost))
 	}, [appContext?.posts, idPost])
 
-	useEffect(() => {
-		if (appContext?.history.find((element) => element === idPost))
-			return
-		appContext?.setHistory([...appContext?.history, idPost])
-	// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, [idPost])
-	console.log(appContext?.history.length)
 	return (
 		<div className="container__tweetDetails">
 			<NavPostDetails />
