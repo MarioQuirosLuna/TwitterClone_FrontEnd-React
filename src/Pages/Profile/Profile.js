@@ -20,7 +20,10 @@ const user = {
 			'username': '@username',
 			'time': '10m',
 			'text_posted': 'Hello Javascript',
-			'media_posted': 'https://tecnovortex.com/wp-content/uploads/2019/04/wallpaper-engine.jpg'
+			'media_posted': 'https://tecnovortex.com/wp-content/uploads/2019/04/wallpaper-engine.jpg',
+			'comments': [],
+			'retweets': [],
+			'likes': []
 		},
 		{
 			'id': '2',
@@ -29,7 +32,10 @@ const user = {
 			'username': '@username2',
 			'time': '10m',
 			'text_posted': 'Hello React',
-			'media_posted': undefined
+			'media_posted': undefined,
+			'comments': [],
+			'retweets': [],
+			'likes': []
 		}
 	]
 }

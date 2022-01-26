@@ -1,17 +1,15 @@
+@use '../../shared/Styles/navBarFixed' as *;
+
 @import '../../shared/Styles/colors';
 @import '../../shared/Styles/breakpoints';
 
+
 .container__navProfile{
-    border-right: 1px solid $border_color_light;
-    border-left: 1px solid $border_color_light;
     
     .header__navProfile{
-        width: 598px;
-        display: flex;
-        align-items: center;
-        position: fixed;
-        top: 0;
-        background-color: $bg_Twitter_transparent;
+        @include navBarFixed;
+        justify-content: flex-start;
+
         div{
             padding: 8px 16px;
             span{

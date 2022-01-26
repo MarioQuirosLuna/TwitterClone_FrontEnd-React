@@ -1,0 +1,94 @@
+@import '../../shared/Styles/colors';
+@import '../../shared/Styles/breakpoints';
+
+.container__tweetDetails{
+    width: 100%;
+
+    .main__tweetDetails{
+        width: 100%;
+        margin: 53px 0 0 0;
+        padding: 0 15px 0 15px;
+        border-bottom: 1px solid $border_color_light;
+
+        .tweetDetails__user{
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+
+            .tweetDetails__data{
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0 0 0 10px;
+
+                .tweetDetails__data-name{
+                    display: inline-block;
+                    .username{
+                        color: $color_text_gray;
+                    }
+                }
+            }
+        }
+
+        .tweetDetails__content{
+            margin: 15px 0 0 0;
+            border-bottom: 1px solid $border_color_light;
+
+            .tweetDetails__content-textPosted{
+                line-height: 28px;
+                font-size: 23px;
+            }
+            .tweetDetails__content-translate{
+                margin: 5px 0 0 0;
+            }
+            .tweetDetails__content-timePosted{
+                height: 20px;
+                margin: 10px 0 10px 0;
+                color: $color_text_gray;
+            }
+        }
+
+        .tweetDetails__tweets{
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 15px 0 15px 0;
+            border-bottom: 1px solid $border_color_light;
+
+            div{
+                margin: 0 15px 0 5px;
+
+                span{
+                    color: $color_text_gray;
+                }
+            }
+        }
+
+        .tweetDetails__icons{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            color: $color_text_gray;
+            padding: 15px 0 15px 0;
+            border-bottom: 1px solid $border_color_light;
+        }
+
+        .tweetDetails__newComment{
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            padding: 15px 0;
+
+            input[type="text"]{
+                width: 100%;
+                height: 24px;
+                font-size: 20px;
+                margin: 0 15px 0 15px;
+                background-color: transparent;
+                border: transparent;
+                color: $color_text_gray;
+            }
+        }
+    }
+}
