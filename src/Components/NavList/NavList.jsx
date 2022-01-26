@@ -1,4 +1,5 @@
 import SettingsMenu from '../../shared/Components/SettingsMenu/SettingsMenu'
+import PlaylistAddOutlinedIcon from '@mui/icons-material/PlaylistAddOutlined'
 import './NavList.scss'
 
 const NavList = () => {
@@ -9,10 +10,10 @@ const NavList = () => {
 					<h2>List</h2>
 					<span>@usuario</span>
 				</div>
-				<div>
-					<SettingsMenu/>
+				<div className="container__NavList-iconList">
+					<PlaylistAddOutlinedIcon/>
 				</div>
-				<div>
+				<div className="container__NavList-iconSettingsList">
 					<SettingsMenu/>
 				</div>      
 			</section>
