@@ -1,5 +1,4 @@
 import NavNotificationsItem from '../NavNotificationsItem/NavNotificationsItem'
-
 import SettingsMenuGear from '../../shared/Components/SettingsMenuGear/SettingsMenuGear'
 import PhotoUser from '../../shared/Components/PhotoUser/PhotoUser'
 import { NavNotificationsMenuListOptions } from './NavNotificationsListOption'

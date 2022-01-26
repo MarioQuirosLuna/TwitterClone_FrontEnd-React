@@ -1,0 +1,25 @@
+@import '../../shared/Styles/colors.scss';
+
+.container__NavList{
+    height: 106px;
+    width: 100%;
+    border: 1px solid $border_color_light;
+
+    .header__NavList{
+        height: 53px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 15px;
+
+        .container__NavList-title{
+            display: flex;
+            justify-content: space-between;
+            margin: 0 5px;
+
+            h2{
+                margin: 5px 0 0 0;
+            }
+        }
+    }
+}
