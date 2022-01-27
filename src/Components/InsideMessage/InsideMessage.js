@@ -1,6 +1,6 @@
 import { useContext } from 'react'
 import PhotoUser from '../../shared/Components/PhotoUser/PhotoUser'
-import MessageContext from '../../Contexts/contextMessage'
+import MessageContext from '../../Context/contextMessage'
 import MessageProfile from '../MessageProfile/MessageProfile'
 import BrokenImageOutlinedIcon from '@mui/icons-material/BrokenImageOutlined'
 import GifBoxOutlinedIcon from '@mui/icons-material/GifBoxOutlined'

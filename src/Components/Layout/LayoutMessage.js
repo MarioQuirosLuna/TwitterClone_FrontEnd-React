@@ -2,7 +2,7 @@ import Menu from '../Menu/Menu'
 import InsideMessage from '../InsideMessage/InsideMessage'
 
 import './LayoutMessage.scss'
-import { MessageProvider } from '../../Contexts/contextMessage'
+import { MessageProvider } from '../../Context/contextMessage'
 
 const messages = [
 	{

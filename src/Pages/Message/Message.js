@@ -1,7 +1,7 @@
 import NavMessage from '../../Components/NavMessage/NavMessage'
 import MessageItem from '../../Components/MessageItem/MessageItem'
 import {useContext} from 'react'
-import MessageContext from '../../Contexts/contextMessage'
+import MessageContext from '../../Context/contextMessage'
 import './Message.scss'
 
 const Message = () => {
