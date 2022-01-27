@@ -1,15 +1,20 @@
-import { useContext } from 'react'
+import { useEffect, useState } from 'react'
 import NavHome from '../../Components/NavHome/NavHome'
 import TweetPost from '../../Components/TweetPost/TweetPost'
 
-import { AppContext } from '../../Context/AppContext'
+import { getAllPost } from '../../Services/api'
 
 import './Home.scss'
 
 const Home = () => {
+	const [posts, setPosts] = useState(null)
 
-	const appContext = useContext(AppContext)
-	const posts = appContext.posts
+	useEffect(() => {
+		const fetching = async () => {
+			setPosts(await getAllPost())
+		}
+		fetching()
+	}, [])
 
 	return (
 		<div className="home__container">
