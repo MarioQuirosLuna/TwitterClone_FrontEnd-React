@@ -1,0 +1,17 @@
+@import '../../shared/Styles/colors.scss';
+
+.menuItem__content{
+    width: auto;
+    color: $color_font_light;
+    padding: 13px 0 13px 10px;
+    .menuItem__label{
+        padding: 0 0 0 10px;
+        font-size: 20px;
+        //font-weight: 700;
+    }
+}
+.menuItem__content:hover{
+    background-color: $border_color_light;
+    border-radius: 40px;
+    width: 170px;
+}

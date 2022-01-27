@@ -1,11 +1,56 @@
+@import '../../shared/Styles/colors.scss';
+
 .menu__container{
     width: 100%;
     height: 100%;
-    display: flex;
     justify-content: flex-end;
-
     nav{
-
         width: 275px;
+    }
+    .container__btnTweet{
+        margin: 13px 5px 0 5px;
+        background: $blue_Twitter;
+        border-radius: 30px;
+        display: flex;
+        align-items: center;
+        input[type="button"]{
+            color: $color_font_light;
+            border-radius: 30px;
+            font-size: 17px;
+            font-weight: 700;
+            width:100%;
+            height: 50px;
+            cursor: pointer;
+            border: transparent;
+            background: transparent;
+        }
+    }
+    .container__profile{
+        display: flex;
+        width: 248px;
+        height: 64px;
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        right: 100;
+        align-items: center;
+        padding: 0 0 0 10px;
+        margin: 0 0 10px 0;
+        label{
+            font-size:14px;
+        }
+        .profile__name{
+            padding: 0 0 0 10px;
+            .profile__name-username{
+                color: $color_text_gray;
+            }
+        }
+        .profile__moreicon{
+            padding: 0 0 0 35px;
+        }
+    }
+    .container__profile:hover{
+        background-color: $border_color_light;
+        border-radius: 35px;
     }
 }
