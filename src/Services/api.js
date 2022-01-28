@@ -22,3 +22,13 @@ export const getUser = async (username) => {
 		console.error(error)
 	}
 }
+
+export const getUserPosts = async (username) => {
+	try {
+		const response = await fetch(`${LOCAL_URL}/user/posts/${username}`)
+		const data = await response.json()
+		return data
+	} catch (error) {
+		console.error(error)
+	}
+}

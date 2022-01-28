@@ -5,28 +5,30 @@ import { AppContext } from '../../Context/AppContext'
 import NavProfile from '../../Components/NavProfile/NavProfile'
 import MenuTweetsProfile from '../../Components/MenuTweetsProfile/MenuTweetsProfile'
 import TweetPost from '../../Components/TweetPost/TweetPost'
+import { getUserPosts } from '../../Services/api'
 
 const Profile = () => {
 
 	const appContext = useContext(AppContext)
-	const [user, setUser] = useState(null)
+	const [posts, setPosts] = useState(null)
 
 	useEffect(() => {
-		const fetching = async () => {
-			setUser(await appContext?.user)
+		const fetchPosts = async () => {
+			if (appContext?.user)
+				setPosts(await getUserPosts(appContext?.user.username))
 		}
-		fetching()
-	}, [appContext?.user])
+		fetchPosts()
+	}, [appContext])
 
 	return (
 		<div className="profile__container">
-			{user &&
+			{appContext?.user &&
 				<>
-					<NavProfile user={user} />
+					<NavProfile user={appContext?.user} />
 					<MenuTweetsProfile />
 					<div className="home__tweetsList">
-						{user?.posts?.map((post, id) => {
-							return <TweetPost key={id} post={post} owner={user.username === post.username} />
+						{posts?.map((post, id) => {
+							return <TweetPost key={id} post={post} owner={appContext?.user.username === post.username} />
 						})}
 					</div>
 				</>
