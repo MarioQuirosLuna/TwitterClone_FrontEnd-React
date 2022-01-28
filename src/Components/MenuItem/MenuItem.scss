@@ -1,3 +1,4 @@
+@import '../../shared/Styles/breakpoints';
 @import '../../shared/Styles/colors.scss';
 
 .menuItem__content{
@@ -7,6 +8,9 @@
     .menuItem__label{
         padding: 0 0 0 10px;
         font-size: 20px;
+        @media(max-width: $LaptopL){
+            display: none;
+        }
         //font-weight: 700;
     }
 }

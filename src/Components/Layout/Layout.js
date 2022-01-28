@@ -1,5 +1,6 @@
 import Menu from '../Menu/Menu'
 import Trends from '../Trends/Trends'
+import MenuDown from '../MenuDown/MenuDown'
 
 import './Layout.scss'
 
@@ -17,6 +18,9 @@ const Layout = ({ children }) => {
 					<div className="container__trends">
 						<Trends />
 					</div>
+				</div>
+				<div className="container__MenuDown">
+					<MenuDown/>
 				</div>
 			</div>
 		</div>

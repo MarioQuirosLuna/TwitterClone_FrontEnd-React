@@ -48,5 +48,15 @@
                 }
             }
         }
+        .container__MenuDown{
+            display: none;
+            @media(max-width: $TabletS){
+                width: 100%;
+                display: flex;
+                position: fixed;
+                border-top: 1px solid $border_color_light;
+                bottom: 0;
+            }
+        }
     }
 }
