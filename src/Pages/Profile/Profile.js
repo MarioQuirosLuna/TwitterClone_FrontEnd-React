@@ -1,4 +1,4 @@
-import { useContext } from 'react'
+import { useContext, useEffect, useState } from 'react'
 
 import { AppContext } from '../../Context/AppContext'
 
@@ -9,18 +9,28 @@ import TweetPost from '../../Components/TweetPost/TweetPost'
 const Profile = () => {
 
 	const appContext = useContext(AppContext)
-	const user = appContext?.user
-	console.log(appContext)
+	const [user, setUser] = useState(null)
+
+	useEffect(() => {
+		const fetching = async () => {
+			setUser(await appContext?.user)
+		}
+		fetching()
+	}, [appContext?.user])
 
 	return (
 		<div className="profile__container">
-			<NavProfile user={user} />
-			<MenuTweetsProfile />
-			<div className="home__tweetsList">
-				{user?.posts?.map((post, id) => {
-					return <TweetPost key={id} post={post} owner={user.username === post.username} />
-				})}
-			</div>
+			{user &&
+				<>
+					<NavProfile user={user} />
+					<MenuTweetsProfile />
+					<div className="home__tweetsList">
+						{user?.posts?.map((post, id) => {
+							return <TweetPost key={id} post={post} owner={user.username === post.username} />
+						})}
+					</div>
+				</>
+			}
 		</div>
 	)
 }
