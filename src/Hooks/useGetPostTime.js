@@ -11,6 +11,7 @@ const addPrevZero = (hours) => {
 }
 
 const useGetPostTime = (datePosted, exactDate) => {
+	if (!datePosted) return
 	const month = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep,', 'Oct', 'Nov', 'Dec']
 	const date = new Date(datePosted)
 
