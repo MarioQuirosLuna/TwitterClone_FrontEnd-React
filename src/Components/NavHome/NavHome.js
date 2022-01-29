@@ -1,8 +1,10 @@
+import { useContext } from 'react'
+
 import BtnTwitter from '../../shared/Components/BtnTwitter/BtnTwitter'
 import PhotoUser from '../../shared/Components/PhotoUser/PhotoUser'
 import TextBlue from '../../shared/Components/TextBlue/TextBlue'
 
-import './NavHome.scss'
+import { AppContext } from '../../Context/AppContext'
 
 import StarRateOutlinedIcon from '@mui/icons-material/StarRateOutlined'
 import ImageOutlinedIcon from '@mui/icons-material/ImageOutlined'
@@ -12,13 +14,19 @@ import SentimentSatisfiedAltOutlinedIcon from '@mui/icons-material/SentimentSati
 import DateRangeOutlinedIcon from '@mui/icons-material/DateRangeOutlined'
 import AddLocationAltOutlinedIcon from '@mui/icons-material/AddLocationAltOutlined'
 
+import './NavHome.scss'
+
 const NavHome = () => {
+	const appContext = useContext(AppContext)
+
 	return (
 		<div className="container__navHome">
 			<section className="header__navHome">
 				<div className="headerNavHome__Photo">
 					<div className="headerNavHome__Photo-user">
-						<PhotoUser url={undefined} size='32' />
+						{appContext?.user &&
+							<PhotoUser url={appContext?.user.user_photo} size='32' />
+						}
 					</div>
 					<div>
 						<h2>Home</h2>
@@ -31,13 +39,15 @@ const NavHome = () => {
 			<section className="main__navHome">
 				<div className="mainNavHome__Content">
 					<div className="mainNavHome__Content-photo">
-						<PhotoUser url={undefined} />
+						{appContext?.user &&
+							<PhotoUser url={appContext?.user.user_photo} />
+						}
 					</div>
 					<div className="mainNavHome__Content-form">
 						<div className="formNavHome__input">
 							<input type="text" placeholder="What's happening?" />
 							<div className="formNavHome__input-span">
-								<TextBlue label="Everyone can reply"/>
+								<TextBlue label="Everyone can reply" />
 							</div>
 						</div>
 						<div className="formNavHome__options">
