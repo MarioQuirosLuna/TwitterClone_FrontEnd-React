@@ -11,7 +11,7 @@ import './NavProfile.scss'
 const NavProfile = ({
 	user: {
 		user_photo,
-		image_background,
+		image_bg,
 		name,
 		username,
 		description,
@@ -34,7 +34,7 @@ const NavProfile = ({
 			</section>
 			<section className="main__navProfile">
 				<div className="main__navProfile-bgImage">
-					<img src={image_background} alt="background img" width="600" />
+					<img src={image_bg} alt="background img" width="600" />
 				</div>
 				<div className='main__navProfile-imgUser'>
 					<div className='photo__profile'>
