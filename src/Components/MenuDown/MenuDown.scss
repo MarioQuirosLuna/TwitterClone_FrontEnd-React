@@ -12,4 +12,16 @@
         display: flex;
         justify-content: space-between;
     }
+    .containet__btnTweetDown{
+        position: fixed;
+        width: 55px;
+        bottom: 70px;
+        right: 20px;
+        height: 55px;
+        background: $blue_Twitter;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 40px;
+    }
 }

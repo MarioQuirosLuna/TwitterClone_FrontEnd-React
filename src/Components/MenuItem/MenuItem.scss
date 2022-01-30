@@ -1,24 +1,34 @@
 @import '../../shared/Styles/breakpoints';
 @import '../../shared/Styles/colors.scss';
 
-.menuItem__content{
-    width: auto;
-    color: $color_font_light;
-    padding: 13px 0 13px 10px;
-    .menuItem__label{
-        padding: 0 0 0 10px;
-        font-size: 20px;
-        @media(max-width: $LaptopL){
-            display: none;
-        }
-        //font-weight: 700;
+.MenuItem__exteriorContent{
+    .active{
+        font-weight: 700;
     }
-}
-.menuItem__content:hover{
-    background-color: $border_color_light;
-    border-radius: 40px;
-    width: 170px;
-    @media(max-width: $LaptopL){
-        width: 55px;
+    .menuItem__content{
+        width: auto;
+        color: $color_font_light;
+        padding: 13px 0 13px 10px;
+        display: flex;
+        align-items: center;
+        @media(max-height: $TabletS){
+            padding: 8px 0 8px 10px;
+        }
+        .menuItem__label{
+            padding: 0 0 0 10px;
+            font-size: 20px;
+            @media(max-width: $LaptopL){
+                display: none;
+            }
+            //font-weight: 700;
+        }
+    }
+    .menuItem__content:hover{
+        background-color: $border_color_light;
+        border-radius: 40px;
+        width: 170px;
+        @media(max-width: $LaptopL){
+            width: 55px;
+        }
     }
 }

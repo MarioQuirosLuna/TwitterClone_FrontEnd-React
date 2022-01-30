@@ -7,19 +7,22 @@ import MoreHorizOutlinedIcon from '@mui/icons-material/MoreHorizOutlined'
 import CreateIcon from '@mui/icons-material/Create'
 
 import './Menu.scss'
+import MenuActiveProvider from '../../Contexts/menuActive'
 
 const Menu = () => {
 	return (
 		<div className="menu__container">
 			<nav className="container__nav">
 				<label className="container__twittericon"><TwitterIcon fontSize='large'/></label>
-				<ul>
-					{ListOptionsMenu?.map((option, index) => {
-						return (
-							<MenuItem key={index} option={option}/>
-						)
-					})}
-				</ul>
+				<MenuActiveProvider value={null}>
+					<ul>
+						{ListOptionsMenu?.map((option, index) => {
+							return (
+								<label className={option.label}><MenuItem key={index} option={option}/></label>
+							)
+						})}
+					</ul>
+				</MenuActiveProvider>
 			</nav>
 			<div className="container__btnTweet">
 				<label type="button" className="btnTweet__tweet">Tweet</label>

@@ -8,6 +8,11 @@
     .container__nav{
         width: 275px;
         position: fixed;
+        .Bookmarks{
+            @media(max-height: $MobileXXL){
+                display: none;
+            }
+        }
         .container__twittericon{
             padding: 5px 0 0 10px;
         }
@@ -21,6 +26,12 @@
         top: 555px;
         align-items: center;
         position: fixed;
+        @media(max-height: $TabletS){
+            top: 455px;
+        }
+        @media(max-height: $MobileXXL){
+            top: 410px;
+        }
         @media(max-width: $LaptopL){
             width: 55px;
         }
@@ -71,6 +82,9 @@
         padding: 0 0 0 10px;
         margin: 0 0 10px 0;
         .pofile_name-moreicon{
+            display: flex;
+            justify-content: center;
+            align-items: center;
             @media(max-width: $LaptopL){
                 display: none;
             }

@@ -1,19 +1,21 @@
 @import '../../shared/Styles/breakpoints';
 @import '../../shared/Styles/colors.scss';
 
-.menuDownItem__content{
-    width: 100%;
-    color: $color_font_light;
-    padding: 13px;
-    align-items: center;
-    justify-content: center;
-    label{
-        width: auto;
-        margin: 0 20px;
-        cursor: pointer;
+.MenuDownItem__exteriorContent{
+    .menuDownItem__content{
+        width: 100%;
+        color: $color_font_light;
+        padding: 13px;
+        align-items: center;
+        justify-content: center;
+        label{
+            width: auto;
+            margin: 0 20px;
+            cursor: pointer;
+        }
     }
-}
-.menuDownItem__content:hover{
-    background: $border_color_light;
-    border-radius: 50px;
+    .menuDownItem__content:hover{
+        background: $border_color_light;
+        border-radius: 50px;
+    }
 }
