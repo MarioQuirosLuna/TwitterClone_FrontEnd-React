@@ -1,13 +1,13 @@
 @import '../../shared/Styles/breakpoints';
 @import '../../shared/Styles/colors.scss';
 
-.menu__container{
+.menuDown__container{
     height: 100%;
     width: 100%;
     background: $background_Twitter;
     align-items: center;
     justify-content: center;
-    .prueba{
+    .container__items{
         width: 100vw;
         display: flex;
         justify-content: space-between;

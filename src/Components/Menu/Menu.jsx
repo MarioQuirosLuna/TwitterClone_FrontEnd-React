@@ -11,8 +11,8 @@ import './Menu.scss'
 const Menu = () => {
 	return (
 		<div className="menu__container">
-			<nav>
-				<TwitterIcon />
+			<nav className="container__nav">
+				<label className="container__twittericon"><TwitterIcon fontSize='large'/></label>
 				<ul>
 					{ListOptionsMenu?.map((option, index) => {
 						return (

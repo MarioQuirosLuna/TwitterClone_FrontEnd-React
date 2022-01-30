@@ -15,7 +15,7 @@
 
         .container__menu{
             width: 250px;
-            border: 1px solid #0f0;
+            margin: 10px 0 0 0;
 
             @media(max-width: $LaptopL){
                 width: 80px;

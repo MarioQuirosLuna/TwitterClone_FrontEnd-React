@@ -7,10 +7,10 @@ import './MenuDown.scss'
 
 const MenuDown = () => {
 	return (
-		<div className="menu__container">
+		<div className="menuDown__container">
 			<nav>
 				<ul>
-					<div className="prueba">
+					<div className="container__items">
 						{ListOptionsMenuDown?.map((option, index) => {
 							return (
 								<MenuDownItem key={index} option={option}/>

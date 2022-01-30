@@ -8,12 +8,12 @@ import PermIdentityOutlinedIcon from '@mui/icons-material/PermIdentityOutlined'
 import MoreHorizOutlinedIcon from '@mui/icons-material/MoreHorizOutlined'
 
 export const ListOptionsMenu = [
-	{ icon: <HomeOutlinedIcon />, url: '/home', label: 'Home'},
-	{ icon: <TagOutlinedIcon />, url: '/explore', label: 'Explore'},
-	{ icon: <NotificationsOutlinedIcon />, url: '/notifications', label: 'Notifications'},
-	{ icon: <EmailOutlinedIcon />, url: '/Message', label: 'Messages'},
-	{ icon: <BookmarkBorderOutlinedIcon />, url: '/bookmarks', label: 'Bookmarks'},
-	{ icon: <ArticleOutlinedIcon />, url: '/list', label: 'List'},
-	{ icon: <PermIdentityOutlinedIcon />, url: '/profile', label: 'Profile'},
-	{ icon: <MoreHorizOutlinedIcon />, url: '/more', label: 'More'}
+	{ icon: <HomeOutlinedIcon fontSize='large'/>, url: '/home', label: 'Home'},
+	{ icon: <TagOutlinedIcon fontSize='large'/>, url: '/explore', label: 'Explore'},
+	{ icon: <NotificationsOutlinedIcon fontSize='large'/>, url: '/notifications', label: 'Notifications'},
+	{ icon: <EmailOutlinedIcon fontSize='large'/>, url: '/Message', label: 'Messages'},
+	{ icon: <BookmarkBorderOutlinedIcon fontSize='large'/>, url: '/bookmarks', label: 'Bookmarks'},
+	{ icon: <ArticleOutlinedIcon fontSize='large'/>, url: '/list', label: 'List'},
+	{ icon: <PermIdentityOutlinedIcon fontSize='large'/>, url: '/profile', label: 'Profile'},
+	{ icon: <MoreHorizOutlinedIcon fontSize='large'/>, url: '/more', label: 'More'}
 ]
