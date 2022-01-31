@@ -1,4 +1,4 @@
-import { useContext } from 'react'
+import { useContext, useState } from 'react'
 
 import BtnTwitter from '../../shared/Components/BtnTwitter/BtnTwitter'
 import PhotoUser from '../../shared/Components/PhotoUser/PhotoUser'
@@ -18,6 +18,11 @@ import './NavHome.scss'
 
 const NavHome = () => {
 	const appContext = useContext(AppContext)
+	const [textPost, setTextPost] = useState('')
+
+	const handleChangeInput = (e) => {
+		setTextPost(e.target.value)
+	}
 
 	return (
 		<div className="container__navHome">
@@ -45,7 +50,7 @@ const NavHome = () => {
 					</div>
 					<div className="mainNavHome__Content-form">
 						<div className="formNavHome__input">
-							<input type="text" placeholder="What's happening?" />
+							<input type="text" name="textPosted" value={textPost} onChange={e=>handleChangeInput(e)} placeholder="What's happening?" />
 							<div className="formNavHome__input-span">
 								<TextBlue label="Everyone can reply" />
 							</div>
@@ -72,7 +77,7 @@ const NavHome = () => {
 								</div>
 							</div>
 							<div>
-								<BtnTwitter label="Tweet" />
+								<BtnTwitter label="Tweet" textPost={textPost} />
 							</div>
 						</div>
 					</div>
