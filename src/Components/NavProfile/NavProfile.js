@@ -1,15 +1,17 @@
 import PhotoUser from '../../shared/Components/PhotoUser/PhotoUser'
+import TextBlue from '../../shared/Components/TextBlue/TextBlue'
+
+import useGetJoinedDate from '../../Hooks/useGetJoinedDate'
 
 import ArrowBackOutlinedIcon from '@mui/icons-material/ArrowBackOutlined'
 import EventNoteOutlinedIcon from '@mui/icons-material/EventNoteOutlined'
 
 import './NavProfile.scss'
-import TextBlue from '../../shared/Components/TextBlue/TextBlue'
 
 const NavProfile = ({
 	user: {
 		user_photo,
-		image_background,
+		image_bg,
 		name,
 		username,
 		description,
@@ -32,11 +34,11 @@ const NavProfile = ({
 			</section>
 			<section className="main__navProfile">
 				<div className="main__navProfile-bgImage">
-					<img src={image_background} alt="background img" width="600" />
+					<img src={image_bg} alt="background img" width="600" />
 				</div>
 				<div className='main__navProfile-imgUser'>
 					<div className='photo__profile'>
-						<PhotoUser url={undefined} size='133' />
+						<PhotoUser url={user_photo} size='133' />
 					</div>
 				</div>
 				<div className='btn__editProfile-container'>
@@ -59,7 +61,7 @@ const NavProfile = ({
 					</div>
 					<div className='main__joinedDate'>
 						<EventNoteOutlinedIcon />
-						<span>Joined {joined_date}</span>
+						<span>Joined {useGetJoinedDate(joined_date)}</span>
 					</div>
 					<div className='main__followBtns'>
 						<div>
