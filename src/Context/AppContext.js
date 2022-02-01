@@ -1,19 +1,22 @@
 import React, { createContext, useEffect, useState } from 'react'
-
-import { getAllPost } from '../Services/api'
+import { getAllPost, getUser } from '../Services/api'
 
 export const AppContext = createContext({})
 
 const AppProvider = ({ children }) => {
+	const [user, setUser] = useState(null)
 	const [posts, setPosts] = useState(null)
-	const initialState = { posts, setPosts }
-
-	const fetching = async () => {
-		setPosts(await getAllPost())
+	const initialState = {
+		user, setUser,
+		posts, setPosts
 	}
 
 	useEffect(() => {
-		fetching()
+		const fetch = async () => {
+			setUser(await getUser('@UserTest'))
+			setPosts(await getAllPost())
+		}
+		fetch()
 	}, [])
 
 	return (

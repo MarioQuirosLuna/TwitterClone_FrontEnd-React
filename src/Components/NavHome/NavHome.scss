@@ -29,6 +29,10 @@
                 }
             }
         }
+
+        @media(max-width: $MobileXL){
+            border-bottom: 1px solid $border_color_light;
+        }
     }
 
     .main__navHome{

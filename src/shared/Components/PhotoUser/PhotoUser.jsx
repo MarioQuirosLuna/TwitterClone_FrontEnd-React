@@ -1,12 +1,12 @@
 import './PhotoUser.scss'
 
-const PhotoUser = ({ url='https://www.computerhope.com/jargon/g/guest-user.jpg', size='48' }) => {
+const PhotoUser = ({ url, size = '48' }) => {
 	return (
 		<div className="photo__user-container">
-			{url ? 
-				<img src={url} alt="PhotoUser" width={size} />
+			{(url && url !== '') ?
+				<img src={url} alt="PhotoUser" width={size} height={size} />
 				:
-				<div>Photo</div>
+				<img src={'https://www.computerhope.com/jargon/g/guest-user.jpg'} alt="PhotoUser" width={size} height={size} />
 			}
 		</div>
 	)

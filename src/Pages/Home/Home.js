@@ -1,21 +1,29 @@
-import { useContext } from 'react'
+import { useContext, useEffect } from 'react'
+
 import NavHome from '../../Components/NavHome/NavHome'
 import TweetPost from '../../Components/TweetPost/TweetPost'
 
 import { AppContext } from '../../Context/AppContext'
+import { getAllPost } from '../../Services/api'
 
 import './Home.scss'
 
 const Home = () => {
-
 	const appContext = useContext(AppContext)
-	const posts = appContext.posts
+
+	useEffect(() => {
+		const fetching = async () => {
+			appContext?.setPosts(await getAllPost())
+		}
+		fetching()
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [])
 
 	return (
 		<div className="home__container">
 			<NavHome />
 			<div className="home__tweetsList">
-				{posts?.map((post, id) => {
+				{appContext?.posts?.map((post, id) => {
 					return <TweetPost key={id} post={post} />
 				})}
 			</div>
