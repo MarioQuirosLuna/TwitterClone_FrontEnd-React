@@ -32,3 +32,15 @@ export const getUserPosts = async (username) => {
 		console.error(error)
 	}
 }
+
+export const newPost = async (newPost) => {
+	const config = {
+		headers: {
+			'Content-Type': 'application/json'
+		}
+	}
+	const req = axios.post(`${LOCAL_URL}/post`, newPost, config)
+	return req
+		.then((res) => res.data)
+		.catch(error => { console.error(error) })
+}

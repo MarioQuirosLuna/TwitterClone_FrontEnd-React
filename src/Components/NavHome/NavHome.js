@@ -50,7 +50,13 @@ const NavHome = () => {
 					</div>
 					<div className="mainNavHome__Content-form">
 						<div className="formNavHome__input">
-							<input type="text" name="textPosted" value={textPost} onChange={e=>handleChangeInput(e)} placeholder="What's happening?" />
+							<input
+								type="text"
+								name="text_posted"
+								value={textPost}
+								onChange={e => handleChangeInput(e)}
+								placeholder="What's happening?"
+							/>
 							<div className="formNavHome__input-span">
 								<TextBlue label="Everyone can reply" />
 							</div>
@@ -77,7 +83,7 @@ const NavHome = () => {
 								</div>
 							</div>
 							<div>
-								<BtnTwitter label="Tweet" textPost={textPost} />
+								<BtnTwitter label="Tweet" textPost={textPost} setTextPost={setTextPost} />
 							</div>
 						</div>
 					</div>

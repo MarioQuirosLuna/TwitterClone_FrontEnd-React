@@ -3,7 +3,7 @@ const format24to12 = (hour) => {
 }
 
 const getAM_PM = (hour) => {
-	return (hour > 12) ? 'PM' : 'AM'
+	return (hour >= 12) ? 'PM' : 'AM'
 }
 
 const addPrevZero = (hours) => {
@@ -20,26 +20,26 @@ const useGetPostTime = (datePosted, exactDate) => {
 	}
 
 	const yearDifferent = new Date().getFullYear() - date.getFullYear()
+	const monthDifferent = new Date().getMonth() - date.getMonth()
 	const daysDifference = new Date().getDate() - date.getDate()
 	const hoursDifference = new Date().getHours() - date.getHours()
 	const minutesDifference = new Date().getMinutes() - date.getMinutes()
 	const secondsDifference = new Date().getSeconds() - date.getSeconds()
 
-	let difference
+	let difference = monthDifferent
 
 	if (yearDifferent > 0) {
 		difference = `${month[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`
 
-	} else if (daysDifference > 0) {
+	} else if (monthDifferent > 0 || daysDifference > 0) {
 		difference = `${month[date.getMonth()]} ${date.getDate()}`
-
 	} else if (hoursDifference > 0) {
 		difference = `${hoursDifference}h`
 
 	} else if (minutesDifference > 0) {
 		difference = `${minutesDifference}m`
 
-	} else if (secondsDifference > 0) {
+	} else if (secondsDifference >= 0) {
 		difference = `${secondsDifference}s`
 
 	}
