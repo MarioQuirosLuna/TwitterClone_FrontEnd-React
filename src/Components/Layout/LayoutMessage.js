@@ -1,4 +1,5 @@
 import Menu from '../Menu/Menu'
+import MenuDown from '../MenuDown/MenuDown'
 import InsideMessage from '../InsideMessage/InsideMessage'
 
 import './LayoutMessage.scss'
@@ -66,7 +67,9 @@ const LayoutMessage = ({ children }) => {
 						</div>
 					</MessageProvider>
 				</div>
-
+				<div className="container__MenuDown">
+					<MenuDown/>
+				</div>
 			</div>
 		</div>
 	)

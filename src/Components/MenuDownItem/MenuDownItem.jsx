@@ -1,6 +1,6 @@
 import {useContext} from 'react'
 import { Link } from 'react-router-dom'
-import './MenuItem.scss'
+import './MenuDownItem.scss'
 import {MenuActiveContext} from '../../Contexts/menuActive'
 
 const MenuItem = ({
@@ -15,16 +15,15 @@ const MenuItem = ({
 	const isActive=label===contextMenuActive?.activeTab
 	const handleActive=()=>contextMenuActive?.setTab(label)
 	return (
-		<div className="MenuItem__exteriorContent">
+		<div className="MenuDownItem__exteriorContent">
 			<div className={`${isActive ? 'active' :''}`} onClick={handleActive}>
 				<Link to={url}>
-					<div className="menuItem__content">
+					<div className="menuDownItem__content">
 						{isActive ? 
 							<label>{icon2}</label>
 							:
 							<label>{icon}</label>
 						}
-						<span className="menuItem__label">{label}</span>
 					</div>
 				</Link>
 			</div>
