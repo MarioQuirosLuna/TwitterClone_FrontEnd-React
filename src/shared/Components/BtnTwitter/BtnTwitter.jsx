@@ -2,7 +2,7 @@ import { useContext } from 'react'
 
 import { AppContext } from '../../../Context/AppContext'
 
-import { newPost } from '../../../Services/api'
+import { getAllPost, newPost } from '../../../Services/api'
 
 import './BtnTwitter.scss'
 
@@ -20,6 +20,8 @@ const BtnTwitter = ({ label = 'BtnLabel', textPost, media_posted }) => {
 				'text_posted': textPost
 			}
 			await newPost(Post)
+			appContext?.setPosts(await getAllPost())
+
 		} catch (error) {
 			console.error(error)
 		}

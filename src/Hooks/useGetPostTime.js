@@ -39,7 +39,7 @@ const useGetPostTime = (datePosted, exactDate) => {
 	} else if (minutesDifference > 0) {
 		difference = `${minutesDifference}m`
 
-	} else if (secondsDifference > 0) {
+	} else if (secondsDifference >= 0) {
 		difference = `${secondsDifference}s`
 
 	}
