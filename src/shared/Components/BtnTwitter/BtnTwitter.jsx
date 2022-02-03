@@ -6,7 +6,7 @@ import { getAllPost, newPost } from '../../../Services/api'
 
 import './BtnTwitter.scss'
 
-const BtnTwitter = ({ label = 'BtnLabel', textPost, media_posted }) => {
+const BtnTwitter = ({ label = 'BtnLabel', textPost, setTextPost, media_posted }) => {
 
 	const appContext = useContext(AppContext)
 	const handleSubmitNewPost = async (e) => {
@@ -20,6 +20,7 @@ const BtnTwitter = ({ label = 'BtnLabel', textPost, media_posted }) => {
 				'text_posted': textPost
 			}
 			await newPost(Post)
+			setTextPost('')
 			appContext?.setPosts(await getAllPost())
 
 		} catch (error) {

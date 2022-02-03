@@ -83,7 +83,7 @@ const NavHome = () => {
 								</div>
 							</div>
 							<div>
-								<BtnTwitter label="Tweet" textPost={textPost} />
+								<BtnTwitter label="Tweet" textPost={textPost} setTextPost={setTextPost} />
 							</div>
 						</div>
 					</div>
