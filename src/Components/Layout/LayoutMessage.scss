@@ -14,12 +14,15 @@
 
         .container__menu{
             width: 250px;
-            border: 1px solid #0f0;
+            margin: 10px 0 0 0;
 
             @media(max-width: $LaptopL){
                 width: 80px;
             }
             @media(max-width: $TabletS){
+                display: none;
+            }
+            @media(max-height: $MobileXL){
                 display: none;
             }
         }
@@ -46,6 +49,23 @@
                 @media(max-width: $LaptopS){
                     display: none;
                 }
+            }
+        }
+        .container__MenuDown{
+            display: none;
+            @media(max-width: $TabletS){
+                width: 100%;
+                display: flex;
+                position: fixed;
+                border-top: 1px solid $border_color_light;
+                bottom: 0;
+            }
+            @media(max-height: $MobileXL){
+                width: 100%;
+                display: flex;
+                position: fixed;
+                border-top: 1px solid $border_color_light;
+                bottom: 0;
             }
         }
     }
