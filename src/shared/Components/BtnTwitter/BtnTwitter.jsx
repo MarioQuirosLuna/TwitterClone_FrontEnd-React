@@ -17,7 +17,9 @@ const BtnTwitter = ({ label = 'BtnLabel', textPost, setTextPost, media_posted })
 				'user_photo': appContext?.user?.user_photo,
 				'nameUser': appContext?.user?.name,
 				'username': appContext?.user?.username,
-				'text_posted': textPost
+				'text_posted': textPost,
+				'parentTweetUserName': null,
+				'parentTweetId': null
 			}
 			await newPost(Post)
 			setTextPost('')
