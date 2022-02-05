@@ -4,7 +4,8 @@ import { AppContext } from '../../Context/AppContext'
 
 import NavProfile from '../../Components/NavProfile/NavProfile'
 import MenuTweetsProfile from '../../Components/MenuTweetsProfile/MenuTweetsProfile'
-import TweetPost from '../../Components/TweetPost/TweetPost'
+import TweetPost from '../../Components/Tweet/TweetPost/TweetPost'
+
 import { getUserPosts } from '../../Services/api'
 
 const Profile = () => {

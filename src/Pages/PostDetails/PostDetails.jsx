@@ -2,14 +2,16 @@ import { useContext, useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 
 import { AppContext } from '../../Context/AppContext'
+
 import useGetPostTime from '../../Hooks/useGetPostTime'
+
 import ImagePosted from '../../shared/Components/ImagePosted/ImagePosted'
 import PhotoUser from '../../shared/Components/PhotoUser/PhotoUser'
 import SettingsMenu from '../../shared/Components/SettingsMenu/SettingsMenu'
 import TextBlue from '../../shared/Components/TextBlue/TextBlue'
-
 import BtnTwitter from '../../shared/Components/BtnTwitter/BtnTwitter'
-import TweetPost from '../../Components/TweetPost/TweetPost'
+
+import TweetPost from '../../Components/Tweet/TweetPost/TweetPost'
 import NavPostDetails from '../../Components/NavPostDetails/NavPostDetails'
 
 import ChatBubbleOutlineOutlinedIcon from '@mui/icons-material/ChatBubbleOutlineOutlined'
