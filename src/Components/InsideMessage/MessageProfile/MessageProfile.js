@@ -1,6 +1,8 @@
-import PhotoUser from '../../shared/Components/PhotoUser/PhotoUser'
+import PhotoUser from '../../../shared/Components/PhotoUser/PhotoUser'
+
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined'
 import DateRangeOutlinedIcon from '@mui/icons-material/DateRangeOutlined'
+
 import './MessageProfile.scss'
 
 const MessageProfile = ({ 

@@ -1,4 +1,4 @@
-import ItemMenuTweetsProfile from './ItemMenuTweetsProfile'
+import ItemMenuTweetsProfile from './ItemMenuTweetsProfile/ItemMenuTweetsProfile'
 import { ListOptionsMenu } from './ListOptions'
 
 import './MenuTweetsProfile.scss'
