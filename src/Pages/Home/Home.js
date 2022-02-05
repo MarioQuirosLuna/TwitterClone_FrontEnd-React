@@ -19,16 +19,12 @@ const Home = () => {
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [])
 
-	const isMyTweet = (username) => {
-		return username === appContext?.user?.username
-	}
-
 	return (
 		<div className="home__container">
 			<NavHome />
 			<div className="home__tweetsList">
 				{appContext?.posts?.map((post, id) => {
-					return <TweetPost key={id} post={post} owner={isMyTweet(post.username)} />
+					return <TweetPost key={id} post={post} />
 				})}
 			</div>
 		</div>

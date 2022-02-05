@@ -31,10 +31,6 @@ const PostDetails = () => {
 		setPost(appContext?.posts?.find((post) => post.id === idPost))
 	}, [appContext?.posts, idPost])
 
-	const isMyTweet = (username) => {
-		return username === appContext?.user?.username
-	}
-
 	return (
 		<div className="container__tweetDetails">
 			<NavPostDetails />
@@ -93,7 +89,7 @@ const PostDetails = () => {
 			</section>
 			<div>
 				{post?.comments?.map((post, id) => {
-					return <TweetComment key={id} post={post} owner={isMyTweet(post.username)} />
+					return <TweetComment key={id} post={post} />
 				})}
 			</div>
 		</div>

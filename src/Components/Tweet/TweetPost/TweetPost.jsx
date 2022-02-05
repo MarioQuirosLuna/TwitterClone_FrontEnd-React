@@ -1,13 +1,18 @@
-import PhotoUser from '../../../shared/Components/PhotoUser/PhotoUser'
+import { useContext } from 'react'
+import { Link } from 'react-router-dom'
 
+import { AppContext } from '../../../Context/AppContext'
+
+import useIsMyTweet from '../../../Hooks/useIsMyTweet'
+
+import TweetData from '../TweetData/TweetData'
+import PhotoUser from '../../../shared/Components/PhotoUser/PhotoUser'
 
 import ChatBubbleOutlineOutlinedIcon from '@mui/icons-material/ChatBubbleOutlineOutlined'
 import AutorenewOutlinedIcon from '@mui/icons-material/AutorenewOutlined'
 import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined'
 import IosShareOutlinedIcon from '@mui/icons-material/IosShareOutlined'
 import BarChartOutlinedIcon from '@mui/icons-material/BarChartOutlined'
-import { Link } from 'react-router-dom'
-import TweetData from '../TweetData/TweetData'
 
 import '../Tweet.scss'
 
@@ -21,9 +26,10 @@ const TweetPost = ({
 		retweets,
 		likes
 	},
-	post,
-	owner
+	post
 }) => {
+	const appContext = useContext(AppContext)
+
 	return (
 		<Link to={`/${username}/status/${id ? id : _id}`} className="tweet__container">
 			<div className="tweet__container-photo">
@@ -49,7 +55,7 @@ const TweetPost = ({
 					<div onClick={() => console.log('click shared')} >
 						<IosShareOutlinedIcon />
 					</div>
-					{owner &&
+					{useIsMyTweet(username, appContext?.user?.username) &&
 						<div>
 							<BarChartOutlinedIcon />
 						</div>

@@ -1,5 +1,10 @@
-import PhotoUser from '../../../shared/Components/PhotoUser/PhotoUser'
+import { useContext } from 'react'
 
+import { AppContext } from '../../../Context/AppContext'
+
+import useIsMyTweet from '../../../Hooks/useIsMyTweet'
+
+import PhotoUser from '../../../shared/Components/PhotoUser/PhotoUser'
 import TweetData from '../TweetData/TweetData'
 
 import ChatBubbleOutlineOutlinedIcon from '@mui/icons-material/ChatBubbleOutlineOutlined'
@@ -13,13 +18,15 @@ import '../Tweet.scss'
 const TweetComment = ({
 	post: {
 		user_photo,
+		username,
 		comments,
 		retweets,
 		likes
 	},
-	post,
-	owner
+	post
 }) => {
+	const appContext = useContext(AppContext)
+
 	return (
 		<div className="tweet__container">
 			<div className="tweet__container-photo">
@@ -45,7 +52,7 @@ const TweetComment = ({
 					<div>
 						<IosShareOutlinedIcon />
 					</div>
-					{owner &&
+					{useIsMyTweet(username, appContext?.user?.username) &&
 						<div>
 							<BarChartOutlinedIcon />
 						</div>
