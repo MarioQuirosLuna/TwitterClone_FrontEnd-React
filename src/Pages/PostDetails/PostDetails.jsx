@@ -5,7 +5,7 @@ import { AppContext } from '../../Context/AppContext'
 
 import useGetPostTime from '../../Hooks/useGetPostTime'
 
-import TweetPost from '../../Components/Tweet/TweetPost/TweetPost'
+import TweetComment from '../../Components/Tweet/TweetComment/TweetComment'
 import NavPostDetails from '../../Components/NavPages/NavPostDetails/NavPostDetails'
 
 import ImagePosted from '../../shared/Components/ImagePosted/ImagePosted'
@@ -30,6 +30,10 @@ const PostDetails = () => {
 	useEffect(() => {
 		setPost(appContext?.posts?.find((post) => post.id === idPost))
 	}, [appContext?.posts, idPost])
+
+	const isMyTweet = (username) => {
+		return username === appContext?.user?.username
+	}
 
 	return (
 		<div className="container__tweetDetails">
@@ -89,7 +93,7 @@ const PostDetails = () => {
 			</section>
 			<div>
 				{post?.comments?.map((post, id) => {
-					return <TweetPost key={id} post={post} />
+					return <TweetComment key={id} post={post} owner={isMyTweet(post.username)} />
 				})}
 			</div>
 		</div>

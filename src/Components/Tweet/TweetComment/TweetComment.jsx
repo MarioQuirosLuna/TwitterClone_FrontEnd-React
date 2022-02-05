@@ -1,11 +1,15 @@
 import PhotoUser from '../../../shared/Components/PhotoUser/PhotoUser'
 
+import TweetData from '../TweetData/TweetData'
+
 import ChatBubbleOutlineOutlinedIcon from '@mui/icons-material/ChatBubbleOutlineOutlined'
 import AutorenewOutlinedIcon from '@mui/icons-material/AutorenewOutlined'
 import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined'
 import IosShareOutlinedIcon from '@mui/icons-material/IosShareOutlined'
 import BarChartOutlinedIcon from '@mui/icons-material/BarChartOutlined'
-import TweetData from '../TweetData/TweetData'
+
+import '../Tweet.scss'
+
 const TweetComment = ({
 	post: {
 		user_photo,
@@ -17,7 +21,7 @@ const TweetComment = ({
 	owner
 }) => {
 	return (
-		<>
+		<div className="tweet__container">
 			<div className="tweet__container-photo">
 				<PhotoUser url={user_photo} />
 			</div>
@@ -28,15 +32,15 @@ const TweetComment = ({
 				<div className="content__options">
 					<div>
 						<ChatBubbleOutlineOutlinedIcon />
-						<span>{comments?.length}</span>
+						<span>0</span>
 					</div>
 					<div>
 						<AutorenewOutlinedIcon />
-						<span>{retweets?.length}</span>
+						<span>0</span>
 					</div>
 					<div>
 						<FavoriteBorderOutlinedIcon />
-						<span>{likes?.length}</span>
+						<span>0</span>
 					</div>
 					<div>
 						<IosShareOutlinedIcon />
@@ -48,7 +52,7 @@ const TweetComment = ({
 					}
 				</div>
 			</div>
-		</>
+		</div>
 	)
 }
 

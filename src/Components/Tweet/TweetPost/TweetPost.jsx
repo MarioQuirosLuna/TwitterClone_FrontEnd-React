@@ -9,7 +9,7 @@ import BarChartOutlinedIcon from '@mui/icons-material/BarChartOutlined'
 import { Link } from 'react-router-dom'
 import TweetData from '../TweetData/TweetData'
 
-import './TweetPost.scss'
+import '../Tweet.scss'
 
 const TweetPost = ({
 	post: {
