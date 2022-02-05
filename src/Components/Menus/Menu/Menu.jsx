@@ -1,13 +1,15 @@
-import MenuItem from '../MenuItem/MenuItem'
+import MenuItem from './MenuItem/MenuItem'
 import { ListOptionsMenu } from './ListOptions'
 
+import PhotoUser from '../../../shared/Components/PhotoUser/PhotoUser'
+
 import TwitterIcon from '@mui/icons-material/Twitter'
-import PhotoUser from '../../shared/Components/PhotoUser/PhotoUser'
 import MoreHorizOutlinedIcon from '@mui/icons-material/MoreHorizOutlined'
 import CreateIcon from '@mui/icons-material/Create'
 
+import MenuActiveProvider from '../../../Context/menuActive'
+
 import './Menu.scss'
-import MenuActiveProvider from '../../Context/menuActive'
 
 const Menu = () => {
 	return (

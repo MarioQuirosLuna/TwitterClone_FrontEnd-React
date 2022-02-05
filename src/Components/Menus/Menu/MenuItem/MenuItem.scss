@@ -1,5 +1,5 @@
-@import '../../shared/Styles/breakpoints';
-@import '../../shared/Styles/colors.scss';
+@use '../../../../shared/Styles/breakpoints' as *;
+@import '../../../../shared/Styles/colors.scss';
 
 .MenuItem__exteriorContent{
     .active{

@@ -1,9 +1,10 @@
-import Menu from '../Menu/Menu'
-import MenuDown from '../MenuDown/MenuDown'
+import Menu from '../Menus/Menu/Menu'
+import MenuDown from '../Menus/MenuDown/MenuDown'
 import InsideMessage from '../InsideMessage/InsideMessage'
 
-import './LayoutMessage.scss'
 import { MessageProvider } from '../../Context/contextMessage'
+
+import './LayoutMessage.scss'
 
 const messages = [
 	{
