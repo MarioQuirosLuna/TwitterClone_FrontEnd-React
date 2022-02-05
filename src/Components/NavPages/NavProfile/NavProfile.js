@@ -1,7 +1,7 @@
-import PhotoUser from '../../shared/Components/PhotoUser/PhotoUser'
-import TextBlue from '../../shared/Components/TextBlue/TextBlue'
+import PhotoUser from '../../../shared/Components/PhotoUser/PhotoUser'
+import TextBlue from '../../../shared/Components/TextBlue/TextBlue'
 
-import useGetJoinedDate from '../../Hooks/useGetJoinedDate'
+import useGetJoinedDate from '../../../Hooks/useGetJoinedDate'
 
 import ArrowBackOutlinedIcon from '@mui/icons-material/ArrowBackOutlined'
 import EventNoteOutlinedIcon from '@mui/icons-material/EventNoteOutlined'

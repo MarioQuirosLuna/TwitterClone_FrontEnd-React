@@ -1,4 +1,4 @@
-@use '../../shared/Styles/navBarFixed' as *;
+@use '../../../shared/Styles/navBarFixed' as *;
 
 .header__navTweet{
     @include navBarFixed;

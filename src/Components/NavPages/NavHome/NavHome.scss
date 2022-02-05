@@ -1,7 +1,7 @@
-@use '../../shared/Styles/navBarFixed' as *;
-@use '../../shared/Styles/breakpoints' as *;
+@use '../../../shared/Styles/navBarFixed' as *;
+@use '../../../shared/Styles/breakpoints' as *;
 
-@import '../../shared/Styles/colors';
+@import '../../../shared/Styles/colors';
 
 .container__navHome{
     width: 100%;

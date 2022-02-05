@@ -2,7 +2,7 @@ import { useContext, useEffect, useState } from 'react'
 
 import { AppContext } from '../../Context/AppContext'
 
-import NavProfile from '../../Components/NavProfile/NavProfile'
+import NavProfile from '../../Components/NavPages/NavProfile/NavProfile'
 import MenuTweetsProfile from '../../Components/MenuTweetsProfile/MenuTweetsProfile'
 import TweetPost from '../../Components/Tweet/TweetPost/TweetPost'
 

@@ -1,10 +1,10 @@
 import { useContext, useState } from 'react'
 
-import BtnTwitter from '../../shared/Components/BtnTwitter/BtnTwitter'
-import PhotoUser from '../../shared/Components/PhotoUser/PhotoUser'
-import TextBlue from '../../shared/Components/TextBlue/TextBlue'
+import BtnTwitter from '../../../shared/Components/BtnTwitter/BtnTwitter'
+import PhotoUser from '../../../shared/Components/PhotoUser/PhotoUser'
+import TextBlue from '../../../shared/Components/TextBlue/TextBlue'
 
-import { AppContext } from '../../Context/AppContext'
+import { AppContext } from '../../../Context/AppContext'
 
 import StarRateOutlinedIcon from '@mui/icons-material/StarRateOutlined'
 import ImageOutlinedIcon from '@mui/icons-material/ImageOutlined'

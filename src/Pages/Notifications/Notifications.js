@@ -1,4 +1,4 @@
-import NavNotifications from '../../Components/NavNotifications/NavNotifications'
+import NavNotifications from '../../Components/NavPages/NavNotifications/NavNotifications'
 import NotificationItem from '../../Components/NotificationItem/NotificationItem'
 
 import './Notifications.scss'
@@ -38,7 +38,7 @@ const user = {
 const Notifications = () => {
 	return (
 		<div className="notifications__container">
-			<NavNotifications/>
+			<NavNotifications />
 			<div className="notificationItem__notificationsList">
 				{user?.notifications?.map((notification, id) => {
 					return <NotificationItem key={id} notification={notification} owner={user.username === notification.username} />
