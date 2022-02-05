@@ -7,7 +7,7 @@ import MoreHorizOutlinedIcon from '@mui/icons-material/MoreHorizOutlined'
 import CreateIcon from '@mui/icons-material/Create'
 
 import './Menu.scss'
-import MenuActiveProvider from '../../Contexts/menuActive'
+import MenuActiveProvider from '../../Context/menuActive'
 
 const Menu = () => {
 	return (

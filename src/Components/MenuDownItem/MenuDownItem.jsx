@@ -1,7 +1,7 @@
 import {useContext} from 'react'
 import { Link } from 'react-router-dom'
 import './MenuDownItem.scss'
-import {MenuActiveContext} from '../../Contexts/menuActive'
+import {MenuActiveContext} from '../../Context/menuActive'
 
 const MenuItem = ({
 	option: { 
