@@ -7,7 +7,7 @@ import './NavPostDetails.scss'
 const NavPostDetails = () => {
 	return (
 		<section className="header__navTweet">
-			<Link to={'/'} >
+			<Link to={'/home'} >
 				<ArrowBackOutlinedIcon />
 			</Link>
 			<div>
