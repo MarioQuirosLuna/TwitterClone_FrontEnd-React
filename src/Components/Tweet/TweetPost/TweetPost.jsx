@@ -31,7 +31,7 @@ const TweetPost = ({
 	const appContext = useContext(AppContext)
 
 	return (
-		<Link to={`/${username}/status/${id ? id : _id}`} className="tweet__container">
+		<Link to={`/${username}/status/${id ? id : _id}`} className="tweet__container link">
 			<div className="tweet__container-photo">
 				<PhotoUser url={user_photo} />
 			</div>
