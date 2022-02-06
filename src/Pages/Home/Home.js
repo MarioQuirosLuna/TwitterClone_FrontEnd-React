@@ -1,7 +1,7 @@
 import { useContext, useEffect } from 'react'
 
-import NavHome from '../../Components/NavHome/NavHome'
-import TweetPost from '../../Components/TweetPost/TweetPost'
+import NavHome from '../../Components/NavPages/NavHome/NavHome'
+import TweetPost from '../../Components/Tweet/TweetPost/TweetPost'
 
 import { AppContext } from '../../Context/AppContext'
 import { getAllPost } from '../../Services/api'

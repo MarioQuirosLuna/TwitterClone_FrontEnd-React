@@ -2,9 +2,10 @@ import { useContext, useEffect, useState } from 'react'
 
 import { AppContext } from '../../Context/AppContext'
 
-import NavProfile from '../../Components/NavProfile/NavProfile'
-import MenuTweetsProfile from '../../Components/MenuTweetsProfile/MenuTweetsProfile'
-import TweetPost from '../../Components/TweetPost/TweetPost'
+import NavProfile from '../../Components/NavPages/NavProfile/NavProfile'
+import MenuTweetsProfile from '../../Components/Menus/MenuTweetsProfile/MenuTweetsProfile'
+import TweetPost from '../../Components/Tweet/TweetPost/TweetPost'
+
 import { getUserPosts } from '../../Services/api'
 
 const Profile = () => {

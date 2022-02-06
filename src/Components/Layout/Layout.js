@@ -1,6 +1,6 @@
-import Menu from '../Menu/Menu'
+import Menu from '../Menus/Menu/Menu'
+import MenuDown from '../Menus/MenuDown/MenuDown'
 import Trends from '../Trends/Trends'
-import MenuDown from '../MenuDown/MenuDown'
 
 import './Layout.scss'
 

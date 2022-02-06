@@ -2,15 +2,17 @@ import { useContext, useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 
 import { AppContext } from '../../Context/AppContext'
+
 import useGetPostTime from '../../Hooks/useGetPostTime'
+
+import TweetComment from '../../Components/Tweet/TweetComment/TweetComment'
+import NavPostDetails from '../../Components/NavPages/NavPostDetails/NavPostDetails'
+
 import ImagePosted from '../../shared/Components/ImagePosted/ImagePosted'
 import PhotoUser from '../../shared/Components/PhotoUser/PhotoUser'
 import SettingsMenu from '../../shared/Components/SettingsMenu/SettingsMenu'
 import TextBlue from '../../shared/Components/TextBlue/TextBlue'
-
 import BtnTwitter from '../../shared/Components/BtnTwitter/BtnTwitter'
-import TweetPost from '../../Components/TweetPost/TweetPost'
-import NavPostDetails from '../../Components/NavPostDetails/NavPostDetails'
 
 import ChatBubbleOutlineOutlinedIcon from '@mui/icons-material/ChatBubbleOutlineOutlined'
 import AutorenewOutlinedIcon from '@mui/icons-material/AutorenewOutlined'
@@ -78,7 +80,7 @@ const PostDetails = () => {
 					<IosShareOutlinedIcon />
 				</div>
 				<div className="tweetDetails__newComment">
-					<PhotoUser />
+					<PhotoUser url={appContext?.user.user_photo} />
 					<input type="text" placeholder="Tweet your reply" />
 					<div>
 						<BtnTwitter label="Reply" />
@@ -87,7 +89,7 @@ const PostDetails = () => {
 			</section>
 			<div>
 				{post?.comments?.map((post, id) => {
-					return <TweetPost key={id} post={post} />
+					return <TweetComment key={id} post={post} />
 				})}
 			</div>
 		</div>

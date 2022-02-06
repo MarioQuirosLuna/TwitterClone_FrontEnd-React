@@ -1,0 +1,9 @@
+@import '../../../shared/Styles/colors';
+
+.menuTweetsProfile__container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px 0;
+    border-bottom: 1px solid $border_color_light;
+}
