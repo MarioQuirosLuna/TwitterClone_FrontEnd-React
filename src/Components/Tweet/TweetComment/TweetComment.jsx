@@ -4,7 +4,6 @@ import { AppContext } from '../../../Context/AppContext'
 
 import useIsMyTweet from '../../../Hooks/useIsMyTweet'
 
-import PhotoUser from '../../../shared/Components/PhotoUser/PhotoUser'
 import TweetData from '../TweetData/TweetData'
 
 import ChatBubbleOutlineOutlinedIcon from '@mui/icons-material/ChatBubbleOutlineOutlined'
@@ -17,44 +16,47 @@ import '../Tweet.scss'
 
 const TweetComment = ({
 	post: {
-		user_photo,
-		username,
-		comments,
-		retweets,
-		likes
+		username
 	},
 	post
 }) => {
 	const appContext = useContext(AppContext)
 
 	return (
-		<div className="tweet__container">
-			<div className="tweet__container-photo">
-				<PhotoUser url={user_photo} />
-			</div>
-			<div className="tweet__container-content">
-
+		<div className="Tweet__container">
+			<div className="tweet__linkContainer">
 				<TweetData post={post} />
-
-				<div className="content__options">
-					<div>
-						<ChatBubbleOutlineOutlinedIcon />
+			</div>
+			<div className="content__options">
+				<div className="content__option-right">
+					<div className="option comments">
+						<i>
+							<ChatBubbleOutlineOutlinedIcon />
+						</i>
 						<span>0</span>
 					</div>
-					<div>
-						<AutorenewOutlinedIcon />
+					<div className="option retweet">
+						<i>
+							<AutorenewOutlinedIcon />
+						</i>
 						<span>0</span>
 					</div>
-					<div>
-						<FavoriteBorderOutlinedIcon />
+					<div className="option like">
+						<i>
+							<FavoriteBorderOutlinedIcon />
+						</i>
 						<span>0</span>
 					</div>
-					<div>
-						<IosShareOutlinedIcon />
+					<div className="option share">
+						<i>
+							<IosShareOutlinedIcon />
+						</i>
 					</div>
 					{useIsMyTweet(username, appContext?.user?.username) &&
-						<div>
-							<BarChartOutlinedIcon />
+						<div className="option statistics">
+							<i>
+								<BarChartOutlinedIcon />
+							</i>
 						</div>
 					}
 				</div>

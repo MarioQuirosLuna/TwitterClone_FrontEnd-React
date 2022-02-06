@@ -37,8 +37,10 @@ const NavHome = () => {
 						<h2>Home</h2>
 					</div>
 				</div>
-				<div>
-					<StarRateOutlinedIcon />
+				<div className="stars">
+					<i>
+						<StarRateOutlinedIcon />
+					</i>
 				</div>
 			</section>
 			<section className="main__navHome">
