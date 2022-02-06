@@ -1,0 +1,40 @@
+@import 'colors';
+
+@mixin iconOptionStandard{
+    i{
+        &:hover{
+            border-radius: 50%;
+            color: $blue_Twitter;
+            background-color: $blue__Twitter_transparent;
+        }
+    }
+}
+
+@mixin iconOptionRetweet{
+    i{
+        &:hover{
+            border-radius: 50%;
+            color: $green_Twitter;
+            background-color: $green__Twitter_transparent;
+        }
+    }
+}
+
+@mixin iconOptionLike{
+    i{
+        &:hover{
+            border-radius: 50%;
+            color: $red_Twitter;
+            background-color: $red__Twitter_transparent;
+        }
+    }
+}
+
+@mixin iconOptionGrey{
+    i{
+        &:hover{
+            border-radius: 50%;
+            background-color: $gray__Twitter_transparent;
+        }
+    }
+}

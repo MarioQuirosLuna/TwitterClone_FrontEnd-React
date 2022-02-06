@@ -8,7 +8,11 @@ const NavPostDetails = () => {
 	return (
 		<section className="header__navTweet">
 			<Link to={'/home'} className='link'>
-				<ArrowBackOutlinedIcon />
+				<div className="goBack">
+					<i>
+						<ArrowBackOutlinedIcon />
+					</i>
+				</div>
 			</Link>
 			<div>
 				<h2>Tweet</h2>

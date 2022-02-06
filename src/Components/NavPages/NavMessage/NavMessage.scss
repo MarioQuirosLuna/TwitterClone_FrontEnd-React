@@ -1,3 +1,4 @@
+@use '../../../shared/Styles/hoverIconOption' as *;
 @import '../../../shared/Styles/breakpoints';
 @import '../../../shared/Styles/colors.scss';
 
@@ -25,8 +26,15 @@
             cursor: pointer;
             padding: 10px 0 0 0;
             justify-content: space-between;
-            div{
-                margin-left: 10px;
+            .icon{
+                @include iconOptionGrey;
+                i{
+                    width: 38px;
+                    height: 38px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
             }
         }
     }

@@ -24,8 +24,10 @@ const NavProfile = ({
 	return (
 		<div className="container__navProfile">
 			<section className="header__navProfile">
-				<div>
-					<ArrowBackOutlinedIcon />
+				<div className="goBack">
+					<i>
+						<ArrowBackOutlinedIcon />
+					</i>
 				</div>
 				<div>
 					<h2>{name}</h2>

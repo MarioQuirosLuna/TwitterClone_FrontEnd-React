@@ -80,7 +80,7 @@ const PostDetails = () => {
 					<IosShareOutlinedIcon />
 				</div>
 				<div className="tweetDetails__newComment">
-					<PhotoUser url={appContext?.user.user_photo} />
+					<PhotoUser url={appContext?.user?.user_photo} />
 					<input type="text" placeholder="Tweet your reply" />
 					<div>
 						<BtnTwitter label="Reply" />
