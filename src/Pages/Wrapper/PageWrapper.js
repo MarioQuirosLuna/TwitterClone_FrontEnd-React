@@ -1,10 +1,24 @@
+import { useContext } from 'react'
+
+import { MenuActiveContext } from '../../Context/menuActive'
+
 import Layout from '../../Components/Layout/Layout'
 import LayoutMessage from '../../Components/Layout/LayoutMessage'
 
+import NewTweet from '../../shared/Components/NewTweet/NewTweet'
+import PopUp from '../../shared/Components/PopUp/Popup'
+
 const PageWrapper = ({ component: Component, isPage, isMessagePage, isLoginPage }) => {
+	const menuContext = useContext(MenuActiveContext)
+
 	return (
 		<>
-			{isPage && 
+			{menuContext?.popUp &&
+				<PopUp>
+					<NewTweet />
+				</PopUp>
+			}
+			{isPage &&
 				<Layout>
 					{Component}
 				</Layout>
@@ -12,7 +26,7 @@ const PageWrapper = ({ component: Component, isPage, isMessagePage, isLoginPage 
 			{isMessagePage &&
 				<LayoutMessage>
 					{Component}
-				</LayoutMessage> 
+				</LayoutMessage>
 			}
 		</>
 	)
