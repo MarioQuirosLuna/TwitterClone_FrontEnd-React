@@ -7,8 +7,6 @@ import TwitterIcon from '@mui/icons-material/Twitter'
 import MoreHorizOutlinedIcon from '@mui/icons-material/MoreHorizOutlined'
 import CreateIcon from '@mui/icons-material/Create'
 
-import MenuActiveProvider from '../../../Context/menuActive'
-
 import './Menu.scss'
 
 const Menu = () => {
@@ -16,17 +14,15 @@ const Menu = () => {
 		<div className="menu__container">
 			<nav className="container__nav">
 				<label className="container__twittericon"><TwitterIcon fontSize='large' /></label>
-				<MenuActiveProvider value={null}>
-					<ul>
-						{ListOptionsMenu?.map((option, index) => {
-							return (
-								<label className={option.label} key={index}>
-									<MenuItem option={option} />
-								</label>
-							)
-						})}
-					</ul>
-				</MenuActiveProvider>
+				<ul>
+					{ListOptionsMenu?.map((option, index) => {
+						return (
+							<label className={option.label} key={index}>
+								<MenuItem option={option} />
+							</label>
+						)
+					})}
+				</ul>
 			</nav>
 			<div className="container__btnTweet">
 				<label type="button" className="btnTweet__tweet">Tweet</label>
