@@ -74,10 +74,26 @@ const PostDetails = () => {
 					</div>
 				</div>
 				<div className="tweetDetails__icons">
-					<ChatBubbleOutlineOutlinedIcon />
-					<AutorenewOutlinedIcon />
-					<FavoriteBorderOutlinedIcon />
-					<IosShareOutlinedIcon />
+					<div className="option comments">
+						<i>
+							<ChatBubbleOutlineOutlinedIcon />
+						</i>
+					</div>
+					<div className="option retweet">
+						<i>
+							<AutorenewOutlinedIcon />
+						</i>
+					</div>
+					<div className="option like">
+						<i>
+							<FavoriteBorderOutlinedIcon />
+						</i>
+					</div>
+					<div className="option share">
+						<i>
+							<IosShareOutlinedIcon />
+						</i>
+					</div>
 				</div>
 				<div className="tweetDetails__newComment">
 					<PhotoUser url={appContext?.user?.user_photo} />
