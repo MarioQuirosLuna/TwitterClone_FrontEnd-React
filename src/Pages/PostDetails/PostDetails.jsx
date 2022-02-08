@@ -96,7 +96,12 @@ const PostDetails = () => {
 					</div>
 				</div>
 				<div className="tweetDetails__newComment">
-					<NewTweet placeholder="Tweet you reply" isComment toUser={post?.username} />
+					<NewTweet
+						placeholder="Tweet you reply"
+						isComment
+						toUser={post?.username}
+						idPost={post?.id}
+					/>
 				</div>
 			</section>
 			<div>

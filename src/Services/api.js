@@ -44,3 +44,15 @@ export const newPost = async (newPost) => {
 		.then((res) => res.data)
 		.catch(error => { console.error(error) })
 }
+
+export const newComment = async (username, id, newComment) => {
+	const config = {
+		headers: {
+			'Content-type': 'application/json'
+		}
+	}
+	const req = axios.put(`${LOCAL_URL}/post/comment/${username}/${id}`, newComment, config)
+	return req
+		.then((res) => res.data)
+		.catch(error => { console.error(error) })
+}

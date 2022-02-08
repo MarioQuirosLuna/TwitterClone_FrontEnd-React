@@ -18,7 +18,8 @@ import './NewTweet.scss'
 const NewTweet = ({
 	placeholder = 'Place Holder',
 	isComment,
-	toUser
+	toUser,
+	idPost
 }) => {
 	const appContext = useContext(AppContext)
 
@@ -84,7 +85,13 @@ const NewTweet = ({
 								</div>
 							</div>
 							<div>
-								<BtnTwitter label="Tweet" textPost={textPost} setTextPost={setTextPost} />
+								<BtnTwitter
+									label={!isComment ? 'Tweet' : 'Reply'}
+									isComment={isComment}
+									textPost={textPost}
+									setTextPost={setTextPost}
+									idPost={idPost}
+								/>
 							</div>
 						</div>
 					</div>

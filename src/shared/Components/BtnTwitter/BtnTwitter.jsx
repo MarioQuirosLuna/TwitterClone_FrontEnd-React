@@ -3,11 +3,18 @@ import { useContext } from 'react'
 import { AppContext } from '../../../Context/AppContext'
 import { MenuActiveContext } from '../../../Context/menuActive'
 
-import { getAllPost, newPost } from '../../../Services/api'
+import { getAllPost, newComment, newPost } from '../../../Services/api'
 
 import './BtnTwitter.scss'
 
-const BtnTwitter = ({ label = 'BtnLabel', textPost, setTextPost, media_posted }) => {
+const BtnTwitter = ({
+	label = 'BtnLabel',
+	textPost,
+	setTextPost,
+	media_posted,
+	isComment,
+	idPost
+}) => {
 
 	const appContext = useContext(AppContext)
 	const menuContext = useContext(MenuActiveContext)
@@ -37,8 +44,24 @@ const BtnTwitter = ({ label = 'BtnLabel', textPost, setTextPost, media_posted })
 		}
 	}
 
+	const handleSubmitNewComment = async (e) => {
+		e.preventDefault()
+		try {
+			const Comment = {
+				'userComment': appContext?.user?.username,
+				'comment': textPost,
+				'media': null
+			}
+			await newComment(appContext?.user?.username, idPost, Comment)
+			appContext?.setPosts(await getAllPost())
+			setTextPost('')
+		} catch (error) {
+			console.error(error)
+		}
+	}
+
 	return (
-		<div className="container__btnTwitter" onClick={handleSubmitNewPost}>
+		<div className="container__btnTwitter" onClick={isComment ? handleSubmitNewComment : handleSubmitNewPost}>
 			<div>
 				<span>{label}</span>
 			</div>
