@@ -15,7 +15,11 @@ import AddLocationAltOutlinedIcon from '@mui/icons-material/AddLocationAltOutlin
 
 import './NewTweet.scss'
 
-const NewTweet = () => {
+const NewTweet = ({
+	placeholder = 'Place Holder',
+	isComment,
+	toUser
+}) => {
 	const appContext = useContext(AppContext)
 
 
@@ -28,6 +32,11 @@ const NewTweet = () => {
 	return (
 		<div className="newTweet__container">
 			<section className="main__navHome">
+				{isComment &&
+					<div className="text_replying">
+						<span>Replying to <TextBlue label={toUser} /></span>
+					</div>
+				}
 				<div className="mainNavHome__Content">
 					<div className="mainNavHome__Content-photo">
 						{appContext?.user &&
@@ -41,11 +50,13 @@ const NewTweet = () => {
 								name="text_posted"
 								value={textPost}
 								onChange={e => handleChangeInput(e)}
-								placeholder="What's happening?"
+								placeholder={placeholder}
 							/>
-							<div className="formNavHome__input-span">
-								<TextBlue label="Everyone can reply" />
-							</div>
+							{!isComment &&
+								<div className="formNavHome__input-span">
+									<TextBlue label="Everyone can reply" />
+								</div>
+							}
 						</div>
 						<div className="formNavHome__options">
 							<div className="formNavHome__options-icons">
@@ -55,15 +66,19 @@ const NewTweet = () => {
 								<div>
 									<GifBoxOutlinedIcon />
 								</div>
-								<div>
-									<PollOutlinedIcon />
-								</div>
+								{!isComment &&
+									<div>
+										<PollOutlinedIcon />
+									</div>
+								}
 								<div>
 									<SentimentSatisfiedAltOutlinedIcon />
 								</div>
-								<div>
-									<DateRangeOutlinedIcon />
-								</div>
+								{!isComment &&
+									<div>
+										<DateRangeOutlinedIcon />
+									</div>
+								}
 								<div>
 									<AddLocationAltOutlinedIcon />
 								</div>

@@ -31,7 +31,7 @@ const NavHome = () => {
 					</i>
 				</div>
 			</section>
-			<NewTweet />
+			<NewTweet placeholder="What's happening?" />
 		</div>
 	)
 }

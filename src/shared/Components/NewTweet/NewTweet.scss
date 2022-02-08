@@ -12,10 +12,15 @@
         @media(max-width: $MobileXL){
             display: none;
         }
+        .text_replying{
+            color: $color_text_gray;
+            padding: 0 0 10px 50px;
+        }
 
         .mainNavHome__Content{
             display: flex;
             height: 145px;
+            max-height: 100%;
 
             .mainNavHome__Content-photo{
                 width: 48px;

@@ -12,7 +12,6 @@ import ImagePosted from '../../shared/Components/ImagePosted/ImagePosted'
 import PhotoUser from '../../shared/Components/PhotoUser/PhotoUser'
 import SettingsMenu from '../../shared/Components/SettingsMenu/SettingsMenu'
 import TextBlue from '../../shared/Components/TextBlue/TextBlue'
-import BtnTwitter from '../../shared/Components/BtnTwitter/BtnTwitter'
 
 import ChatBubbleOutlineOutlinedIcon from '@mui/icons-material/ChatBubbleOutlineOutlined'
 import AutorenewOutlinedIcon from '@mui/icons-material/AutorenewOutlined'
@@ -20,6 +19,7 @@ import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlin
 import IosShareOutlinedIcon from '@mui/icons-material/IosShareOutlined'
 
 import './PostDetails.scss'
+import NewTweet from '../../shared/Components/NewTweet/NewTweet'
 
 const PostDetails = () => {
 
@@ -96,11 +96,7 @@ const PostDetails = () => {
 					</div>
 				</div>
 				<div className="tweetDetails__newComment">
-					<PhotoUser url={appContext?.user?.user_photo} />
-					<input type="text" placeholder="Tweet your reply" />
-					<div>
-						<BtnTwitter label="Reply" />
-					</div>
+					<NewTweet placeholder="Tweet you reply" isComment toUser={post?.username} />
 				</div>
 			</section>
 			<div>
