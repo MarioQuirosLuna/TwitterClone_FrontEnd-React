@@ -1,5 +1,9 @@
+import { useContext } from 'react'
+
 import MenuItem from './MenuItem/MenuItem'
 import { ListOptionsMenu } from './ListOptions'
+
+import { MenuActiveContext } from '../../../Context/menuActive'
 
 import PhotoUser from '../../../shared/Components/PhotoUser/PhotoUser'
 
@@ -10,6 +14,12 @@ import CreateIcon from '@mui/icons-material/Create'
 import './Menu.scss'
 
 const Menu = () => {
+	const menuContext = useContext(MenuActiveContext)
+
+	const OpenPopUp = () => {
+		menuContext?.setPopUp(true)
+	}
+
 	return (
 		<div className="menu__container">
 			<nav className="container__nav">
@@ -25,8 +35,8 @@ const Menu = () => {
 				</ul>
 			</nav>
 			<div className="container__btnTweet">
-				<label type="button" className="btnTweet__tweet">Tweet</label>
-				<label type="button" className="btnTweet__icon"><CreateIcon /></label>
+				<label type="button" className="btnTweet__tweet" onClick={() => OpenPopUp()}>Tweet</label>
+				<label type="button" className="btnTweet__icon" onClick={() => OpenPopUp()}><CreateIcon /></label>
 			</div>
 			<div className="container__profile">
 				<PhotoUser url={undefined} size="40" />
