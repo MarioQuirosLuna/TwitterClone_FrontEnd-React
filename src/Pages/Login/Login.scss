@@ -11,13 +11,29 @@
             .login_exit {
                 padding: 10px 0px 0 10px;
                 cursor: pointer;
-                overflow: hidden;
+                @media(max-width: $TabletS) {
+                    position: absolute; 
+                    top: 0; 
+                    left: 0;
+                }
             }
             .login_icon_twitter {
                 padding: 5px 0px 0 245px;
             }
+            
         }
         .login_body_container {
+
+            @media(max-width: $TabletM) {
+                margin-top: 200px;
+            }
+
+            @media(max-width: $MobileS) {
+                position: absolute; 
+                top: 0; 
+                left: 0;
+            }
+
             .login_title{
                 display: flex;
                 justify-content: center;
@@ -99,8 +115,10 @@
                 padding-top: 10px;
                 position: relative;
                 overflow: hidden;
-                .enter_login_info {
-                    background: none;
+
+                input[type="text"] {
+                    background: transparent;
+                    border: transparent;
                     width: 300px;
                     height: 60px;
                     border: 3px solid #404D57;
@@ -116,7 +134,7 @@
                     color: #404D57;
                     font-size: 20px;
                 }
-                .enter_login_info:focus + .login_info .login_span_info{
+                .enter_login_info:focus + .login_info .login_span_info {
                     transform: translateY(-150%);
                     font-size: 14px;
                     color: #1DA1F2;

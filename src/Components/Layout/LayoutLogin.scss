@@ -9,13 +9,27 @@
     height: 100vh;
     width: 100vw;
 
+
     .ContainerLogin__Content {
         height: 650px;
         width: 600px;
         background-color: black;
         border-radius: 16px;
-        //align-items: center;
-        //justify-content: center;
         display: flex;
-    }
+
+        @media(max-width: $TabletM) {
+            height: 100vh;
+            width: 100vw;
+            border-radius: 0;
+            justify-content: center;
+            display: flex;
+        }
+
+        @media(max-width: $TabletS) {
+            width: 100%;
+            position: absolute;
+            top: 0; 
+            left: 0;
+        }
+    } 
 }
