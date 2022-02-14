@@ -6,9 +6,9 @@ const MenuActiveProvider = ({ children }) => {
 
 	const [activeTab, setTab] = useState(null)
 	const initialTab = { activeTab, setTab }
-	useEffect(()=>{
+	useEffect(() => {
 		setTab('Home')
-	},[])
+	}, [])
 	return (
 		<MenuActiveContext.Provider value={initialTab}>
 			{children}
