@@ -106,9 +106,6 @@
             .retweet{
                 @include iconOptionRetweet;
             }
-            .like{
-                @include iconOptionLike;
-            }
         }
 
         @media (max-width: $MobileXXL){

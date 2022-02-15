@@ -27,6 +27,9 @@
             color: $red_Twitter;
             background-color: $red__Twitter_transparent;
         }
+        &.active{
+            color: $red_Twitter;
+        }
     }
 }
 

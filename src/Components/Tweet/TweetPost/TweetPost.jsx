@@ -5,11 +5,11 @@ import { AppContext } from '../../../Context/AppContext'
 
 import useIsMyTweet from '../../../Hooks/useIsMyTweet'
 
+import BtnLike from '../../../shared/Components/BtnLike/BtnLike'
 import TweetData from '../TweetData/TweetData'
 
 import ChatBubbleOutlineOutlinedIcon from '@mui/icons-material/ChatBubbleOutlineOutlined'
 import AutorenewOutlinedIcon from '@mui/icons-material/AutorenewOutlined'
-import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined'
 import IosShareOutlinedIcon from '@mui/icons-material/IosShareOutlined'
 import BarChartOutlinedIcon from '@mui/icons-material/BarChartOutlined'
 
@@ -47,12 +47,11 @@ const TweetPost = ({
 						</i>
 						<span>{retweets?.length}</span>
 					</div>
-					<div className="option like" onClick={() => console.log('click like')} >
-						<i>
-							<FavoriteBorderOutlinedIcon />
-						</i>
-						<span>{likes?.length}</span>
-					</div>
+					<BtnLike
+						likes={likes}
+						id={id ? id : _id}
+						showDetail
+					/>
 					<div className="option share" onClick={() => console.log('click share')} >
 						<i>
 							<IosShareOutlinedIcon />
