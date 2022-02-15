@@ -1,14 +1,16 @@
+@use '../../../shared/Styles/navBarFixed' as *;
 @import '../../../shared/Styles/breakpoints';
 @import '../../../shared/Styles/colors.scss';
+
 
 .containerBookmarks{
     width: 100%;
     height: 53px;
     .containerBookmarks_header{
+        @include navBarFixed;
         display: flex;
         justify-content: space-between;
         .header__top{
-            padding: 6px 0 0 15px;
             label{
                 font-size: 13px;
                 color: $color_text_gray;
@@ -17,9 +19,6 @@
                 font-size: 20px;
                 font-weight: 700;
             }
-        }
-        .containerBookmarks_icons{
-            padding: 15px 15px 0 0;
         }
     }
 }
