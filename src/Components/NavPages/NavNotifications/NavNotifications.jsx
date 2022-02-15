@@ -16,8 +16,10 @@ const NavNotifications = () => {
 					</div>
 					<h2>Notifications</h2>
 				</div>
-				<div>
-					<SettingsMenuGear />
+				<div className="settings">
+					<i>
+						<SettingsMenuGear />
+					</i>
 				</div>
 			</section>
 			<section className="main__NavNotification">

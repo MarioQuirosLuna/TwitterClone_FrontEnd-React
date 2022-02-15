@@ -16,6 +16,7 @@ import PostDetails from '../Pages/PostDetails/PostDetails'
 import AppProvider from '../Context/AppContext'
 
 import './App.scss'
+import MenuActiveProvider from '../Context/menuActive'
 
 function App() {
 	return (

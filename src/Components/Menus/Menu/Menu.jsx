@@ -1,5 +1,9 @@
+import { useContext } from 'react'
+
 import MenuItem from './MenuItem/MenuItem'
 import { ListOptionsMenu } from './ListOptions'
+
+import { MenuActiveContext } from '../../../Context/menuActive'
 
 import PhotoUser from '../../../shared/Components/PhotoUser/PhotoUser'
 
@@ -7,30 +11,32 @@ import TwitterIcon from '@mui/icons-material/Twitter'
 import MoreHorizOutlinedIcon from '@mui/icons-material/MoreHorizOutlined'
 import CreateIcon from '@mui/icons-material/Create'
 
-import MenuActiveProvider from '../../../Context/menuActive'
-
 import './Menu.scss'
 
 const Menu = () => {
+	const menuContext = useContext(MenuActiveContext)
+
+	const OpenPopUp = () => {
+		menuContext?.setPopUp(true)
+	}
+
 	return (
 		<div className="menu__container">
 			<nav className="container__nav">
 				<label className="container__twittericon"><TwitterIcon fontSize='large' /></label>
-				<MenuActiveProvider value={null}>
-					<ul>
-						{ListOptionsMenu?.map((option, index) => {
-							return (
-								<label className={option.label} key={index}>
-									<MenuItem option={option} />
-								</label>
-							)
-						})}
-					</ul>
-				</MenuActiveProvider>
+				<ul>
+					{ListOptionsMenu?.map((option, index) => {
+						return (
+							<label className={option.label} key={index}>
+								<MenuItem option={option} />
+							</label>
+						)
+					})}
+				</ul>
 			</nav>
 			<div className="container__btnTweet">
-				<label type="button" className="btnTweet__tweet">Tweet</label>
-				<label type="button" className="btnTweet__icon"><CreateIcon /></label>
+				<label type="button" className="btnTweet__tweet" onClick={() => OpenPopUp()}>Tweet</label>
+				<label type="button" className="btnTweet__icon" onClick={() => OpenPopUp()}><CreateIcon /></label>
 			</div>
 			<div className="container__profile">
 				<PhotoUser url={undefined} size="40" />
