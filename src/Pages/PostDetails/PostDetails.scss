@@ -1,0 +1,129 @@
+@use '../../shared/Styles/hoverIconOption' as *;
+@use '../../shared/Styles/breakpoints' as *;
+@import '../../shared/Styles/colors';
+
+.container__tweetDetails{
+    width: 100%;
+
+    .main__tweetDetails{
+        width: 100%;
+        margin: 53px 0 0 0;
+        padding: 0 15px 0 15px;
+        border-bottom: 1px solid $border_color_light;
+
+        .tweetDetails__user{
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+
+            .tweetDetails__data{
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0 0 0 10px;
+
+                .tweetDetails__data-name{
+                    display: inline-block;
+                    .username{
+                        color: $color_text_gray;
+                    }
+                }
+            }
+        }
+
+        .tweetDetails__content{
+            margin: 15px 0 0 0;
+            border-bottom: 1px solid $border_color_light;
+
+            .tweetDetails__content-textPosted{
+                line-height: 28px;
+                font-size: 23px;
+            }
+            .tweetDetails__content-translate{
+                margin: 5px 0 0 0;
+            }
+            .tweetDetails__content-timePosted{
+                height: 20px;
+                margin: 10px 0 10px 0;
+                color: $color_text_gray;
+            }
+        }
+
+        .tweetDetails__tweets{
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 15px 0 15px 0;
+            border-bottom: 1px solid $border_color_light;
+
+            div{
+                margin: 0 15px 0 5px;
+
+                span{
+                    color: $color_text_gray;
+                }
+            }
+        }
+
+        .tweetDetails__icons{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            color: $color_text_gray;
+            padding: 15px 0 15px 0;
+            border-bottom: 1px solid $border_color_light;
+
+            .option{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                i{
+                    width: 38px;
+                    height: 38px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+            .comments, .share, .statistics{
+                @include iconOptionStandard;
+            }
+            .retweet{
+                @include iconOptionRetweet;
+            }
+            .like{
+                @include iconOptionLike;
+            }
+        }
+
+        .tweetDetails__newComment{
+            height: 180px;
+            /*
+            * Overriding styles of the newTweet component
+            */
+            .newTweet__container{
+                .main__navHome{
+                    margin: 0;
+                    padding: 20px 0 0 0;
+                    .mainNavHome__Content{
+                        .mainNavHome__Content-form{
+                            .formNavHome__input{
+                                border: none;
+                            }
+                            .formNavHome__options{
+                                .formNavHome__options-icons{
+                                    justify-content: flex-start;
+                                    div{
+                                        padding: 0 10px 0 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

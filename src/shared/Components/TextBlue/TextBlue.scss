@@ -1,0 +1,11 @@
+@import '../../Styles/colors';
+
+.textBlue__label{
+    width: 170px;
+    height: 24px;
+    font-size: 14px;
+    text-decoration: none solid $blue_Twitter;
+
+    cursor: pointer;
+    color: $blue_Twitter;
+}

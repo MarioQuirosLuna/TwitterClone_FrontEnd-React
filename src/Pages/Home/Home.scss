@@ -1,4 +1,4 @@
-@import '../../shared/Styles/breakpoints';
+@use '../../shared/Styles/breakpoints' as *;
 
 .home__container{
     .home__tweetsList{

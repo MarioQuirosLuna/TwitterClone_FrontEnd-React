@@ -1,0 +1,58 @@
+@use '../../../shared/Styles/hoverIconOption' as *;
+@import '../../../shared/Styles/colors.scss';
+
+.container__NavNotification{
+    height: 106px;
+    width: 100%;
+    border-bottom: 1px solid $border_color_light;
+
+    .header__NavNotification{
+        height: 53px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 15px;
+
+        .container__NavNotification-title{
+            display: flex;
+            justify-content: space-between;
+            margin: 0 5px;
+
+            .container__NavNotification-photo{
+                display: none;
+                margin: 0 20px 0 0;
+                @media screen and (max-width:500px) {
+                    display: flex;
+                }
+            }
+
+            h2{
+                margin: 5px 0 0 0;
+            }
+
+        }
+        .settings{
+            @include iconOptionGrey;
+            
+            i{
+                width: 38px;
+                height: 38px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+
+    .main__NavNotification{
+        width: 100%;
+        height: 53px;
+
+        .mainContent__NavNotification{
+            display: flex;
+            height: 53px;
+            justify-content: space-around;
+            align-items: center;
+        }
+    }
+}

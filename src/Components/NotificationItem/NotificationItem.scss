@@ -1,21 +1,25 @@
 @import '../../shared/Styles/colors.scss';
 
-.tweet__container{
+.notification__container{
     width: 100%;
 
     display: flex;
-    border-left: 1px solid $border_color_light;
-    border-right: 1px solid $border_color_light;
     border-bottom: 1px solid $border_color_light;
     padding: 10px 0;
     cursor: pointer;
 
-    .tweet__container-photo{
-        width: 48px;
-        margin: 0 12px 0 12px;
+    .notification__container-icon{
+        width: 32px;
+        margin: 0 0px 0 32px;
+        color: $blue_Twitter;
     }
 
-    .tweet__container-content{
+    .notification__container-photo{
+        width: 32px;
+        margin: 0 12px 0 0px;
+    }
+
+    .notification__container-content{
         width: 100%;
         padding: 0 12px 0 10px;
 
@@ -61,26 +65,10 @@
         .content__text{
             width: 100%;
             min-height: auto;
-        }
-        .content__media{
-            width: 100%;
-            min-height: auto;
-            padding: 12px 0 0 0;
-        }
-        .content__options{
-            width: 90%;
-            display: flex;
-            padding: 10px 0 0 0;
-            justify-content: space-between;
-            color: $color_text_gray;
+            margin: 0 10px 0 0;
 
-            div{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                span{
-                    margin: 0 0 0 10px;
-                }
+            span{
+                font-weight: 700;
             }
         }
     }

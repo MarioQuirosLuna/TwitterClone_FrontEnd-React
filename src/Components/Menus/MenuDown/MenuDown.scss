@@ -1,0 +1,27 @@
+@use '../../../shared/Styles/breakpoints' as *;
+@import '../../../shared/Styles/colors.scss';
+
+.menuDown__container{
+    height: 100%;
+    width: 100%;
+    background: $background_Twitter;
+    align-items: center;
+    justify-content: center;
+    .container__items{
+        width: 100vw;
+        display: flex;
+        justify-content: space-between;
+    }
+    .containet__btnTweetDown{
+        position: fixed;
+        width: 55px;
+        bottom: 70px;
+        right: 20px;
+        height: 55px;
+        background: $blue_Twitter;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 40px;
+    }
+}

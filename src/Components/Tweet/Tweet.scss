@@ -1,0 +1,119 @@
+@use '../../shared/Styles/hoverIconOption' as *;
+@use '../../shared/Styles/breakpoints' as *;
+@import '../../shared/Styles/colors.scss';
+
+.Tweet__container{
+    width: 100%;
+    border-bottom: 1px solid $border_color_light;
+
+    .tweet__linkContainer{
+        display: flex;
+        
+        padding: 10px 0;
+        cursor: pointer;
+    
+        .tweet__container-photo{
+            width: 48px;
+            margin: 0 12px 0 12px;
+        }
+    
+        .tweet__container-content{
+            width: 100%;
+            padding: 0 12px 0 10px;
+    
+            .content__nav{
+                display: flex;
+                align-items: flex-start;
+                justify-content: space-between;
+                flex-direction: row;
+    
+                .content__nav-data{
+                    width: 100%;
+                    height: 22px;
+                    display: flex;
+    
+                    span{
+                        height: auto;
+                        width: auto;
+                        display: inline;
+                        line-height: 20px;
+                        padding: 0 5px 0 0;
+                        white-space: nowrap;
+                    }
+    
+                    .nav__data-name{
+                        font-weight: 700;
+                    }
+                    .nav__data-username{
+                        @media(max-width: 400px){
+                            display: none;
+                        }
+                    }
+                    .nav__data-username, .nav__data-time{
+                        color: $color_text_gray;
+                    }
+                }
+                .content__nav-settings{
+                    display: flex;
+                    align-items: stretch;
+                    margin: 0 10px 0 10px;
+                }
+            }
+    
+            .content__text{
+                width: 100%;
+                min-height: auto;
+            }
+            .content__media{
+                width: 100%;
+                min-height: auto;
+                padding: 12px 0 0 0;
+            }
+        }
+    }
+    .content__options{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 0 0 5px 20px;
+
+        .content__option-right{
+            width: 80%;
+            display: flex;
+            padding: 10px 0 0 0;
+            justify-content: space-between;
+            color: $color_text_gray;
+
+            .option{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                i{
+                    width: 38px;
+                    height: 38px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                span{
+                    margin: 0 0 0 8px;
+                }
+            }
+            .comments, .share, .statistics{
+                @include iconOptionStandard;
+            }
+            .retweet{
+                @include iconOptionRetweet;
+            }
+            .like{
+                @include iconOptionLike;
+            }
+        }
+
+        @media (max-width: $MobileXXL){
+            justify-content: flex-end;
+            padding: 0 15px 10px 0;
+        }
+    }
+}
