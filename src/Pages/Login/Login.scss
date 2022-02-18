@@ -6,6 +6,12 @@
     .login {
         width: 600px;
         height: 650px;
+
+        @media(max-width: $TabletS) {
+            width: 100vw;
+            height: 100vh;
+        }
+        
         .login_up_container{
             display: flex;
             .login_exit {
