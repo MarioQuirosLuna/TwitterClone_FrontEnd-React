@@ -6,13 +6,21 @@
     .login {
         width: 600px;
         height: 650px;
-
+        
         @media(max-width: $TabletS) {
             width: 100vw;
             height: 100vh;
         }
+
+        @media (max-width: $MobileL) {
+            overflow-y: scroll;
+            overflow-x: scroll;
+            position: relative;
+            
+        }
         
         .login_up_container{
+            
             display: flex;
             .login_exit {
                 padding: 10px 0px 0 10px;
@@ -25,19 +33,23 @@
             }
             .login_icon_twitter {
                 padding: 5px 0px 0 245px;
+
+                @media (max-width: $TabletS) {
+                    padding: 5px 0px 0 45%;
+                    
+                }
+                @media (max-width: $TabletM) {
+                    padding: 5px 0px 0 45%;
+                    
+                }
             }
             
         }
         .login_body_container {
 
-            @media(max-width: $TabletM) {
-                margin-top: 200px;
-            }
-
             @media(max-width: $MobileS) {
                 position: absolute; 
-                top: 0; 
-                left: 0;
+                margin-left: 30px;
             }
 
             .login_title{
