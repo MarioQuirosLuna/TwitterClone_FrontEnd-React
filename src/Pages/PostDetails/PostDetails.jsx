@@ -12,14 +12,14 @@ import ImagePosted from '../../shared/Components/ImagePosted/ImagePosted'
 import PhotoUser from '../../shared/Components/PhotoUser/PhotoUser'
 import SettingsMenu from '../../shared/Components/SettingsMenu/SettingsMenu'
 import TextBlue from '../../shared/Components/TextBlue/TextBlue'
+import NewTweet from '../../shared/Components/NewTweet/NewTweet'
+import BtnLike from '../../shared/Components/BtnLike/BtnLike'
 
 import ChatBubbleOutlineOutlinedIcon from '@mui/icons-material/ChatBubbleOutlineOutlined'
 import AutorenewOutlinedIcon from '@mui/icons-material/AutorenewOutlined'
-import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined'
 import IosShareOutlinedIcon from '@mui/icons-material/IosShareOutlined'
 
 import './PostDetails.scss'
-import NewTweet from '../../shared/Components/NewTweet/NewTweet'
 
 const PostDetails = () => {
 
@@ -84,11 +84,10 @@ const PostDetails = () => {
 							<AutorenewOutlinedIcon />
 						</i>
 					</div>
-					<div className="option like">
-						<i>
-							<FavoriteBorderOutlinedIcon />
-						</i>
-					</div>
+					<BtnLike
+						likes={post?.likes}
+						id={idPost}
+					/>
 					<div className="option share">
 						<i>
 							<IosShareOutlinedIcon />
