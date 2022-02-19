@@ -1,0 +1,228 @@
+@import '../../shared/Styles/breakpoints';
+
+.login_container {
+    background: background_Login;
+
+    .login {
+        width: 600px;
+        height: 650px;
+        
+        @media(max-width: $TabletS) {
+            width: 100vw;
+            height: 100vh;
+        }
+
+        @media (max-width: $MobileL) {
+            overflow-y: scroll;
+            overflow-x: scroll;
+            position: relative;
+            
+        }
+        
+        .login_up_container{
+            
+            display: flex;
+            .login_exit {
+                padding: 10px 0px 0 10px;
+                label{
+                    cursor: pointer;
+                }
+                @media(max-width: $TabletS) {
+                    position: absolute; 
+                    top: 0; 
+                    left: 0;
+                }
+            }
+            .login_icon_twitter {
+                padding: 5px 0px 0 245px;
+
+                @media (max-width: $TabletS) {
+                    padding: 5px 0px 0 45%;
+                    
+                }
+                @media (max-width: $TabletM) {
+                    padding: 5px 0px 0 45%;
+                    
+                }
+            }
+            
+        }
+        .login_body_container {
+
+            @media(max-width: $MobileS) {
+                position: absolute; 
+                margin-left: 30px;
+            }
+
+            .login_title{
+                display: flex;
+                justify-content: center;
+                padding-top: 25px;
+                .login_span_title {
+                    font-size: 23px;
+                    font-weight: 700;
+                }
+            }
+            .login_with_google {
+                display: flex;
+                justify-content: center;
+                padding-top: 25px;
+                .login_with_google_button {
+                    display: flex;
+                    justify-content: center;
+                    cursor: pointer;
+                    font-size: 16px;
+                    background: white;
+                    border-radius: 20px;
+                    height: 40px;
+                    width: 300px;
+                    .login_with_google_tittle {
+                        padding-top: 10px;
+                        color: black;
+                    }
+                }
+            }
+            .login_with_apple_container {
+                .login_with_apple {
+                    display: flex;
+                    justify-content: center;
+                    padding-top: 25px;
+                    .login_with_apple_button {
+                        display: flex;
+                        justify-content: center;
+                        cursor: pointer;
+                        font-size: 16px;
+                        background: white;
+                        border-radius: 20px;
+                        height: 40px;
+                        width: 300px;
+                        .login_with_apple_tittle {
+                            padding-top: 10px;
+                            color: black;
+                        }
+                    }
+                }
+            }
+            .login_divider {
+                display: flex;
+                justify-content: center;
+                padding-top: 20px;
+                font-size: 17px;
+                .divider {
+                    h1 {
+                        display: inline-block;
+                        position: relative;
+                    }
+                    h1::after, h1::before {
+                        content: '';
+                        position: absolute;
+                        width: 135px;
+                        height: 2px;
+                        background-color: #404D57;
+                        top: 0.4em;
+                    }
+                    h1::before {
+                        left: -140px;
+                    }
+                    h1::after {
+                        right: -140px;
+                    }
+                }
+            }
+            .login_enter_mail {
+                display: flex;
+                justify-content: center;
+                padding-top: 10px;
+                position: relative;
+                overflow: hidden;
+
+                input[type="text"] {
+                    background: transparent;
+                    border: transparent;
+                    width: 300px;
+                    height: 60px;
+                    border: 3px solid #404D57;
+                    border-radius: 5px;
+                    color: white;
+                }
+                .login_info {
+                    position: absolute;
+                    pointer-events: none;
+                    bottom: 20px;
+                }
+                .login_span_info {
+                    color: #404D57;
+                    font-size: 20px;
+                }
+                .enter_login_info:focus + .login_info .login_span_info {
+                    transform: translateY(-150%);
+                    font-size: 14px;
+                    color: #1DA1F2;
+                }
+
+                .enter_login_info:valid + .login_info .login_span_info {
+                    transform: translateY(-150%);
+                    font-size: 14px;
+                }
+
+                .enter_login_info:focus {
+                    border: 3px solid #1DA1F2;
+                }
+            }
+            .login_button_next {
+                display: flex;
+                justify-content: center;
+                padding-top: 25px;
+                .next_button {
+                    display: flex;
+                    justify-content: center;
+                    cursor: pointer;
+                    font-size: 16px;
+                    background: white;
+                    border-radius: 20px;
+                    height: 40px;
+                    width: 300px;
+                    .next_span {
+                        padding-top: 10px;
+                        color: black;
+                    }
+                }
+            }
+            .login_button_forget {
+                display: flex;
+                justify-content: center;
+                padding-top: 25px;
+                .login_forget_button {
+                    display: flex;
+                    justify-content: center;
+                    cursor: pointer;
+                    font-size: 16px;
+                    background: none;
+                    border-radius: 20px;
+                    height: 40px;
+                    width: 300px;
+                    border: 3px solid #404D57;
+                    .lofin_forgett_message {
+                        padding-top: 10px;
+                        color: white;
+                    }
+                }
+            }
+            .login_signup {
+                display: flex;
+                justify-content: center;
+                padding-top: 40px;
+                font-size: 15px;
+                font-weight: 700;
+                .login_message {
+                    color: #404D57;
+                }
+                .login_link {
+                    cursor: pointer;
+                    padding: 0 0 0 5px;
+                    color: #149BD9;
+                }
+            }
+        }
+    }
+}

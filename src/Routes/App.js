@@ -7,6 +7,7 @@ import {
 
 import PageWrapper from '../Pages/Wrapper/PageWrapper'
 import Home from '../Pages/Home/Home'
+import Login from '../Pages/Login/Login'
 import Notifications from '../Pages/Notifications/Notifications'
 import Message from '../Pages/Message/Message'
 import Bookmarks from '../Pages/Bookmarks/Bookmarks'
@@ -64,6 +65,11 @@ function App() {
 						<Route path="*" element={
 							<Navigate to="/" />
 						} />
+					  <Route path="/login" element={
+							<PageWrapper component={
+								<Login />
+							} isLoginPage />
+						}/>
 					</Routes>
 				</AppProvider>
 			</BrowserRouter>
