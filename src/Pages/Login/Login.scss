@@ -24,7 +24,9 @@
             display: flex;
             .login_exit {
                 padding: 10px 0px 0 10px;
-                cursor: pointer;
+                label{
+                    cursor: pointer;
+                }
                 @media(max-width: $TabletS) {
                     position: absolute; 
                     top: 0; 
@@ -216,6 +218,8 @@
                     color: #404D57;
                 }
                 .login_link {
+                    cursor: pointer;
+                    padding: 0 0 0 5px;
                     color: #149BD9;
                 }
             }

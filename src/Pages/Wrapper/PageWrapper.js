@@ -29,10 +29,11 @@ const PageWrapper = ({ component: Component, isPage, isMessagePage, isLoginPage 
 					{Component}
 				</LayoutMessage>
 			}
-      {isLoginPage &&
-         <LayoutLogin>
-           {Component}
-         </LayoutLogin> 
+      		{isLoginPage &&
+         		<LayoutLogin>
+           			{Component}
+         		</LayoutLogin>
+			}
 		</>
 	)
 	

@@ -66,10 +66,10 @@ function App() {
 							<Navigate to="/" />
 						} />
 					  <Route path="/login" element={
-						  <PageWrapper component={
-							  <Login />
-						} isLoginPage />
-					}/>
+							<PageWrapper component={
+								<Login />
+							} isLoginPage />
+						}/>
 					</Routes>
 				</AppProvider>
 			</BrowserRouter>
