@@ -15,62 +15,64 @@ import Profile from '../Pages/Profile/Profile'
 import PostDetails from '../Pages/PostDetails/PostDetails'
 
 import AppProvider from '../Context/AppContext'
+import MenuActiveProvider from '../Context/menuActive'
 
 import './App.scss'
-import MenuActiveProvider from '../Context/menuActive'
 
 function App() {
 	return (
 		<div className="app">
 			<BrowserRouter>
 				<AppProvider>
-					<Routes>
-						<Route path="/" element={
-							<PageWrapper component={
-								<div>
-									default page
-								</div>
-							} isPage />
-						} />
-						<Route path="/home" element={
-							<PageWrapper component={
-								<Home />
-							} isPage />
-						} />
-						<Route path="/profile" element={
-							<PageWrapper component={
-								<Profile />
-							} isPage />
-						} />
-						<Route path="/notifications" element={
-							<PageWrapper component={
-								<Notifications />
-							} isPage />
-						} />
-						<Route path="/Message" element={
-							<PageWrapper component={
-								<Message />
-							} isMessagePage />
-						} />
-						<Route path="/Bookmarks" element={
-							<PageWrapper component={
-								<Bookmarks />
-							} isPage />
-						} />
-						<Route path="/:user/status/:idPost" element={
-							<PageWrapper component={
-								<PostDetails />
-							} isPage />
-						} />
-						<Route path="*" element={
-							<Navigate to="/" />
-						} />
-					  <Route path="/login" element={
-							<PageWrapper component={
-								<Login />
-							} isLoginPage />
-						}/>
-					</Routes>
+					<MenuActiveProvider>
+						<Routes>
+							<Route path="/" element={
+								<PageWrapper component={
+									<div>
+										default page
+									</div>
+								} isPage />
+							} />
+							<Route path="/home" element={
+								<PageWrapper component={
+									<Home />
+								} isPage />
+							} />
+							<Route path="/profile" element={
+								<PageWrapper component={
+									<Profile />
+								} isPage />
+							} />
+							<Route path="/notifications" element={
+								<PageWrapper component={
+									<Notifications />
+								} isPage />
+							} />
+							<Route path="/Message" element={
+								<PageWrapper component={
+									<Message />
+								} isMessagePage />
+							} />
+							<Route path="/Bookmarks" element={
+								<PageWrapper component={
+									<Bookmarks />
+								} isPage />
+							} />
+							<Route path="/:user/status/:idPost" element={
+								<PageWrapper component={
+									<PostDetails />
+								} isPage />
+							} />
+							<Route path="*" element={
+								<Navigate to="/" />
+							} />
+							<Route path="/login" element={
+								<PageWrapper component={
+									<Login />
+								} isLoginPage />
+							} />
+						</Routes>
+					</MenuActiveProvider>
 				</AppProvider>
 			</BrowserRouter>
 		</div>
