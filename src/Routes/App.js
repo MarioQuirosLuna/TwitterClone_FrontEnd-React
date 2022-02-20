@@ -8,6 +8,7 @@ import {
 import PageWrapper from '../Pages/Wrapper/PageWrapper'
 import Home from '../Pages/Home/Home'
 import Login from '../Pages/Login/Login'
+import Register from '../Pages/Register/Register'
 import Notifications from '../Pages/Notifications/Notifications'
 import Message from '../Pages/Message/Message'
 import Bookmarks from '../Pages/Bookmarks/Bookmarks'
@@ -65,11 +66,16 @@ function App() {
 						<Route path="*" element={
 							<Navigate to="/" />
 						} />
-					  <Route path="/login" element={
+					  	<Route path="/login" element={
 							<PageWrapper component={
 								<Login />
 							} isLoginPage />
 						}/>
+						<Route path="/register" element={
+						  <PageWrapper component={
+							  <Register />
+						  } isLoginPage />
+					  }/>
 					</Routes>
 				</AppProvider>
 			</BrowserRouter>
