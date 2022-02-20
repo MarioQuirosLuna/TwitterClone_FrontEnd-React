@@ -1,0 +1,165 @@
+@import '../../shared/Styles/breakpoints';
+@import '../../shared/Styles/colors';
+
+.register__container{
+    .register__content{
+        .content__registerTop{
+            display: flex;
+            .register__exit {
+                padding: 15px 0px 0 15px;
+                label{
+                    cursor: pointer;
+                }
+                @media(max-width: $TabletS) {
+                    position: absolute; 
+                    top: 0; 
+                    left: 0;
+                }
+            }
+            .register__iconTwitter {
+                padding: 10px 0px 0 250px;
+
+                @media (max-width: $TabletS) {
+                    padding: 5px 0px 0 45%;
+                    
+                }
+                @media (max-width: $TabletM) {
+                    padding: 5px 0px 0 45%;
+                    
+                }
+            }
+        }
+        .content__registerLabel{
+            display: flex;
+            padding: 23px 0 0 33px;
+            .registerLabel {
+                font-size: 23px;
+                font-weight: 700;
+            }
+        }
+        .content__registerName {
+            display: flex;
+            justify-content: center;
+            position: relative;
+            padding: 25px 0 0 33px;
+
+            input[type="text"] {
+                background: transparent;
+                border: transparent;
+                width: 536px;
+                height: 60px;
+                font-size: 16px;
+                border: 1px solid $border_color_light;
+                border-radius: 5px;
+                color: white;
+            }
+        }
+        .content__registerName:focus {
+            border: 1px solid $blue_Twitter;
+        }
+        .content__registerEmail {
+            display: flex;
+            justify-content: center;
+            position: relative;
+            padding: 25px 0 0 33px;
+
+            input[type="text"] {
+                background: transparent;
+                border: transparent;
+                width: 536px;
+                height: 60px;
+                font-size: 16px;
+                border: 1px solid $border_color_light;
+                border-radius: 5px;
+                color: white;
+            }
+        }
+        .content__registerEmail:focus {
+            border: 1px solid $blue_Twitter;
+        }
+        .content__changeEmailPhone{
+            padding: 30px 0 0 33px;
+            .registerChangeEmailPhone{
+                cursor: pointer;
+                background: transparent;
+                border: transparent;
+                color: $blue_Twitter;
+            }
+            .registerChangeEmailPhone:hover{
+                text-decoration: underline;
+            }
+        }
+        .content__dateInfo{
+            padding: 35px 0 0 33px;
+            .Birthday{
+                font-size: 15px;
+                font-weight: 700;
+            }
+            .div__info{
+                width: 536px;
+                padding: 5px 0 0 0; 
+                .info__label{
+                    color: $color_text_gray;
+                    font-size: 15px;
+                }
+            }
+        }
+        .content__birthdaySelect{
+            padding: 16px 0 0 33px;
+            display: flex;
+            width: 100%;
+            .birthday__Month{
+                width: 100%;
+                select{
+                    cursor: pointer;
+                    background: transparent;
+                    border-radius: 5px;
+                    border: 1px solid $border_color_light;
+                    width: 252px;
+                    height: 60px;
+                }
+                select:focus {
+                    border: 1px solid $blue_Twitter;
+                }
+            }
+            .birthday__day{
+                padding: 0 0 0 15px;
+                width: 100%;
+                select{
+                    cursor: pointer;
+                    background: transparent;
+                    border-radius: 5px;
+                    border: 1px solid $border_color_light;
+                    width: 118px;
+                    height: 60px;
+                }
+                select:focus {
+                    border: 1px solid $blue_Twitter;
+                }
+            }
+            .birthday__year{
+                width: 100%;
+                select{
+                    cursor: pointer;
+                    background: transparent;
+                    border-radius: 5px;
+                    border: 1px solid $border_color_light;
+                    width: 135px;
+                    height: 60px;
+                }
+                select:focus {
+                    border: 1px solid $blue_Twitter;
+                }
+            }
+        }
+        .content__nextButton{
+            padding: 90px 0 0 33px;
+            .nextButton{
+                cursor: pointer;
+                width: 534px;
+                height: 43px;
+                border-radius: 40px;
+            }
+        }
+    }
+}
