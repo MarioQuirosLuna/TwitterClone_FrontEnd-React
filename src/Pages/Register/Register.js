@@ -1,6 +1,8 @@
-import './Register.scss'
 import TwitterIcon from '@mui/icons-material/Twitter'
 import CloseIcon from '@mui/icons-material/Close'
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown'
+import './Register.scss'
+
 
 const Register = () => {
 	return (
@@ -51,6 +53,7 @@ const Register = () => {
 							<option>November</option>
 							<option>December</option>
 						</select>
+						<label className="month__icon"><KeyboardArrowDownIcon fontSize="large"/></label>
 					</div>
 					<div className="birthday__day">
 						<select>
@@ -59,6 +62,7 @@ const Register = () => {
     							<option>{++i}</option>
   							)}
 						</select>
+						<label className="day__icon"><KeyboardArrowDownIcon fontSize="large"/></label>
 					</div>
 					<div className="birthday__year">
 						<select>
@@ -67,6 +71,7 @@ const Register = () => {
     							<option>{2022-i}</option>
   							)}
 						</select>
+						<label className="year__icon"><KeyboardArrowDownIcon fontSize="large"/></label>
 					</div>
 				</div>
 				<div className="content__nextButton">

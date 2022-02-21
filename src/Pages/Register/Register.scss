@@ -110,45 +110,84 @@
             width: 100%;
             .birthday__Month{
                 width: 100%;
+                display: flex;
+                border: 1px solid $border_color_light;
+                justify-content: center;
+                align-items: center;
+                border-radius: 5px;
+                width: 252px;
                 select{
+                    appearance: none;
                     cursor: pointer;
-                    background: transparent;
-                    border-radius: 5px;
-                    border: 1px solid $border_color_light;
-                    width: 252px;
+                    background: $background_Twitter;
+                    color: $color_font_light;
+                    border: transparent;
                     height: 60px;
+                    width: 252px;
                 }
                 select:focus {
                     border: 1px solid $blue_Twitter;
                 }
+                .month__icon{
+                    position: absolute;
+                    margin: 0 0 0 210px;
+                    pointer-events: none;
+                }
             }
             .birthday__day{
-                padding: 0 0 0 15px;
+                margin: 0 0 0 15px;
                 width: 100%;
+                display: flex;
+                border: 1px solid $border_color_light;
+                justify-content: center;
+                align-items: center;
+                border-radius: 5px;
+                width: 118px;
                 select{
+                    appearance: none;
                     cursor: pointer;
-                    background: transparent;
+                    background: $background_Twitter;
+                    color: $color_font_light;
+                    border: transparent;
                     border-radius: 5px;
-                    border: 1px solid $border_color_light;
                     width: 118px;
                     height: 60px;
                 }
                 select:focus {
                     border: 1px solid $blue_Twitter;
                 }
+                .day__icon{
+                    position: absolute;
+                    margin: 0 0 0 70px;
+                    pointer-events: none;
+                }
             }
             .birthday__year{
+                margin: 0 0 0 15px;
                 width: 100%;
+                display: flex;
+                border: 1px solid $border_color_light;
+                justify-content: center;
+                align-items: center;
+                border-radius: 5px;
+                width: 135px;
                 select{
+                    appearance: none;
                     cursor: pointer;
-                    background: transparent;
+                    background: $background_Twitter;
+                    color: $color_font_light;
                     border-radius: 5px;
-                    border: 1px solid $border_color_light;
+                    border: transparent;
                     width: 135px;
                     height: 60px;
                 }
                 select:focus {
                     border: 1px solid $blue_Twitter;
+                }
+                .year__icon{
+                    position: absolute;
+                    margin: 0 0 0 90px;
+                    pointer-events: none;
                 }
             }
         }
