@@ -117,11 +117,13 @@
                 border-radius: 5px;
                 width: 252px;
                 select{
+                    padding: 20px 0 0 7px;
                     appearance: none;
                     cursor: pointer;
                     background: $background_Twitter;
                     color: $color_font_light;
                     border: transparent;
+                    border-radius: 5px;
                     height: 60px;
                     width: 252px;
                 }
@@ -129,8 +131,16 @@
                     border: 1px solid $blue_Twitter;
                 }
                 .month__icon{
+                    color: $color_text_gray;
                     position: absolute;
                     margin: 0 0 0 210px;
+                    pointer-events: none;
+                }
+                .month__label{
+                    color: $color_text_gray;
+                    font-size: 13px;
+                    position: absolute;
+                    margin: 0 200px 30px 0;
                     pointer-events: none;
                 }
             }
@@ -144,6 +154,7 @@
                 border-radius: 5px;
                 width: 118px;
                 select{
+                    padding: 20px 0 0 7px;
                     appearance: none;
                     cursor: pointer;
                     background: $background_Twitter;
@@ -157,8 +168,16 @@
                     border: 1px solid $blue_Twitter;
                 }
                 .day__icon{
+                    color: $color_text_gray;
                     position: absolute;
                     margin: 0 0 0 70px;
+                    pointer-events: none;
+                }
+                .day__label{
+                    color: $color_text_gray;
+                    font-size: 13px;
+                    position: absolute;
+                    margin: 0 80px 30px 0;
                     pointer-events: none;
                 }
             }
@@ -172,6 +191,7 @@
                 border-radius: 5px;
                 width: 135px;
                 select{
+                    padding: 20px 0 0 7px;
                     appearance: none;
                     cursor: pointer;
                     background: $background_Twitter;
@@ -185,8 +205,16 @@
                     border: 1px solid $blue_Twitter;
                 }
                 .year__icon{
+                    color: $color_text_gray;
                     position: absolute;
                     margin: 0 0 0 90px;
+                    pointer-events: none;
+                }
+                .year__label{
+                    color: $color_text_gray;
+                    font-size: 13px;
+                    position: absolute;
+                    margin: 0 95px 30px 0;
                     pointer-events: none;
                 }
             }

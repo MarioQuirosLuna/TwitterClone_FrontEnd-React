@@ -54,6 +54,7 @@ const Register = () => {
 							<option>December</option>
 						</select>
 						<label className="month__icon"><KeyboardArrowDownIcon fontSize="large"/></label>
+						<label className="month__label">Month</label>
 					</div>
 					<div className="birthday__day">
 						<select>
@@ -63,6 +64,7 @@ const Register = () => {
   							)}
 						</select>
 						<label className="day__icon"><KeyboardArrowDownIcon fontSize="large"/></label>
+						<label className="day__label">Day</label>
 					</div>
 					<div className="birthday__year">
 						<select>
@@ -72,6 +74,7 @@ const Register = () => {
   							)}
 						</select>
 						<label className="year__icon"><KeyboardArrowDownIcon fontSize="large"/></label>
+						<label className="year__label">Year</label>
 					</div>
 				</div>
 				<div className="content__nextButton">
