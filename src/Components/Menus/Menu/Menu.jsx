@@ -4,6 +4,7 @@ import MenuItem from './MenuItem/MenuItem'
 import { ListOptionsMenu } from './ListOptions'
 
 import { MenuActiveContext } from '../../../Context/menuActive'
+import { disableScroll } from '../../../Hooks/useScroll'
 
 import PhotoUser from '../../../shared/Components/PhotoUser/PhotoUser'
 
@@ -18,6 +19,7 @@ const Menu = () => {
 
 	const OpenPopUp = () => {
 		menuContext?.setPopUp(true)
+		disableScroll()
 	}
 
 	return (

@@ -3,7 +3,7 @@
 @import '../../Styles/colors';
 
 .PopUp__container{
-    position: absolute;
+    position: fixed;
     background-color: $bg_PopUp;
     width: 100%;
     height: 100vh;

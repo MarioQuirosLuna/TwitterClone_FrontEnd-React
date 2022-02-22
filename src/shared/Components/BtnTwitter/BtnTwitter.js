@@ -2,6 +2,7 @@ import { useContext } from 'react'
 
 import { AppContext } from '../../../Context/AppContext'
 import { MenuActiveContext } from '../../../Context/menuActive'
+import { enableScroll } from '../../../Hooks/useScroll'
 
 import { getAllPost, newComment, newPost } from '../../../Services/api'
 
@@ -21,6 +22,7 @@ const BtnTwitter = ({
 
 	const ClosePopUp = () => {
 		menuContext?.setPopUp(false)
+		enableScroll()
 	}
 
 	const handleSubmitNewPost = async (e) => {

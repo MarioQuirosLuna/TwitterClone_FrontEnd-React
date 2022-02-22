@@ -1,6 +1,7 @@
 import { useContext } from 'react'
 
 import { MenuActiveContext } from '../../../Context/menuActive'
+import { enableScroll } from '../../../Hooks/useScroll'
 
 import CloseOutlinedIcon from '@mui/icons-material/CloseOutlined'
 
@@ -11,6 +12,7 @@ const PopUp = ({ children }) => {
 
 	const ClosePopUp = () => {
 		menuContext?.setPopUp(false)
+		enableScroll()
 	}
 
 	return (
