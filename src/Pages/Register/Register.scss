@@ -2,6 +2,10 @@
 @import '../../shared/Styles/colors';
 
 .register__container{
+    @media(max-width: $TabletM) {
+        width: 100vw;
+        height: 100vh;
+    }
     .register__content{
         .content__registerTop{
             display: flex;
@@ -41,7 +45,11 @@
             display: flex;
             justify-content: center;
             position: relative;
-            padding: 25px 0 0 33px;
+            padding: 25px 0 0 0;
+
+            @media(max-width: $TabletM) {
+                padding: 25px 25px 0 25px;
+            }
 
             input[type="text"] {
                 background: transparent;
@@ -52,6 +60,10 @@
                 border: 1px solid $border_color_light;
                 border-radius: 5px;
                 color: white;
+            
+                @media(max-width: $TabletM) {
+                    width: 100%;
+                }
             }
         }
         .content__registerName:focus {
@@ -61,7 +73,11 @@
             display: flex;
             justify-content: center;
             position: relative;
-            padding: 25px 0 0 33px;
+            padding: 25px 0 0 0;
+
+            @media(max-width: $TabletM) {
+                padding: 25px 25px 0 25px;
+            }
 
             input[type="text"] {
                 background: transparent;
@@ -72,6 +88,10 @@
                 border: 1px solid $border_color_light;
                 border-radius: 5px;
                 color: white;
+            
+                @media(max-width: $TabletM) {
+                    width: 100%;
+                }
             }
         }
         .content__registerEmail:focus {
@@ -98,6 +118,11 @@
             .div__info{
                 width: 536px;
                 padding: 5px 0 0 0; 
+            
+                @media(max-width: $TabletM) {
+                    width: 90%;
+                }
+
                 .info__label{
                     color: $color_text_gray;
                     font-size: 15px;
@@ -105,9 +130,11 @@
             }
         }
         .content__birthdaySelect{
-            padding: 16px 0 0 33px;
+            padding: 16px 25px 0 33px;
             display: flex;
             width: 100%;
+            align-items: center;
+            justify-content: center;
             .birthday__Month{
                 width: 100%;
                 display: flex;
@@ -115,7 +142,9 @@
                 justify-content: center;
                 align-items: center;
                 border-radius: 5px;
-                width: 252px;
+                @media(max-width: $TabletM) {
+
+                }
                 select{
                     padding: 20px 0 0 7px;
                     appearance: none;
@@ -126,6 +155,10 @@
                     border-radius: 5px;
                     height: 60px;
                     width: 252px;
+            
+                    @media(max-width: $TabletM) {
+                        width: 100%;
+                    }
                 }
                 select:focus {
                     border: 1px solid $blue_Twitter;
@@ -135,6 +168,10 @@
                     position: absolute;
                     margin: 0 0 0 210px;
                     pointer-events: none;
+            
+                    @media(max-width: $TabletM) {
+                        margin: 0 0 0 24%;
+                    }
                 }
                 .month__label{
                     color: $color_text_gray;
@@ -142,6 +179,10 @@
                     position: absolute;
                     margin: 0 200px 30px 0;
                     pointer-events: none;
+            
+                    @media(max-width: $TabletM) {
+                        margin: 0 22% 30px 0;
+                    }
                 }
             }
             .birthday__day{
@@ -152,7 +193,6 @@
                 justify-content: center;
                 align-items: center;
                 border-radius: 5px;
-                width: 118px;
                 select{
                     padding: 20px 0 0 7px;
                     appearance: none;
@@ -163,6 +203,10 @@
                     border-radius: 5px;
                     width: 118px;
                     height: 60px;
+            
+                    @media(max-width: $TabletM) {
+                        width: 100%;
+                    }
                 }
                 select:focus {
                     border: 1px solid $blue_Twitter;
@@ -172,6 +216,10 @@
                     position: absolute;
                     margin: 0 0 0 70px;
                     pointer-events: none;
+            
+                    @media(max-width: $TabletM) {
+                        margin: 0 0 0 24%;
+                    }
                 }
                 .day__label{
                     color: $color_text_gray;
@@ -179,6 +227,10 @@
                     position: absolute;
                     margin: 0 80px 30px 0;
                     pointer-events: none;
+            
+                    @media(max-width: $TabletM) {
+                        margin: 0 23% 30px 0;
+                    }
                 }
             }
             .birthday__year{
@@ -189,7 +241,6 @@
                 justify-content: center;
                 align-items: center;
                 border-radius: 5px;
-                width: 135px;
                 select{
                     padding: 20px 0 0 7px;
                     appearance: none;
@@ -200,6 +251,10 @@
                     border: transparent;
                     width: 135px;
                     height: 60px;
+            
+                    @media(max-width: $TabletM) {
+                        width: 100%;
+                    }
                 }
                 select:focus {
                     border: 1px solid $blue_Twitter;
@@ -209,6 +264,10 @@
                     position: absolute;
                     margin: 0 0 0 90px;
                     pointer-events: none;
+            
+                    @media(max-width: $TabletM) {
+                        margin: 0 0 0 24%;
+                    }
                 }
                 .year__label{
                     color: $color_text_gray;
@@ -216,6 +275,10 @@
                     position: absolute;
                     margin: 0 95px 30px 0;
                     pointer-events: none;
+            
+                    @media(max-width: $TabletM) {
+                        margin: 0 23% 30px 0;
+                    }
                 }
             }
         }
@@ -226,6 +289,14 @@
                 width: 534px;
                 height: 43px;
                 border-radius: 40px;
+            
+                @media(max-width: $TabletM) {
+                    width: 100%;
+                }
+            }
+            
+            @media(max-width: $TabletM) {
+                padding: 90px 25px 0 33px;
             }
         }
     }
