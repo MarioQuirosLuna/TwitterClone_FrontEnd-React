@@ -2,11 +2,9 @@
 @import '../../shared/Styles/colors';
 
 .register__container{
-    @media(max-width: $TabletM) {
-        width: 100vw;
-        height: 100vh;
-    }
     .register__content{
+        width: 100%;
+        height: 100%;
         .content__registerTop{
             display: flex;
             .register__exit {
@@ -130,7 +128,7 @@
             }
         }
         .content__birthdaySelect{
-            padding: 16px 25px 0 33px;
+            padding: 16px 25px 30px 33px;
             display: flex;
             width: 100%;
             align-items: center;
@@ -143,7 +141,7 @@
                 align-items: center;
                 border-radius: 5px;
                 @media(max-width: $TabletM) {
-
+                    
                 }
                 select{
                     padding: 20px 0 0 7px;
@@ -170,7 +168,7 @@
                     pointer-events: none;
             
                     @media(max-width: $TabletM) {
-                        margin: 0 0 0 24%;
+                        margin: 0 0 0 14%;
                     }
                 }
                 .month__label{
@@ -181,7 +179,7 @@
                     pointer-events: none;
             
                     @media(max-width: $TabletM) {
-                        margin: 0 22% 30px 0;
+                        margin: 0 12% 30px 0;
                     }
                 }
             }
@@ -218,7 +216,7 @@
                     pointer-events: none;
             
                     @media(max-width: $TabletM) {
-                        margin: 0 0 0 24%;
+                        margin: 0 0 0 14%;
                     }
                 }
                 .day__label{
@@ -229,7 +227,7 @@
                     pointer-events: none;
             
                     @media(max-width: $TabletM) {
-                        margin: 0 23% 30px 0;
+                        margin: 0 12% 30px 0;
                     }
                 }
             }
@@ -266,7 +264,7 @@
                     pointer-events: none;
             
                     @media(max-width: $TabletM) {
-                        margin: 0 0 0 24%;
+                        margin: 0 0 0 14%;
                     }
                 }
                 .year__label{
@@ -277,27 +275,27 @@
                     pointer-events: none;
             
                     @media(max-width: $TabletM) {
-                        margin: 0 23% 30px 0;
+                        margin: 0 12% 30px 0;
                     }
                 }
             }
         }
         .content__nextButton{
-            padding: 90px 0 0 33px;
+            display: flex;
+            justify-content: center;
             .nextButton{
                 cursor: pointer;
                 width: 534px;
                 height: 43px;
                 border-radius: 40px;
+                margin: 10px 20px 10px 20px;
             
                 @media(max-width: $TabletM) {
                     width: 100%;
                 }
             }
             
-            @media(max-width: $TabletM) {
-                padding: 90px 25px 0 33px;
-            }
+            
         }
     }
 }
