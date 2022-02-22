@@ -13,21 +13,17 @@
     .ContainerLogin__Content {
         height: 650px;
         width: 600px;
-        background-color: black;
+        background-color: $background_Twitter;
         border-radius: 16px;
         display: flex;
 
         @media(max-width: $TabletM) {
-            height: 100vh;
             width: 100vw;
             border-radius: 0;
-            justify-content: center;
-            display: flex;
         }
 
         @media(max-width: $TabletS) {
             width: 100vw;
-            height: 100vh;
         }
     } 
 }
