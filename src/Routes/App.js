@@ -64,13 +64,18 @@ function App() {
 									<PostDetails />
 								} isPage />
 							} />
-							<Route path="*" element={
-								<Navigate to="/" />
-							} />
 							<Route path="/login" element={
 								<PageWrapper component={
 									<Login />
 								} isLoginPage />
+							} />
+							<Route path="/register" element={
+								<PageWrapper component={
+									<Register />
+								} isLoginPage />
+							} />
+							<Route path="*" element={
+								<Navigate to="/" />
 							} />
 						</Routes>
 					</MenuActiveProvider>
