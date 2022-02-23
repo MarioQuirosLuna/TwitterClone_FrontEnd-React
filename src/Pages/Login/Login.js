@@ -8,7 +8,9 @@ const Login = () => {
 			<div className="login">
 				<div className="login_up_container">
 					<div className="login_exit">
-						<label type="button" className="exit_button"><CloseIcon/></label>
+						<i>
+							<CloseIcon />
+						</i>
 					</div>
 					<div className="login_icon_twitter">
 						<TwitterIcon fontSize="large"/>

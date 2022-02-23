@@ -1,7 +1,10 @@
+@use '../../shared/Styles/hoverIconOption' as *;
+
 @import '../../shared/Styles/breakpoints';
+@import '../../shared/Styles/colors';
+
 
 .login_container {
-    background: background_Login;
 
     .login {
         width: 600px;
@@ -18,30 +21,52 @@
             position: relative;
             
         }
-        
+
+        @media(max-height: $TabletS) {
+            width: 100vw;
+            height: 100vh;
+            overflow-y: scroll;
+            overflow-x: scroll;
+            position: relative;
+        }
+
         .login_up_container{
-            
+
             display: flex;
             .login_exit {
-                padding: 10px 0px 0 10px;
-                label{
-                    cursor: pointer;
-                }
-                @media(max-width: $TabletS) {
+
+                @include iconOptionGrey;
+                padding: 5px 0px 0 10px;
+
+                @media(max-width: $TabletM) {
                     position: absolute; 
                     top: 0; 
                     left: 0;
                 }
+                @media(max-height: $TabletS) {
+                    position: absolute; 
+                    top: 0; 
+                    left: 0;
+                }
+                i {
+                    cursor: pointer;
+                    width: 38px;
+                    height: 38px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
             }
+            
             .login_icon_twitter {
                 padding: 5px 0px 0 245px;
 
-                @media (max-width: $TabletS) {
-                    padding: 5px 0px 0 45%;
+                @media (max-width: $TabletM) {
+                    padding: 5px 0px 0 50%;
                     
                 }
-                @media (max-width: $TabletM) {
-                    padding: 5px 0px 0 45%;
+                @media (max-height: $TabletS) {
+                    padding: 5px 0px 0 50%;
                     
                 }
             }
@@ -72,13 +97,13 @@
                     justify-content: center;
                     cursor: pointer;
                     font-size: 16px;
-                    background: white;
+                    background: $color_font_light;
                     border-radius: 20px;
                     height: 40px;
                     width: 300px;
                     .login_with_google_tittle {
                         padding-top: 10px;
-                        color: black;
+                        color: $background_Twitter;
                     }
                 }
             }
@@ -92,13 +117,13 @@
                         justify-content: center;
                         cursor: pointer;
                         font-size: 16px;
-                        background: white;
+                        background: $color_font_light;
                         border-radius: 20px;
                         height: 40px;
                         width: 300px;
                         .login_with_apple_tittle {
                             padding-top: 10px;
-                            color: black;
+                            color: $background_Twitter;
                         }
                     }
                 }
@@ -118,7 +143,7 @@
                         position: absolute;
                         width: 135px;
                         height: 2px;
-                        background-color: #404D57;
+                        background-color: $border_color_light;
                         top: 0.4em;
                     }
                     h1::before {
@@ -141,9 +166,9 @@
                     border: transparent;
                     width: 300px;
                     height: 60px;
-                    border: 3px solid #404D57;
+                    border: 3px solid $border_color_light;
                     border-radius: 5px;
-                    color: white;
+                    color: $color_font_light;
                 }
                 .login_info {
                     position: absolute;
@@ -151,13 +176,13 @@
                     bottom: 20px;
                 }
                 .login_span_info {
-                    color: #404D57;
+                    color: $border_color_light;
                     font-size: 20px;
                 }
                 .enter_login_info:focus + .login_info .login_span_info {
                     transform: translateY(-150%);
                     font-size: 14px;
-                    color: #1DA1F2;
+                    color: $blue_Twitter;
                 }
 
                 .enter_login_info:valid + .login_info .login_span_info {
@@ -166,7 +191,7 @@
                 }
 
                 .enter_login_info:focus {
-                    border: 3px solid #1DA1F2;
+                    border: 3px solid $blue_Twitter;
                 }
             }
             .login_button_next {
@@ -178,13 +203,13 @@
                     justify-content: center;
                     cursor: pointer;
                     font-size: 16px;
-                    background: white;
+                    background: $color_font_light;
                     border-radius: 20px;
                     height: 40px;
                     width: 300px;
                     .next_span {
                         padding-top: 10px;
-                        color: black;
+                        color: $background_Twitter;
                     }
                 }
             }
@@ -201,10 +226,10 @@
                     border-radius: 20px;
                     height: 40px;
                     width: 300px;
-                    border: 3px solid #404D57;
+                    border: 3px solid $border_color_light;
                     .lofin_forgett_message {
                         padding-top: 10px;
-                        color: white;
+                        color: $color_font_light;
                     }
                 }
             }
@@ -215,12 +240,12 @@
                 font-size: 15px;
                 font-weight: 700;
                 .login_message {
-                    color: #404D57;
+                    color: $color_text_gray;
                 }
                 .login_link {
                     cursor: pointer;
                     padding: 0 0 0 5px;
-                    color: #149BD9;
+                    color: $blue_Twitter;
                 }
             }
         }
