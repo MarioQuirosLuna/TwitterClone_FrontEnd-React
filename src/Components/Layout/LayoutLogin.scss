@@ -17,13 +17,19 @@
         border-radius: 16px;
         display: flex;
 
-        @media(max-width: $TabletM) {
+        @media(max-height: $TabletS) {
             width: 100vw;
+            height: 100vh;
             border-radius: 0;
+            justify-content: center;
         }
 
-        @media(max-width: $TabletS) {
+        @media(max-width: $TabletM) {
             width: 100vw;
+            height: 100vh;
+            border-radius: 0;
+            justify-content: center;
         }
+
     } 
 }
