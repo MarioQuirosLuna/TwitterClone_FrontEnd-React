@@ -19,8 +19,8 @@ const TweetData = ({
 	}
 }) => {
 	return (
-		<Link to={`/${username}/status/${id ? id : _id}`} className="link">
-			<div className="tweet__linkContainer">
+		<div className="tweet__linkContainer">
+			<Link to={`/${username}/status/${id ? id : _id}`} className="tweet__linkContent link">
 				<div className="tweet__container-tweetData">
 					<div className="tweet__container-photo">
 						<PhotoUser url={user_photo} />
@@ -41,11 +41,11 @@ const TweetData = ({
 						</div>
 					</div>
 				</div>
-				<div className="content__nav-settings">
-					<SettingsMenu />
-				</div>
+			</Link>
+			<div className="content__nav-settings">
+				<SettingsMenu />
 			</div>
-		</Link>
+		</div>
 	)
 }
 
