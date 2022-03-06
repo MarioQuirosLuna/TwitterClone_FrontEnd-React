@@ -5,6 +5,7 @@ import './SettingsMenu.scss'
 
 
 const SettingsMenu = ({
+	id,
 	listOptions,
 	showMenu,
 	handleShowMenu
@@ -22,7 +23,12 @@ const SettingsMenu = ({
 					<ul>
 						{listOptions?.map(option => {
 							return (
-								<SettingItem key={option.label} option={option} handleShowMenu={handleShowMenu} />
+								<SettingItem
+									key={option.label}
+									id={id}
+									option={option}
+									handleShowMenu={handleShowMenu}
+								/>
 							)
 						})}
 					</ul>
