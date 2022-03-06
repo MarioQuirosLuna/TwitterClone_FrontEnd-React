@@ -45,6 +45,18 @@ export const newPost = async (newPost) => {
 		.catch(error => { console.error(error) })
 }
 
+export const deletePost = async (username, id) => {
+	const config = {
+		headers: {
+			'Content-type': 'application/json'
+		}
+	}
+	const req = axios.delete(`${LOCAL_URL}/post/delete/${username}/${id}`, config)
+	return req
+		.then((res) => res.data)
+		.catch(error => { console.error(error) })
+}
+
 export const newComment = async (username, id, newComment) => {
 	const config = {
 		headers: {
