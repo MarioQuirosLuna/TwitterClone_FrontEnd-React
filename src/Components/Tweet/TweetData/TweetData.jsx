@@ -1,4 +1,7 @@
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
+
+import { ListOptions } from './ListOptions'
 
 import ImagePosted from '../../../shared/Components/ImagePosted/ImagePosted'
 import SettingsMenu from '../../../shared/Components/SettingsMenu/SettingsMenu'
@@ -18,10 +21,21 @@ const TweetData = ({
 		media_posted
 	}
 }) => {
+
+	const [showMenu, setShowMenu] = useState(false)
+
+	const handleShowMenuTweet = (target) => {
+		if (target) {
+			setShowMenu(true)
+		} else {
+			setShowMenu(false)
+		}
+	}
+
 	return (
 		<div className="tweet__linkContainer">
 			<Link to={`/${username}/status/${id ? id : _id}`} className="tweet__linkContent link">
-				<div className="tweet__container-tweetData">
+				<div className="tweet__container-tweetData" >
 					<div className="tweet__container-photo">
 						<PhotoUser url={user_photo} />
 					</div>
@@ -43,7 +57,7 @@ const TweetData = ({
 				</div>
 			</Link>
 			<div className="content__nav-settings">
-				<SettingsMenu />
+				<SettingsMenu listOptions={ListOptions} showMenu={showMenu} handleShowMenu={handleShowMenuTweet} />
 			</div>
 		</div>
 	)

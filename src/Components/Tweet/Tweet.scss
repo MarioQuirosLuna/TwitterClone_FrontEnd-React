@@ -8,11 +8,11 @@
 
     .tweet__linkContainer{
         display: flex;
+        padding: 10px 0;
 
         .tweet__linkContent{
             display: flex;
             width: 100%;
-            padding: 10px 0;
             cursor: pointer;
             
             .tweet__container-tweetData{

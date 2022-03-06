@@ -1,0 +1,22 @@
+@import '../../Styles/colors.scss';
+
+.itemMenuTweet__container{
+    width: 100%;
+
+    .itemMenuTweet__Option{
+        display: flex;
+        align-items: center;
+        padding: 10px 0;
+
+        label{
+            color: $color_text_gray;
+        }
+        span{
+            padding: 0 0 0 10px;
+            color: $color_font_light;
+        }
+        .delete{
+            color: $delete_color;
+        }
+    }
+}
