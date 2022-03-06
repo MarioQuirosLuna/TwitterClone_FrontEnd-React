@@ -6,6 +6,7 @@ import './SettingsMenu.scss'
 
 const SettingsMenu = ({
 	id,
+	username,
 	listOptions,
 	showMenu,
 	handleShowMenu
@@ -25,6 +26,7 @@ const SettingsMenu = ({
 							return (
 								<SettingItem
 									key={option.label}
+									username={username}
 									id={id}
 									option={option}
 									handleShowMenu={handleShowMenu}

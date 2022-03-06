@@ -1,3 +1,5 @@
+import { deletePost } from '../../../Services/api'
+
 import DeleteForeverOutlinedIcon from '@mui/icons-material/DeleteForeverOutlined'
 import PushPinOutlinedIcon from '@mui/icons-material/PushPinOutlined'
 import AddBoxOutlinedIcon from '@mui/icons-material/AddBoxOutlined'
@@ -5,8 +7,8 @@ import TextsmsOutlinedIcon from '@mui/icons-material/TextsmsOutlined'
 import CodeOutlinedIcon from '@mui/icons-material/CodeOutlined'
 import BarChartOutlinedIcon from '@mui/icons-material/BarChartOutlined'
 
-const deleteTweet = (id) => {
-	console.log('delete', id)
+const deleteTweet = async (username, id) => {
+	await deletePost(username, id)
 }
 
 export const ListOptions = [

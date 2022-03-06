@@ -58,6 +58,7 @@ const TweetData = ({
 			</Link>
 			<div className="content__nav-settings">
 				<SettingsMenu
+					username={username}
 					id={`${id ? id : _id}`}
 					listOptions={ListOptions}
 					showMenu={showMenu}
