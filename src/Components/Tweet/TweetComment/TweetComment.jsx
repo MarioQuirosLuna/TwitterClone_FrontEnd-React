@@ -4,7 +4,7 @@ import { AppContext } from '../../../Context/AppContext'
 
 import useIsMyTweet from '../../../Hooks/useIsMyTweet'
 
-import TweetData from '../TweetData/TweetData'
+import TweetDataComment from '../TweetData/TweetDataComment'
 
 import ChatBubbleOutlineOutlinedIcon from '@mui/icons-material/ChatBubbleOutlineOutlined'
 import AutorenewOutlinedIcon from '@mui/icons-material/AutorenewOutlined'
@@ -24,9 +24,7 @@ const TweetComment = ({
 
 	return (
 		<div className="Tweet__container">
-			<div className="tweet__linkContainer">
-				<TweetData post={post} />
-			</div>
+			<TweetDataComment post={post} />
 			<div className="content__options">
 				<div className="content__option-right">
 					<div className="option comments">
