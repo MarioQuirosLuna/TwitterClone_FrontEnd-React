@@ -25,6 +25,61 @@
         height: 100vh;
         z-index: 1;
         background-color: $background_Twitter;
+        display: flex;
+        align-items: center;
+        padding: 50px;
+
+        .icon{
+            padding: 0 0 60px 0;
+        }
+        .text{
+            .big{
+                font-size: 60px;
+                padding: 0 0 30px 0;
+                font-weight: bold;
+            }
+            .little{
+                font-size: 40px;
+                padding: 0 0 20px 0;
+                font-weight: bold;
+            }
+        }
+        .signUpOptions{
+            width: 45%;
+
+            .option{
+                height: 40px;
+                color: $background_Twitter;
+                background-color:$color_font_light;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 8px 10px;
+                border-radius: 50px;
+                margin: 15px 0;
+                span{
+                    padding:0 0 0 5px;
+                }
+            }
+            .apple{
+                font-weight: bold;
+            }
+            .sectionOr{
+                display: flex;
+                justify-content: center;
+            }
+            .phoneEmail{
+                background-color: $blue_Twitter;
+                color: $color_font_light;
+                font-weight: bold;
+            }
+            .message__cookies{
+                font-size: 12px;
+            }
+        }
+        .logIn{
+            
+        }
     }
 
     @media (max-width: $LaptopS){

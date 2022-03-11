@@ -1,3 +1,7 @@
+import TwitterIcon from '@mui/icons-material/Twitter'
+import GoogleIcon from '@mui/icons-material/Google'
+import AppleIcon from '@mui/icons-material/Apple'
+
 import './Default.scss'
 
 const Default = () => {
@@ -5,45 +9,49 @@ const Default = () => {
 		<div className="default__containerPage">
 			<div className="default__menuInitial">
 				<div>
-					<div>
+					<div className="icon">
 						<i>
-							Icon tweeter
+							<TwitterIcon fontSize="large" />
 						</i>
 					</div>
-					<div>
-						<p>
+					<div className="text">
+						<p className="big">
 							What is happening now
 						</p>
-						<p>
+						<p className="little">
 							Join Twitter today.
 						</p>
 					</div>
-					<div>
-						<div>
-							Sign up with Google
+					<div className="signUpOptions">
+						<div className="option">
+							<i><GoogleIcon /></i>
+							<span>Sign up with Google</span>
 						</div>
-						<div>
-							Sign up with Apple
+						<div className="option apple">
+							<i><AppleIcon /></i>
+							<span>Sign up with Apple</span>
 						</div>
-						<div>
-							<div>----</div>
+						<div className="sectionOr">
+							<div></div>
 							<div>
 								<span>or</span>
 							</div>
-							<div>----</div>
+							<div></div>
 						</div>
-						<span>
+						<span className="option phoneEmail">
 							Sign up with phone number or email
 						</span>
-						<div>
+						<div className="message__cookies">
 							By signing up, you agree to the Terms of Service and Privacy Policy, including the Use of Cookies policy.
 						</div>
 					</div>
-					<div>
-						<div>
+					<div className="logIn">
+						<div className="message__title">
 							Do you already have an account?
 						</div>
-						<div>Log in</div>
+						<div className="login__option">
+							Log in
+						</div>
 					</div>
 				</div>
 			</div>
