@@ -6,6 +6,7 @@ import {
 } from 'react-router-dom'
 
 import PageWrapper from '../Pages/Wrapper/PageWrapper'
+import Default from '../Pages/Default/Default'
 import Home from '../Pages/Home/Home'
 import Login from '../Pages/Login/Login'
 import Register from '../Pages/Register/Register'
@@ -29,10 +30,8 @@ function App() {
 						<Routes>
 							<Route path="/" element={
 								<PageWrapper component={
-									<div>
-										default page
-									</div>
-								} isPage />
+									<Default />
+								} isDefaultPage />
 							} />
 							<Route path="/home" element={
 								<PageWrapper component={

@@ -1,0 +1,37 @@
+@use '../../shared/Styles/breakpoints' as *;
+
+@import '../../shared/Styles/colors.scss';
+
+.default__containerPage{
+    width: 100vw;
+    max-width: 100vw;
+    display: flex;
+    flex-flow: row-reverse wrap-reverse;
+
+    .default__imageInitial{
+        width: 54%;
+        img{
+            max-width: 100vw;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+    }
+    .default__menuInitial{
+        width: 46%;
+        height: 100vh;
+        z-index: 1;
+        background-color: $background_Twitter;
+    }
+
+    @media (max-width: $LaptopS){
+        display: inline-block;
+
+        .default__menuInitial{
+
+        }
+    }
+}
