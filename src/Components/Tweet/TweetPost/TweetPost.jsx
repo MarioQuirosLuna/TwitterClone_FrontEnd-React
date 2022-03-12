@@ -1,5 +1,4 @@
 import { useContext } from 'react'
-import { Link } from 'react-router-dom'
 
 import { AppContext } from '../../../Context/AppContext'
 
@@ -30,9 +29,7 @@ const TweetPost = ({
 
 	return (
 		<div className="Tweet__container">
-			<Link to={`/${username}/status/${id ? id : _id}`} className="tweet__linkContainer link">
-				<TweetData post={post} />
-			</Link>
+			<TweetData post={post} />
 			<div className="content__options">
 				<div className="content__option-right">
 					<div className="option comments" onClick={() => console.log('click comments')} >
