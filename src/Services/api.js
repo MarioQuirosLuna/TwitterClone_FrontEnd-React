@@ -80,3 +80,15 @@ export const newLike = async (username, id, newLike) => {
 		.then((res) => res.data)
 		.catch(error => { console.error(error) })
 }
+
+export const signUpUser = async (register) => {
+	const config = {
+		headers: {
+			'Content-type': 'application/json'
+		}
+	}
+	const req = axios.post(`${LOCAL_URL}/login/register`, register, config)
+	return req
+		.then((res) => res.data)
+		.catch((err) => { console.error(err) })
+}
