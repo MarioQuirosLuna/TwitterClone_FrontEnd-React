@@ -10,7 +10,13 @@ import LayoutDefault from '../../Components/Layout/LayoutDefault'
 import NewTweet from '../../shared/Components/NewTweet/NewTweet'
 import PopUp from '../../shared/Components/PopUp/Popup'
 
-const PageWrapper = ({ component: Component, isPage, isMessagePage, isLoginPage, isDefaultPage }) => {
+const PageWrapper = ({
+	component: Component,
+	isPage,
+	isMessagePage,
+	isLoginPage,
+	isDefaultPage
+}) => {
 	const menuContext = useContext(MenuActiveContext)
 
 	return (
