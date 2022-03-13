@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 import TwitterIcon from '@mui/icons-material/Twitter'
 import GoogleIcon from '@mui/icons-material/Google'
 import AppleIcon from '@mui/icons-material/Apple'
@@ -37,9 +39,9 @@ const Default = () => {
 								</div>
 								<div></div>
 							</div>
-							<span className="option phoneEmail">
+							<Link to={'/register'} className="option phoneEmail">
 								<span>Sign up with phone number or email</span>
-							</span>
+							</Link>
 							<div className="message__cookies">
 								By signing up, you agree to the <span>Terms of Service</span> and <span>Privacy Policy</span>, including the <span>Use of Cookies policy</span>.
 							</div>
@@ -48,9 +50,9 @@ const Default = () => {
 							<div className="message__title">
 								Do you already have an account?
 							</div>
-							<div className="login__option">
+							<Link to={'/login'} className="login__option">
 								Log in
-							</div>
+							</Link>
 						</div>
 					</div>
 				</div>
