@@ -13,7 +13,7 @@ const AppProvider = ({ children }) => {
 
 	useEffect(() => {
 		const fetch = async () => {
-			setUser(await getUser('@UserTest'))
+			setUser(await getUser(localStorage.getItem('userTwitterClone')))
 			setPosts(await getAllPost())
 		}
 		fetch()
