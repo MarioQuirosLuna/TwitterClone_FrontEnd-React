@@ -92,3 +92,27 @@ export const signUpUser = async (register) => {
 		.then((res) => res.data)
 		.catch((err) => { console.error(err) })
 }
+
+export const verificationAccount = async (userIdentification) => {
+	const config = {
+		headers: {
+			'Content-type': 'application/json'
+		}
+	}
+	const req = axios.post(`${LOCAL_URL}/login/verify`, userIdentification, config)
+	return req
+		.then((res) => res.data)
+		.catch((err) => { console.error(err) })
+}
+
+export const logInUser = async (logInUser) => {
+	const config = {
+		headers: {
+			'Content-type': 'application/json'
+		}
+	}
+	const req = axios.post(`${LOCAL_URL}/login/`, logInUser, config)
+	return req
+		.then((res) => res.data)
+		.catch((err) => { console.error(err) })
+}
