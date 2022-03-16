@@ -82,6 +82,13 @@
    * ![React](https://img.shields.io/badge/react-v.17.0.2-111)
    * ![React-Dom](https://img.shields.io/badge/react_dom-v.17.0.2-111)
    * ![React-Scripts](https://img.shields.io/badge/react_scripts-v.5.0.0-111)
+   * ![Axios](https://img.shields.io/badge/axios-v.0.25.0-111)
+   * ![Sass](https://img.shields.io/badge/sass-v.1.47.0-111)
+   * ![React-router-dom](https://img.shields.io/badge/react_router_dom-v.6.2.1-111)
+   * ![Mui/material](https://img.shields.io/badge/mui_material-v.5.2.8-111)
+   * ![Mui/icons-material](https://img.shields.io/badge/mui_icons_material-v.5.2.5-111)
+   * ![Emotion/styled](https://img.shields.io/badge/emotion/styled-v.11.6.0-111)
+   * ![Emotion/react](https://img.shields.io/badge/emotion/react-v.11.7.1-111)
 
    ### 👉 Installation.
    
@@ -116,6 +123,9 @@
 
 [![LinkedIn](https://custom-icon-badges.herokuapp.com/badge/-LinkedIn%20Isabel%20Portuguez%20Calderón-%230A66C2?style=flat&logo=LinkedIn&logoColor=white&labelColor=111)](https://www.linkedin.com/in/isabel-portuguez-calderón-142b4b229)
 [![Twitter URL](https://img.shields.io/twitter/url?label=Twitter%20%40IsaPortuguezC&style=social&url=https%3A%2F%2Ftwitter.com%2FIsaPortuguezC)](https://twitter.com/IsaPortuguezC)
+
+* Jorge Madrigal Solano
+* Bryan Soto Ureña
 
 
 ## 💜 Acknowledgments.
