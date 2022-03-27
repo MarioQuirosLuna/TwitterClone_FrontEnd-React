@@ -69,13 +69,13 @@ export const newComment = async (username, id, newComment) => {
 		.catch(error => { console.error(error) })
 }
 
-export const newLike = async (username, id, newLike) => {
+export const newLike = async (id, newLike) => {
 	const config = {
 		headers: {
 			'Content-type': 'application/json'
 		}
 	}
-	const req = axios.put(`${LOCAL_URL}/post/like/${username}/${id}`, newLike, config)
+	const req = axios.put(`${LOCAL_URL}/post/like/${id}`, newLike, config)
 	return req
 		.then((res) => res.data)
 		.catch(error => { console.error(error) })
