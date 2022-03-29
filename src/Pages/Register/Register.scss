@@ -9,9 +9,19 @@
             display: flex;
             .register__exit {
                 padding: 15px 0px 0 15px;
-                label{
-                    cursor: pointer;
+                .exit_button{
+                    color: $color_font_light;
+                    svg{
+                        cursor: pointer;
+                    }
+                    span{
+                        font-size: 20px;
+                        font-weight: bold;
+                        line-height: 24px;
+                        overflow: break-word;
+                    }
                 }
+
                 @media(max-width: $TabletS) {
                     position: absolute; 
                     top: 0; 
@@ -39,35 +49,10 @@
                 font-weight: 700;
             }
         }
-        .content__registerName {
-            display: flex;
-            justify-content: center;
-            position: relative;
-            padding: 25px 0 0 0;
-
-            @media(max-width: $TabletM) {
-                padding: 25px 25px 0 25px;
-            }
-
-            input[type="text"] {
-                background: transparent;
-                border: transparent;
-                width: 536px;
-                height: 60px;
-                font-size: 16px;
-                border: 1px solid $border_color_light;
-                border-radius: 5px;
-                color: white;
-            
-                @media(max-width: $TabletM) {
-                    width: 100%;
-                }
-            }
-        }
         .content__registerName:focus {
             border: 1px solid $blue_Twitter;
         }
-        .content__registerEmail {
+        .content__register {
             display: flex;
             justify-content: center;
             position: relative;
@@ -77,7 +62,7 @@
                 padding: 25px 25px 0 25px;
             }
 
-            input[type="text"] {
+            input[type="text"], input[type="password"] {
                 background: transparent;
                 border: transparent;
                 width: 536px;
@@ -96,7 +81,7 @@
             border: 1px solid $blue_Twitter;
         }
         .content__changeEmailPhone{
-            padding: 30px 0 0 33px;
+            padding: 20px 0 0 33px;
             .registerChangeEmailPhone{
                 cursor: pointer;
                 background: transparent;
@@ -108,7 +93,7 @@
             }
         }
         .content__dateInfo{
-            padding: 35px 0 0 33px;
+            padding: 20px 0 0 33px;
             .Birthday{
                 font-size: 15px;
                 font-weight: 700;
@@ -128,7 +113,7 @@
             }
         }
         .content__birthdaySelect{
-            padding: 16px 25px 30px 33px;
+            padding: 16px 25px 10px 33px;
             display: flex;
             width: 100%;
             align-items: center;
@@ -277,6 +262,44 @@
                     @media(max-width: $TabletM) {
                         margin: 0 12% 30px 0;
                     }
+                }
+            }
+        }
+        .step2__container{
+            padding: 20px;
+            .title{
+                padding: 20px 20px 12px 20px;
+                span{
+                    font-size: 23px;
+                    font-weight: bold;
+                    line-height: 28px;
+                    overflow: break-word;
+                    
+                }
+            }
+            .subtitle{
+                padding: 32px 20px 0 20px;
+                span{
+                    font-size: 20px;
+                    font-weight: bold;
+                    line-height: 24px;
+                    overflow: break-word;
+                    
+                }
+            }
+            .text{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 12px 20px 0 20px;
+            }
+            .terms{
+                color: $color_text_gray;
+                padding: 40px 20px 180px 20px;
+                font-size: 15px;
+
+                span{
+                    color: $blue_Twitter;
                 }
             }
         }

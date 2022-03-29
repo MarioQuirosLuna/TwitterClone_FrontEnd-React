@@ -20,7 +20,7 @@ const BtnLike = ({ likes, id, showDetail }) => {
 			const Like = {
 				'userLiked': appContext?.user?.username
 			}
-			await newLike(appContext?.user?.username, id, Like)
+			await newLike(id, Like)
 			appContext?.setPosts(await getAllPost())
 		} catch (error) {
 			console.error(error)

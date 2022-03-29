@@ -1,0 +1,277 @@
+@use '../../shared/Styles/breakpoints' as *;
+@use '../../shared/Styles/designButton' as *;
+
+@import '../../shared/Styles/colors.scss';
+
+.default__containerPage{
+    width: 100vw;
+    max-width: 100vw;
+    height: 100vh;
+    @media (max-width: $TabletM){
+        height: auto;
+    }
+
+    .default__complete{
+        height: 95vh;
+        display: flex;
+        flex-flow: row-reverse wrap-reverse;
+
+        .default__imageInitial{
+            width: 54%;
+            img{
+                max-width: 60vw;
+                width: 54%;
+                height: 100%;
+                position: absolute;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center center;
+                @media (max-width: $LaptopXL){
+                    width: 46%;
+                }
+                @media (max-width: $LaptopS){
+                    width: 22%;
+                }
+                @media (max-width: $TabletM){
+                    width: 100vw;
+                    max-width: 100vw;
+                    height: 350px;
+                }
+                @media (max-width: $MobileL){
+                    height: 200px;
+                }
+            }
+            .logo{
+                width: 100%;
+                height: 100%;
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                svg{
+                    width: 100%;
+                    height: 100%;
+                    max-height: 350px;
+                    color: $color_white;
+                    @media (max-width: $MobileL){
+                        max-height: 200px;
+                    }
+                }
+            }
+            @media (max-width: $LaptopXL){
+                width: 46%;
+            }
+            @media (max-width: $LaptopS){
+                width: 22%;
+            }
+            @media (max-width: $TabletM){
+                width: 100vw;
+            }
+        }
+        .default__menuInitial{
+            width: 46%;
+            height: 100vh;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            padding: 50px;
+
+            @media (max-width: $LaptopXL){
+                width: 54%;
+            }
+            @media (max-width: $LaptopS){
+                width: 78%;
+            }
+            @media (max-width: $TabletM){
+                width: 100vw;
+                height: 90vh;
+                justify-content: center;
+            }
+            @media (max-width: $TabletS){
+                padding: 0;
+            }
+            @media (max-width: $MobileL){
+                height: auto;
+            }
+
+            .content{
+                width: 720px;
+                @media (max-width: $TabletM){
+                    width: 100%;
+                    padding: 0;
+                }
+                @media (max-width: $TabletS){
+                    padding: 0 0 0 60px;
+                }
+                
+                .icon{
+                    padding: 0 0 60px 0;
+                    svg{
+                        width: 42px;
+                        height: 42px;
+                    }
+                    @media (max-width: $TabletS){
+                        padding: 0 0 10px 0;
+                    }
+                }
+                .text{
+                    width: 75%;
+                    @media (max-width: $TabletM){
+                        width: 90%;
+                    }
+                    .big{
+                        font-size: 64px;
+                        line-height: 84px;
+                        letter-spacing: -1.2px;
+                        font-weight: bold;
+                        overflow-wrap: break-word;
+                        @media (max-width: $MobileXL){
+                            font-size: 40px;
+                            line-height: 52px;
+                            letter-spacing: -0.8;
+                        }
+                    }
+                    .little{
+                        font-size: 31px;
+                        padding: 48px 0 32px 0;
+                        line-height: 36px;
+                        font-weight: bold;
+                        @media (max-width: $TabletS){
+                            padding: 10px 0 10px 0;
+                        }
+                        @media (max-width: $MobileXL){
+                            font-size: 23px;
+                            line-height: 28px;
+                        }
+                    }
+                }
+                .signUpOptions{
+                    width: 45%;
+                    @media (max-width: $TabletS){
+                        width: 60%;
+                    }
+                    @media (max-width: $MobileL){
+                        width: 80%;
+                    }
+                    .option{
+                        @include buttonTwitter;
+        
+                        color: $background_Twitter;
+                        background-color:$color_font_light;
+                        span{
+                            padding:0 0 0 5px;
+                        }
+                    }
+                    .apple{
+                        font-weight: bold;
+                    }
+                    .sectionOr{
+                        display: flex;
+                        justify-content: center;
+                    }
+                    .phoneEmail{
+                        background-color: $blue_Twitter;
+                        color: $color_font_light;
+                        font-weight: bold;
+                        white-space: nowrap;
+                        overflow-wrap: break-word;
+                        max-width: 100%;
+                        
+                        span{
+                            max-width: 80%;
+                            overflow-wrap: break-word;
+                            white-space: inherit;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            color: $color_font_light;
+                        }
+                        &:hover{
+                            background-color: $blue___Twitter_hover;
+                        }
+                    }
+                    .message__cookies{
+                        font-size: 11px;
+                        line-height: 12px; 
+                        color: $color_text_gray;
+                        span{
+                            font-size: inherit;
+                            line-height: inherit;
+                            color: $blue_Twitter;
+                            cursor: pointer;
+                        }
+                    }
+                }
+                .logIn{
+                    width: 45%;
+                    padding: 60px 0 0 0;
+                    @media (max-width: $TabletS){
+                        width: 60%;
+                    }
+                    @media (max-width: $MobileL){
+                        width: 85%;
+                    }
+                    .message__title{
+                        font-weight: bold;
+                        padding: 0 0 20px 0;
+                        font-size: 17px;
+                    }
+                    .login__option{
+                        @include buttonTwitter;
+                        
+                        color: $blue_Twitter;
+                        font-weight: bold;
+                        border: 1px solid $color_font_light;
+
+                        &:hover{
+                            background-color: $blue__Twitter_transparent;
+                        }
+                    }
+                }
+            }
+        }
+        @media (max-width: $LaptopS){
+            height: 90vh;
+        }
+        @media (max-width: $TabletM){
+            display: inline-block;
+        }
+    }
+    .navigation{       
+        height: 5vh;
+        .navBottom{
+            display: flex;
+            position: relative;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: stretch;
+            padding: 12px 16px;
+            flex-direction: row;
+
+            span{
+                display: inline;
+                font-size: 14px;
+                color: $color_text_gray;
+                padding: 5px 16px 5px 0;
+                line-height: 16px;
+                font-size: 13px;
+                cursor: pointer;
+                overflow-wrap: break-word;
+
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+
+        }
+        @media (max-width: $LaptopS){
+            height: 10vh;
+        }
+        @media (max-width: $TabletS){
+            height: 15vh;
+        }
+        @media (max-width: $MobileL){
+            height: auto;
+        }
+    }
+    
+}

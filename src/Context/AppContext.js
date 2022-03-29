@@ -13,8 +13,13 @@ const AppProvider = ({ children }) => {
 
 	useEffect(() => {
 		const fetch = async () => {
-			setUser(await getUser('@UserTest'))
-			setPosts(await getAllPost())
+			if (!localStorage.getItem('userTwitterClone') && !window.location.href.endsWith('/')) {
+				window.location.href = '/'
+				return
+			} else {
+				setUser(await getUser(localStorage.getItem('userTwitterClone')))
+				setPosts(await getAllPost())
+			}
 		}
 		fetch()
 	}, [])
