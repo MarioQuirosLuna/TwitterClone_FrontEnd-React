@@ -90,6 +90,7 @@ const NewTweet = ({
 									isComment={isComment}
 									textPost={textPost}
 									setTextPost={setTextPost}
+									toUser={toUser}
 									idPost={idPost}
 								/>
 							</div>

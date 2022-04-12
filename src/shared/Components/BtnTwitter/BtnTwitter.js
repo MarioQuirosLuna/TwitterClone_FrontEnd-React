@@ -14,6 +14,7 @@ const BtnTwitter = ({
 	setTextPost,
 	media_posted,
 	isComment,
+	toUser,
 	idPost
 }) => {
 
@@ -54,7 +55,7 @@ const BtnTwitter = ({
 				'comment': textPost,
 				'media': null
 			}
-			await newComment(appContext?.user?.username, idPost, Comment)
+			await newComment(toUser, idPost, Comment)
 			appContext?.setPosts(await getAllPost())
 			setTextPost('')
 		} catch (error) {

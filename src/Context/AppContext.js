@@ -17,8 +17,10 @@ const AppProvider = ({ children }) => {
 				window.location.href = '/'
 				return
 			} else {
-				setUser(await getUser(localStorage.getItem('userTwitterClone')))
-				setPosts(await getAllPost())
+				if (localStorage.getItem('userTwitterClone')) {
+					setUser(await getUser(localStorage.getItem('userTwitterClone')))
+					setPosts(await getAllPost())
+				}
 			}
 		}
 		fetch()
