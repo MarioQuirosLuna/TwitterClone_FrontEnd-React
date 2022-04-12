@@ -1,11 +1,11 @@
 import axios from 'axios'
 
-const PRODUCTION_URL = ''
+const PRODUCTION_URL = 'https://twitter-clone-backend-mongo.herokuapp.com/api'
 const LOCAL_URL = 'http://localhost:3001/api'
 
 export const getAllPost = async () => {
 	try {
-		const response = await fetch(`${LOCAL_URL}/home`)
+		const response = await fetch(`${PRODUCTION_URL}/home`)
 		const data = await response.json()
 		return data
 	} catch (error) {
@@ -15,7 +15,7 @@ export const getAllPost = async () => {
 
 export const getUser = async (username) => {
 	try {
-		const response = await fetch(`${LOCAL_URL}/user/${username}`)
+		const response = await fetch(`${PRODUCTION_URL}/user/${username}`)
 		const data = await response.json()
 		return data
 	} catch (error) {
@@ -25,7 +25,7 @@ export const getUser = async (username) => {
 
 export const getUserPosts = async (username) => {
 	try {
-		const response = await fetch(`${LOCAL_URL}/user/posts/${username}`)
+		const response = await fetch(`${PRODUCTION_URL}/user/posts/${username}`)
 		const data = await response.json()
 		return data
 	} catch (error) {
@@ -39,7 +39,7 @@ export const newPost = async (newPost) => {
 			'Content-Type': 'application/json'
 		}
 	}
-	const req = axios.post(`${LOCAL_URL}/post`, newPost, config)
+	const req = axios.post(`${PRODUCTION_URL}/post`, newPost, config)
 	return req
 		.then((res) => res.data)
 		.catch(error => { console.error(error) })
@@ -51,7 +51,7 @@ export const deletePost = async (username, id) => {
 			'Content-type': 'application/json'
 		}
 	}
-	const req = axios.delete(`${LOCAL_URL}/post/delete/${username}/${id}`, config)
+	const req = axios.delete(`${PRODUCTION_URL}/post/delete/${username}/${id}`, config)
 	return req
 		.then((res) => res.data)
 		.catch(error => { console.error(error) })
@@ -63,7 +63,7 @@ export const newComment = async (username, id, newComment) => {
 			'Content-type': 'application/json'
 		}
 	}
-	const req = axios.put(`${LOCAL_URL}/post/comment/${username}/${id}`, newComment, config)
+	const req = axios.put(`${PRODUCTION_URL}/post/comment/${username}/${id}`, newComment, config)
 	return req
 		.then((res) => res.data)
 		.catch(error => { console.error(error) })
@@ -75,7 +75,7 @@ export const newLike = async (id, newLike) => {
 			'Content-type': 'application/json'
 		}
 	}
-	const req = axios.put(`${LOCAL_URL}/post/like/${id}`, newLike, config)
+	const req = axios.put(`${PRODUCTION_URL}/post/like/${id}`, newLike, config)
 	return req
 		.then((res) => res.data)
 		.catch(error => { console.error(error) })
@@ -87,7 +87,7 @@ export const signUpUser = async (register) => {
 			'Content-type': 'application/json'
 		}
 	}
-	const req = axios.post(`${LOCAL_URL}/login/register`, register, config)
+	const req = axios.post(`${PRODUCTION_URL}/login/register`, register, config)
 	return req
 		.then((res) => res.data)
 		.catch((err) => { console.error(err) })
@@ -99,7 +99,7 @@ export const verificationAccount = async (userIdentification) => {
 			'Content-type': 'application/json'
 		}
 	}
-	const req = axios.post(`${LOCAL_URL}/login/verify`, userIdentification, config)
+	const req = axios.post(`${PRODUCTION_URL}/login/verify`, userIdentification, config)
 	return req
 		.then((res) => res.data)
 		.catch((err) => { console.error(err) })
@@ -111,7 +111,7 @@ export const logInUser = async (logInUser) => {
 			'Content-type': 'application/json'
 		}
 	}
-	const req = axios.post(`${LOCAL_URL}/login/`, logInUser, config)
+	const req = axios.post(`${PRODUCTION_URL}/login/`, logInUser, config)
 	return req
 		.then((res) => res.data)
 		.catch((err) => { console.error(err) })
