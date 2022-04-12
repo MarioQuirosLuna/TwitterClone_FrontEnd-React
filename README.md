@@ -23,6 +23,12 @@ Deployed in: https://twitter-clone-front-end.vercel.app/
 
 ## 💻 About the project.
 
+   This is an initial version of a project for educational purposes, so it is not fully developed yet, so it may present different errors. Likewise, only some functionalities have been implemented. Over time, some other features that twitter has will be added.
+
+Test accounts:
+   1. User: UserTest    Password: 123
+   2. User: UserTest2   Password: 123
+
    ### 📜 Descriptions.
    
    It consists of a recreation of Twitter, to put into practice knowledge of both Front-end and Back-end implementing the MERN Stack along with other technologies to add more value to the project.
