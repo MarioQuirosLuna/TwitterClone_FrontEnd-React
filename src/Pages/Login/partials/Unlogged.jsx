@@ -30,7 +30,7 @@ const Unlogged = ({
 	return (
 		<div className="login_body_container">
 			<div className="login_title">
-				<span className="login_span_title">Log in to Twitter</span>
+				<span className="login_span_title">Log in to TwitterClone</span>
 			</div>
 			<div className="login_with_container">
 				<div className="login_with">

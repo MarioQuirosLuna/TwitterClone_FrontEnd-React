@@ -15,6 +15,14 @@
         }
         .container__twittericon{
             padding: 5px 0 0 10px;
+            .clone{
+                font-weight: 700;
+
+                @media(max-width: $LaptopL){
+                    display: flex;
+                    justify-content: center;
+                }
+            }
         }
         @media(max-width: $LaptopL){
             max-width: 64px;

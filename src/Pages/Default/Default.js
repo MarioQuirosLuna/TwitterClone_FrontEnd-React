@@ -20,7 +20,7 @@ const Default = () => {
 								What is happening now
 							</span>
 							<p className="little">
-								Join Twitter today.
+								Join TwitterClone today.
 							</p>
 						</div>
 						<div className="signUpOptions">
@@ -85,7 +85,7 @@ const Default = () => {
 					<span>Developers</span>
 					<span>Guide</span>
 					<span>Setting</span>
-					<span>&copy;{new Date().getFullYear()}</span>
+					<span>CloneTwitter &copy;{new Date().getFullYear()}</span>
 				</nav>
 			</div>
 		</div>

@@ -25,7 +25,9 @@ const Menu = () => {
 	return (
 		<div className="menu__container">
 			<nav className="container__nav">
-				<label className="container__twittericon"><TwitterIcon fontSize='large' /></label>
+				<label className="container__twittericon"><TwitterIcon fontSize='large' />
+					<span className="clone">Clone</span>
+				</label>
 				<ul>
 					{ListOptionsMenu?.map((option, index) => {
 						return (
