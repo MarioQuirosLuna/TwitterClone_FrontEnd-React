@@ -19,8 +19,6 @@
 |--|--|--|
 |![profile](https://user-images.githubusercontent.com/37676736/162999983-e15eb629-432f-41ef-895c-afd7ebc07b0a.PNG)|![message](https://user-images.githubusercontent.com/37676736/162999690-f5e7c4a3-cefd-4ed5-a7dd-90afdaa284f3.PNG)|![notifications](https://user-images.githubusercontent.com/37676736/163000092-12fd7a11-7314-43b5-b176-62db7942c39a.PNG)|
 
-Deployed in: https://twitter-clone-front-end.vercel.app/ 
-
 ## 💻 About the project.
 
    This is an initial version of a project for educational purposes, so it is not fully developed yet, so it may present different errors. Likewise, only some functionalities have been implemented. Over time, some other features that twitter has will be added.
